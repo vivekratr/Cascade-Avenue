@@ -1,12 +1,20 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+module.exports = {
+  "content": [
+      "./src/**/*.{js,jsx,ts,tsx}"
   ],
-  theme: {
-    extend: {},
+  "theme": {
+      "extend": {
+          "colors": {
+              "yellow-600": "#9f580a"
+          },
+          "spacing": {}
+      },
+      "fontSize": {
+          "inherit": "inherit"
+      }
   },
-  plugins: [],
+  "corePlugins": {
+      "preflight": false
+  }
 }
-

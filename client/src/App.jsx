@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Mainpage from './components/Mainpage'
 import './App.css'
+import Figma1 from './components/Figma1';
+import Figma2 from './components/Figma2';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -14,6 +16,8 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Mainpage /*state = {state}*/ />} />
+          <Route path="/fig" element={<Figma1 /*state = {state}*/ />} />
+          <Route path="/fig1" element={<Figma2 /*state = {state}*/ />} />
           
         </Routes>
       
