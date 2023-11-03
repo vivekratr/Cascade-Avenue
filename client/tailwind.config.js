@@ -5,6 +5,9 @@ export default {
   ],
   "theme": {
       "extend": {
+        screens: {
+            'xs': '375px',  // Custom screen size for smaller than 'sm'
+          },
           "colors": {
               "yellow-600": "#9f580a"
           },
