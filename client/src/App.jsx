@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
-      <div>
+      <div className='m-0 p-0'>
   
 
         <Routes>
