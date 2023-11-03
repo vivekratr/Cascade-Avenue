@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   "content": [
       "./src/**/*.{js,jsx,ts,tsx}"
   ],
@@ -8,13 +8,18 @@ module.exports = {
           "colors": {
               "yellow-600": "#9f580a"
           },
-          "spacing": {}
+          "fontFamily": {
+            "dm-serif-display": "DynaPuff"
+            }
       },
       "fontSize": {
           "inherit": "inherit"
-      }
+      },
+      
   },
   "corePlugins": {
       "preflight": false
   }
 }
+
+
