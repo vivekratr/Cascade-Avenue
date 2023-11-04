@@ -1,6 +1,8 @@
 import Header from "./Header";
 import { Button } from "@material-tailwind/react";
 import React, { useState } from "react";
+
+
 export default function Mainpage() {
   const backgroundImageUrl = "https://cdn.discordapp.com/attachments/1096324843877703713/1169889030075326545/image_12.png?ex=65570b10&is=65449610&hm=15386f2762e0011dbe26eae3f532949505320da5aab46cec39e877b613a1acd4&";
 
