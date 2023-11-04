@@ -40,7 +40,7 @@ export default function Header() {
 
       {/* Responsive Navigation Menu */}
       {isNavOpen && (
-        <div className="lg:hidden my-0  max-w-[60%] flex flex-col items-start absolute left-0 top-0 bg-white">
+        <div className="lg:hidden my-0  max-w-[60%] flex flex-col items-start absolute left-0 top-0 bg-white z-10">
           <div className="my-5 mx-6 mr-13 bg-none relative max-w-[16rem]  max-h-24 px-3  flex flex-row items-center justify-start gap-[0.5rem]">
         <img
           src={Logo}
