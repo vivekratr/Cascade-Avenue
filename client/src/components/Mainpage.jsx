@@ -24,18 +24,18 @@ export default function Mainpage() {
       {/* <h1 className="color-white">Mainpage</h1> */}
     <div className="relative">
 
-      <div className="flex flex-row flex-wrap gap-14 justify-evenly w-[69rem] ">
+      <div className="flex flex-row flex-wrap gap-3 justify-evenly w-[100%] lg:w-[50%] ">
 
-        <div style={{borderRadius:"32px"}} className="relative  p-4 bg-white w-[60%] lg:max-w-[40%] h-[31.19rem]  text-left text-[1.75rem] text-yellow-700 font-dm-serif-displays">
+        <div style={{borderRadius:"32px"}} className="relative  p-7 bg-white w-[60%] lg:max-w-[60%] h-[31.19rem]  text-left text-[1.75rem] text-yellow-700 font-dm-serif-displays">
         <div className="h-fit text-[1.7rem] font-dm-serif-display text-yellow-400 text-left">CASCADE AVENUE</div>
         <div className="h-fit text-[0.8rem] font-dm-serif-display text-yellow-600 text-left">KASARVADAVALI, GB ROAD, THANE[W] - 400615</div>
-        <div className="h-fit  text-[2rem] font-dm-serif-display text-red-600 text-left">Largest 1 BHK Of THANE</div>
+        <div className="h-fit mt-7  text-[2rem] font-dm-serif-display text-red-600 text-left">Largest 1 BHK Of THANE</div>
         <div className="h-fit text-[0.71em] font-dm-serif-display text-yellow-700 text-left">
 <p className="h-fit m-0">Luxury Amenities : 25+</p>
 <p className=" h-fit m-0">Carpet Area : 426 to 900 Sqf</p>
 </div>
 
-<div className="relative rounded-[23px] bg-gray-200 md:w-[50%] w-[90%] lg:w-[50%]  h-[2.69rem] overflow-hidden text-left text-[1.25rem] text-darkolivegreen font-dm-serif-display">
+<div className="relative rounded-[23px] mt-8 bg-gray-200 md:w-[100%] w-[100%] lg:w-[100%]  h-[2.69rem] overflow-hidden text-left text-[1.25rem] text-darkolivegreen font-dm-serif-display">
       <div
         className={`relative top-[0rem] left-[0rem] rounded-[32px] w-[50%] h-[2.69rem]  overflow-hidden cursor-pointer ${
           is1BHKSelected ? "bg-yellow-600 text-white" : "bg-gray-200 text-black"
@@ -53,11 +53,11 @@ export default function Mainpage() {
         <div className=" xs:text-[0.9rem]  sm:text-[0.9rem] xs:pt-2 xs:pl-5 xs:text-left text-center pt-1">1+1 Jodi</div>
       </div>
     </div>
-      <div className="absolute text-[1.75rem] font-dm-serif-display text-yellow-700 text-left mt-2">
-        {is1BHKSelected ? <div className="relative text-[0.8em] font-dm-serif-display text-yellow-700 text-left">52.47* Lakhs Starting Price</div> :<div className="relative text-[0.8em] font-dm-serif-display text-yellow-700 text-left">XX* Lakhs Starting Price</div>}
+      <div className="absolute text-[1.75rem] font-dm-serif-display text-yellow-700 text-left mt-6">
+        {is1BHKSelected ? <div className="relative w-[80%]  text-[0.8em] font-dm-serif-display text-yellow-700 text-center">52.47* Lakhs Starting Price</div> :<div className="relative w-[80%] text-[0.8em] font-dm-serif-display text-yellow-700 text-center">XX* Lakhs Starting Price</div>}
       </div>
-      <div className="relative top-[5rem] rounded-[46px] bg-yellow-600 max-w-[40%] h-[3.25rem] overflow-hidden  text-[1.4rem] text-white font-dm-serif-display">
-<div className="flex justify-center  text-center my-auto">Enquire Now</div>
+      <div className="relative xs:left-[9%] left-[30%] top-[5rem] rounded-[46px] bg-yellow-600 xs:min-w-[80%] min-w-[39%] max-w-[35%] h-[3.25rem] overflow-hidden text-justify text-[0.9rem] text-white font-dm-serif-display">
+<div className="relative top-[0.8rem] left-[2.8rem]">Enquire Now</div>
 </div>
 
 
