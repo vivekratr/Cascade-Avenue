@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 const withMT = require("@material-tailwind/react/utils/withMT");
 module.exports = withMT({
   "content": [
@@ -13,7 +14,8 @@ module.exports = withMT({
           },
           "colors": {
               "yellow-600": "#9f580a",
-              "yellow-400": "#e3a008"
+              "yellow-400": "#e3a008",
+              "yellow-700": "#8e4b10"
           },
           "fontFamily": {
             "dm-serif-display": "DynaPuff",
