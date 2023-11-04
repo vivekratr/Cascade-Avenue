@@ -12,10 +12,12 @@ module.exports = withMT({
             'xs': '375px',  // Custom screen size for smaller than 'sm'
           },
           "colors": {
-              "yellow-600": "#9f580a"
+              "yellow-600": "#9f580a",
+              "yellow-400": "#e3a008"
           },
           "fontFamily": {
-            "dm-serif-display": "DynaPuff"
+            "dm-serif-display": "DynaPuff",
+
             }
       },
       "fontSize": {

@@ -15,8 +15,18 @@ export default function Mainpage() {
       
       <Header />
       {/* <Button>Button</Button>; */}
-      <h1 className="color-white">Mainpage</h1>
+      {/* <h1 className="color-white">Mainpage</h1> */}
+    <div className="relative">
 
+      <div className="flex flex-row flex-wrap gap-14 justify-evenly ">
+
+        <div style={{borderRadius:"32px"}} className="relative  p-4 bg-white w-[60%] lg:max-w-[40%] h-[31.19rem] overflow-hidden text-left text-[1.75rem] text-yellow-700 font-dm-serif-display">
+        <div className=" text-[1.75rem] font-dm-serif-display text-yellow-400 text-left">CASCADE AVENUE</div>
+        <div className=" text-[1.38rem] font-dm-serif-display text-yellow-600 text-left">GB ROAD THANE</div>
+        </div>
+
+      </div>
+    </div>
     </div>
   );
 }
