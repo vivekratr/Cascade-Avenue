@@ -65,6 +65,7 @@ export default function Mainpage() {
   }, [getScreenSize, window.innerWidth, screenSize]);
 
   return (
+    <div>
     <div
       className="relative  lg:h-full
     lg:bg-large-image xl:bg-extra-large-image bg-center object-cover max-w-full min-h-[200vh]  md:min-h-[500px] lg:min-h-[600px]"
@@ -155,6 +156,7 @@ export default function Mainpage() {
 
       {/* 2nd page */}
 
+    </div>
       <div className="block  w-full ">
         <div className="w-[20%] bg-black"></div>
         <div className="w-[80%] bg-red-400"></div>
