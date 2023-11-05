@@ -10,6 +10,7 @@ export default function Mainpage() {
     backgroundImage: `url(${backgroundImageUrl})`,
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
+    
     height: "100vh", 
   };
 
