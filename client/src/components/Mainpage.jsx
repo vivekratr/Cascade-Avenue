@@ -1,20 +1,43 @@
 import Header from "./Header";
 import { Button } from "@material-tailwind/react";
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Corousel from "./Corousel";
 
 import Corousell from "./Corousell";
 
 export default function Mainpage() {
   const backgroundImageUrl = "https://cdn.discordapp.com/attachments/1096324843877703713/1169889030075326545/image_12.png?ex=65570b10&is=65449610&hm=15386f2762e0011dbe26eae3f532949505320da5aab46cec39e877b613a1acd4&";
+  
+  const [backgroundImage, setBackgroundImage] = useState(backgroundImageUrl);
+const  [screenSize,setScreenSize] = useState('');
 
   const backgroundStyles = {
-    backgroundImage: `url(${backgroundImageUrl})`,
+    backgroundImage: `url(${backgroundImage})`,
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     
     height: "100vh", 
   };
+
+
+  function getScreenSize() {
+    const innerWidth = window.innerWidth;
+    console.log('innerWidth',innerWidth)
+  
+    if (innerWidth >= 1200) {
+      setScreenSize('large')
+      return 'large';
+    } else if (innerWidth >= 768) {
+      setScreenSize('medium')
+
+      return 'medium';
+    } else {
+      setScreenSize('small')
+
+      console.log('small')
+      return 'small';
+    }
+  }
 
   const slides =['https://cdn.discordapp.com/attachments/1096324843877703713/1170449806326509629/image.png?ex=65591553&is=6546a053&hm=39a63eb208dc06999a7b2deb3b330813fbe72caa16364ab341a2e7ff40b6f350&',
   'https://i.ibb.co/B3s7v4h/2.png',
@@ -26,9 +49,21 @@ export default function Mainpage() {
   const handleToggle = () => {
     setIs1BHKSelected(!is1BHKSelected);
   };
+
+  useEffect(() => {
+    const screenSize = getScreenSize();
+  
+    if (screenSize === 'small') {
+      
+     setBackgroundImage('https://cdn.discordapp.com/attachments/1096324843877703713/1170667695902048377/image.png?ex=6559e040&is=65476b40&hm=8225cf55ec24c1e09c4cfeb4d01662a123e19310152a8598f5578cbad0be4999&')
+    } else {
+      setBackgroundImage(backgroundImageUrl);
+    }
+  }, [getScreenSize,window.innerWidth,screenSize]);
+
   return (
-    <div className="relative sm:bg-small-image md:bg-medium-image
-    lg:bg-large-image xl:bg-extra-large-image bg-center h-full md:[https://cdn.discordapp.com/attachments/1096324843877703713/1169645484760117339/eejbSLQ9QZSOWKDNve-kQA.png?ex=6556283e&is=6543b33e&hm=2fb673ffc54e3f15bb47b431178bfcab8a79c5b2d7a73220facd24ae036125cb&] bg-[https://cdn.discordapp.com/attachments/1096324843877703713/1169645484760117339/eejbSLQ9QZSOWKDNve-kQA.png?ex=6556283e&is=6543b33e&hm=2fb673ffc54e3f15bb47b431178bfcab8a79c5b2d7a73220facd24ae036125cb&] object-cover max-w-full w-full   min-h-screen md:min-h-[500px] lg:min-h-[600px]" style={backgroundStyles}>
+    <div className="relative h-[1300px] lg:h-full
+    lg:bg-large-image xl:bg-extra-large-image bg-center object-cover max-w-full  md:min-h-[500px] lg:min-h-[600px]" style={backgroundStyles}>
       
       <Header />
       {/* <Button>Button</Button>; */}
@@ -80,9 +115,9 @@ export default function Mainpage() {
       </div>
         {/*left side corousel */}
         <div className=" h-[78%] w-[100%] aspect-square  overflow-y-hidden lg:w-[60%]">
-        <div className="max-w-lg">
+       
 
-        <Corousell >
+        {/* <Corousell >
         {slides.map((slide) => (
             <img
               src={slide}
@@ -90,8 +125,9 @@ export default function Mainpage() {
             />
           ))
         }
-          </Corousell>
-        </div>
+          </Corousell> */}
+          <Corousel/>
+        
         </div>
     </div>
     </div>

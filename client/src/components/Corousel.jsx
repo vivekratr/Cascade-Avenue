@@ -21,7 +21,7 @@ export default function CarouselCustomNavigation() {
       <img
         src="https://cdn.discordapp.com/attachments/1096324843877703713/1170447206298435695/image.png?ex=655912e7&is=65469de7&hm=ee5587fc85aa92f10da1c39b6b8851635ce4f2e1b605eff6730d03ba4b05a528&"
         alt="image 1"
-        className="object-cover "
+        className="object-cover aspect-square "
         style={{ objectFit: "cover" }} // Add this line
       />
        <img
