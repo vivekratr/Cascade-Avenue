@@ -4,6 +4,7 @@ import Mainpage from './components/Mainpage'
 import './App.css'
 import Figma1 from './components/Figma1';
 import Figma2 from './components/Figma2';
+import Corousell from './components/Corousell';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -18,6 +19,8 @@ function App() {
           <Route path="/" element={<Mainpage /*state = {state}*/ />} />
           <Route path="/fig" element={<Figma1 /*state = {state}*/ />} />
           <Route path="/fig1" element={<Figma2 /*state = {state}*/ />} />
+          <Route path="/cor" element={<Corousell /*state = {state}*/ />} />
+
           
         </Routes>
       

@@ -16,6 +16,11 @@ export default function Mainpage() {
     height: "100vh", 
   };
 
+  const slides =['https://cdn.discordapp.com/attachments/1096324843877703713/1170449806326509629/image.png?ex=65591553&is=6546a053&hm=39a63eb208dc06999a7b2deb3b330813fbe72caa16364ab341a2e7ff40b6f350&',
+  'https://i.ibb.co/B3s7v4h/2.png',
+  'https://i.ibb.co/XXR8kzF/3.png',
+  'https://i.ibb.co/yg7BSdM/4.png']
+
   const [is1BHKSelected, setIs1BHKSelected] = useState(true);
 
   const handleToggle = () => {
@@ -75,11 +80,19 @@ export default function Mainpage() {
       </div>
         {/*left side corousel */}
         <div className=" h-[78%] w-[100%] aspect-square  overflow-y-hidden lg:w-[60%]">
-        <div>
+        <div className="max-w-lg">
 
+        <Corousell >
+        {slides.map((slide) => (
+            <img
+              src={slide}
+              alt="image 1"
+            />
+          ))
+        }
+          </Corousell>
         </div>
         </div>
-        <Corousell />
     </div>
     </div>
   );
