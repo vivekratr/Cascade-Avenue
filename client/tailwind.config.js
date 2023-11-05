@@ -19,7 +19,8 @@ module.exports = withMT({
           "colors": {
               "yellow-600": "#9f580a",
               "yellow-400": "#e3a008",
-              "yellow-700": "#8e4b10"
+              "yellow-700": "#8e4b10",
+              "darkkhaki": "#ab995a"
           },
           "fontFamily": {
             "dm-serif-display": "DynaPuff",

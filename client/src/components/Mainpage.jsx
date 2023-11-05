@@ -154,12 +154,30 @@ export default function Mainpage() {
         </div>
       </div>
 
-      {/* 2nd page */}
 
     </div>
-      <div className="block  w-full ">
-        <div className="w-[20%] bg-black"></div>
-        <div className="w-[80%] bg-red-400"></div>
+    
+      {/* 2nd page */}
+      <div className="flex  w-full ">
+        <div className="relative w-[20%] bg-white ">
+        <div className="absolute top-[30rem] h-full   font-dm-serif-display text-darkkhaki text-left [transform:_rotate(-90deg)] [transform-origin:0_0] opacity-[0.32]">
+          <p className="w-[29rem] h-fit text-[2rem]">
+
+          CASCADE AVENUE
+          </p>
+          <p className=" w-[30rem] h-fit text-[1rem]">Kasarvadavali, GB Road, Thane - 400615</p>
+          </div>
+        </div>
+        <div className="w-[80%] h-full bg-white">
+        <div className="relative h-12 text-[1.2rem] top-7 lg:text-[3rem] font-dm-serif-display text-teal-600 text-left">Happiness Is Beautiful</div>
+        <div className="relative h-12 text-[1.2rem] top-0 lg:text-[3rem] font-dm-serif-display text-darkkhaki text-left">Moment spent with your loved ones</div>
+        <div className="flex flex-wrap">
+          <img className=" h-[25rem] w-[17rem] rounded-[2rem]  " src="https://cdn.discordapp.com/attachments/1096324843877703713/1170748291554746519/cascade_pic1.jpg?ex=655a2b50&is=6547b650&hm=5b37b6bc6af8adf9d43f8f46144529fc27a1cd2c53bce4322357a0afe8f36e9b&" alt="" />
+          <p>
+
+          </p>
+        </div>
+        </div>
       </div>
     </div>
   );
