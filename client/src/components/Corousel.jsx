@@ -3,7 +3,7 @@ import { Carousel } from "@material-tailwind/react";
 export default function CarouselCustomNavigation() {
   return (
     <Carousel
-      className="rounded-3xl aspect-square overflow-hidden h-[100%] w-[100%] lg:w-[90%] relative z-10"
+      className="rounded-3xl aspect-video overflow-hidden  h-[100%] w-[100%]  lg:w-[86%] relative z-20"
       navigation={({ setActiveIndex, activeIndex, length }) => (
         <div className="relative bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
           {new Array(length).fill("").map((_, i) => (
@@ -21,17 +21,17 @@ export default function CarouselCustomNavigation() {
       <img
         src="https://cdn.discordapp.com/attachments/1096324843877703713/1170447206298435695/image.png?ex=655912e7&is=65469de7&hm=ee5587fc85aa92f10da1c39b6b8851635ce4f2e1b605eff6730d03ba4b05a528&"
         alt="image 1"
-        className="object-cover aspect-square "
+        className="object-cover  "
         style={{ objectFit: "cover" }} // Add this line
       />
        <img
-        src="https://cdn.discordapp.com/attachments/1096324843877703713/1170449806326509629/image.png?ex=65591553&is=6546a053&hm=39a63eb208dc06999a7b2deb3b330813fbe72caa16364ab341a2e7ff40b6f350&"
+        src="https://cdn.discordapp.com/attachments/1096324843877703713/1170703634296754248/diwali_cascade_Custom_1.png?ex=655a01b9&is=65478cb9&hm=dda3fd6d8b6c4a541ce2d827ebdf9ff02d80e59d6a0a4ff0ec97c9449404964a&"
         alt="image 1"
         className="object-cover "
         style={{ objectFit: "cover" }} // Add this line
       />
        <img
-        src="https://cdn.discordapp.com/attachments/1096324843877703713/1170452120047210556/WhatsApp_Image_2023-11-02_at_22.53.00_c990782c.jpg?ex=6559177b&is=6546a27b&hm=3fe78ed4e0a0ef942b5f23fb759c76b19db71e00e0ae267f8ab9369b7445b2b4&"
+        src="https://cdn.discordapp.com/attachments/1096324843877703713/1170701960425525308/image.png?ex=655a0029&is=65478b29&hm=b3c7fb53217f543b083107f65310e9f2fa6908a04d6423e887e279c4a5cb7eb3&"
         alt="image 1"
         className="object-cover "
         style={{ objectFit: "cover" }} // Add this line
