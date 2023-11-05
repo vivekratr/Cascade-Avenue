@@ -27,13 +27,13 @@ export default function CarouselCustomNavigation() {
        <img
         src="https://cdn.discordapp.com/attachments/1096324843877703713/1170449806326509629/image.png?ex=65591553&is=6546a053&hm=39a63eb208dc06999a7b2deb3b330813fbe72caa16364ab341a2e7ff40b6f350&"
         alt="image 1"
-        className="object-cover overflow-y-hidden"
+        className="object-cover "
         style={{ objectFit: "cover" }} // Add this line
       />
        <img
         src="https://cdn.discordapp.com/attachments/1096324843877703713/1170452120047210556/WhatsApp_Image_2023-11-02_at_22.53.00_c990782c.jpg?ex=6559177b&is=6546a27b&hm=3fe78ed4e0a0ef942b5f23fb759c76b19db71e00e0ae267f8ab9369b7445b2b4&"
         alt="image 1"
-        className="object-cover overflow-y-hidden"
+        className="object-cover "
         style={{ objectFit: "cover" }} // Add this line
       />
       {/* Add similar style for other images if necessary */}

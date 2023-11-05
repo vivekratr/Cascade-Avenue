@@ -3,6 +3,8 @@ import { Button } from "@material-tailwind/react";
 import React, { useState } from "react";
 import Corousel from "./Corousel";
 
+import Corousell from "./Corousell";
+
 export default function Mainpage() {
   const backgroundImageUrl = "https://cdn.discordapp.com/attachments/1096324843877703713/1169889030075326545/image_12.png?ex=65570b10&is=65449610&hm=15386f2762e0011dbe26eae3f532949505320da5aab46cec39e877b613a1acd4&";
 
@@ -20,7 +22,8 @@ export default function Mainpage() {
     setIs1BHKSelected(!is1BHKSelected);
   };
   return (
-    <div className="relative  h-full md:[https://cdn.discordapp.com/attachments/1096324843877703713/1169645484760117339/eejbSLQ9QZSOWKDNve-kQA.png?ex=6556283e&is=6543b33e&hm=2fb673ffc54e3f15bb47b431178bfcab8a79c5b2d7a73220facd24ae036125cb&] bg-[https://cdn.discordapp.com/attachments/1096324843877703713/1169645484760117339/eejbSLQ9QZSOWKDNve-kQA.png?ex=6556283e&is=6543b33e&hm=2fb673ffc54e3f15bb47b431178bfcab8a79c5b2d7a73220facd24ae036125cb&] object-cover max-w-full w-full   min-h-screen md:min-h-[500px] lg:min-h-[600px]" style={backgroundStyles}>
+    <div className="relative sm:bg-small-image md:bg-medium-image
+    lg:bg-large-image xl:bg-extra-large-image bg-center h-full md:[https://cdn.discordapp.com/attachments/1096324843877703713/1169645484760117339/eejbSLQ9QZSOWKDNve-kQA.png?ex=6556283e&is=6543b33e&hm=2fb673ffc54e3f15bb47b431178bfcab8a79c5b2d7a73220facd24ae036125cb&] bg-[https://cdn.discordapp.com/attachments/1096324843877703713/1169645484760117339/eejbSLQ9QZSOWKDNve-kQA.png?ex=6556283e&is=6543b33e&hm=2fb673ffc54e3f15bb47b431178bfcab8a79c5b2d7a73220facd24ae036125cb&] object-cover max-w-full w-full   min-h-screen md:min-h-[500px] lg:min-h-[600px]" style={backgroundStyles}>
       
       <Header />
       {/* <Button>Button</Button>; */}
@@ -72,9 +75,11 @@ export default function Mainpage() {
       </div>
         {/*left side corousel */}
         <div className=" h-[78%] w-[100%] aspect-square  overflow-y-hidden lg:w-[60%]">
+        <div>
 
-        <Corousel />
         </div>
+        </div>
+        <Corousell />
     </div>
     </div>
   );
