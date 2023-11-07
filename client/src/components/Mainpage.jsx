@@ -68,14 +68,14 @@ export default function Mainpage() {
     <div>
     <div
       className="relative  lg:h-full
-      bg-center object-cover max-w-full md:min-h-[200vh] min-h-[200vh]   lg:min-h-[120vh]"
+      bg-center object-cover max-w-full md:min-h-[200vh] min-h-[180vh]   lg:min-h-[120vh]"
       style={backgroundStyles}
     >
       <Header />
       {/* <Button>Button</Button>; */}
       {/* <h1 className="color-white">Mainpage</h1> */}
       <div className="  w-full flex  flex-wrap  justify-between">
-        <div className=" ml-0  w-[100%] lg:max-w-[40%] flex justify-around ">
+        <div className=" ml-0  w-[100%] h-max lg:max-w-[40%] flex justify-around ">
           {/* right side content */}
           <div
             style={{ borderRadius: "32px" }}
@@ -104,43 +104,43 @@ export default function Mainpage() {
                 }`}
                 onClick={handleToggle}
               >
-                <div className="xs:text-[0.9rem] xs:pt-2 xs:pl-5 xs:text-left text-center pt-1">
+                <div className="xs:text-[0.9rem] h-fit xs:pt-2 xs:pl-5 xs:text-left text-center pt-1">
                   1 BHK
                 </div>
               </div>
               <div
-                className={`absolute top-[0rem]  xs:left-[50%] w-[50%]  left-[8.5rem] rounded-[32px]  h-[2.69rem] overflow-hidden cursor-pointer ${
+                className={`absolute top-[0rem] h-fit xs:left-[50%] w-[50%]  left-[8.5rem] rounded-[32px]  h-[2.69rem] overflow-hidden cursor-pointer ${
                   is1BHKSelected
                     ? "bg-gray-200 text-black"
                     : "bg-yellow-600 text-white"
                 }`}
                 onClick={handleToggle}
               >
-                <div className=" xs:text-[0.9rem]  sm:text-[0.9rem] xs:pt-2 xs:pl-5 xs:text-left text-center pt-1">
+                <div className=" xs:text-[0.9rem] h-fit  sm:text-[0.9rem] xs:pt-2 xs:pl-5 xs:text-left text-center pt-1">
                   1+1 Jodi
                 </div>
               </div>
             </div>
-            <div className="absolute text-[1.75rem] font-dm-serif-display text-yellow-700 text-left mt-6">
+            <div className="absolute text-[1.75rem] h-max font-dm-serif-display text-yellow-700 text-left mt-6">
               {is1BHKSelected ? (
-                <div className="relative w-[80%]  text-[0.8em] font-dm-serif-display text-yellow-700 text-center">
+                <div className="relative w-[80%]  text-[0.8em] h-fit font-dm-serif-display text-yellow-700 text-center">
                   52.47* Lakhs Starting Price
                 </div>
               ) : (
-                <div className="relative w-[80%] text-[0.8em] font-dm-serif-display text-yellow-700 text-center">
+                <div className="relative w-[80%] text-[0.8em] h-fit font-dm-serif-display text-yellow-700 text-center">
                   XX* Lakhs Starting Price
                 </div>
               )}
             </div>
             <div className="relative xs:left-[9%] left-[30%] top-[5rem] rounded-[46px] bg-yellow-600 xs:min-w-[80%]  min-w-[39%] max-w-[35%] h-[3.25rem] overflow-hidden text-justify text-[0.9rem] text-white font-dm-serif-display">
-              <div className="relative top-[0.8rem] lg:left-[7rem] left-[4.8rem]">
+              <div className="relative top-[0.8rem] h-fit lg:left-[7rem] left-[4.8rem]">
                 Enquire Now
               </div>
             </div>
           </div>
         </div>
         {/*left side corousel */}
-        <div className=" h-[78%] w-[90%]   flex mx-auto my-auto mb-8 lg:mb:0 lg:mx-0 lg:my-0  lg:h-[36rem] md:lg-w-[50%] lg:max-w-[60%]">
+        <div className=" h-[78%] w-[90%] lg:min-h[36rem] my-[5rem]  flex mx-auto  mb-8 lg:mb:0 lg:mx-0 lg:my-0  lg:h-[36rem] md:lg-w-[50%] lg:max-w-[60%]">
           {/* <Corousell >
         {slides.map((slide) => (
             <img
@@ -171,14 +171,14 @@ export default function Mainpage() {
         <div className="w-[80%] h-full bg-white">
         <div className="relative h-12 lg:h-max text-[1.2rem] top-7 lg:text-[3rem] font-dm-serif-display text-teal-600 text-left">Happiness Is Beautiful</div>
         <div className="relative h-12 lg:mt-3 lg:mb-11 lg:h-max text-[1.2rem] top-0 lg:text-[3rem] font-dm-serif-display text-darkkhaki text-left">Moment spent with your loved ones</div>
-        <div className="flex flex-wrap lg:gap-10 mt-3 h-[550px] lg:h-auto">
-          <img className=" h-[25rem] w-[17rem] lg:w-[29rem] rounded-[2rem]  " src="https://cdn.discordapp.com/attachments/1096324843877703713/1170748291554746519/cascade_pic1.jpg?ex=655a2b50&is=6547b650&hm=5b37b6bc6af8adf9d43f8f46144529fc27a1cd2c53bce4322357a0afe8f36e9b&" alt="" />
-          <p className="my-2 h-fit lg:max-w-[500px]">
+        <div className="flex flex-wrap lg:gap-10 mb-7  mt-3 h-[550px] lg:h-auto">
+          <img className=" h-[25rem] w-full lg:w-[29rem] rounded-[2rem]  " src="https://cdn.discordapp.com/attachments/1096324843877703713/1170748291554746519/cascade_pic1.jpg?ex=655a2b50&is=6547b650&hm=5b37b6bc6af8adf9d43f8f46144529fc27a1cd2c53bce4322357a0afe8f36e9b&" alt="" />
+          <p className="my-2 h-fit  lg:max-w-[500px]">
           Lorem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam dolorem, unde asperiores itaque quae pariatur perspiciatis libero! Harum, non cumque. Voluptatum autem maxime nostrum porro expedita dolore suscipit cupiditate officiis? ipsum dolor sit amet consectetur adipisicing elit. Laborum ad minima, temporibus reiciendis ut mollitia quidem molestiae inventore. Aliquid deleniti nesciunt vero! Deserunt eius accusamus ex libero quas debitis dignissimos!
           </p>
         </div>
 
-        <div className="flex flex-wrap h-[10rem] lg:mt-6 items-center">
+        <div className="flex flex-wrap h-[10rem] mt-16 lg:mt-6 items-center">
         <div className="relative w-[19rem] lg:text-[3rem] lg:w-[45rem] h-fit text-[1.3rem] font-dm-serif-display text-darkkhaki text-left">CELEBRATE A COMPLETE LIFE</div>
 
         <div className="relative rounded-[46px] mx-auto right-3  bg-yellow-600 w-[14rem] h-[4rem] overflow-hidden text-justify text-[1rem] text-white font-dm-serif-display lg:text-[1.1rem]">

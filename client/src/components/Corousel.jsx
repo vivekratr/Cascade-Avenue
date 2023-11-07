@@ -4,7 +4,7 @@ export default function CarouselCustomNavigation() {
   const ImgStyle = { objectFit: "cover",maxWidth:`100%`,height:`auto`};
   return (
     <Carousel
-      className="rounded-3xl aspect-video overflow-hidden  h-[100%] w-[100%]  lg:w-[86%] relative z-20"
+      className="rounded-3xl  overflow-hidden  h-auto w-[100%]  lg:w-[86%] relative z-20"
       navigation={({ setActiveIndex, activeIndex, length }) => (
         <div className="relative bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
           {new Array(length).fill("").map((_, i) => (
@@ -38,6 +38,15 @@ export default function CarouselCustomNavigation() {
       />
        <img
         src="https://cdn.discordapp.com/attachments/1096324843877703713/1170748291554746519/cascade_pic1.jpg?ex=655a2b50&is=6547b650&hm=5b37b6bc6af8adf9d43f8f46144529fc27a1cd2c53bce4322357a0afe8f36e9b&"
+        alt="image 1"
+        className="object-cover "
+        style={ImgStyle} 
+        height={`537px`}
+        width={`715px`}
+
+      />
+       <img
+        src="https://cdn.discordapp.com/attachments/1096324843877703713/1171538501376954469/image_Custom.png?ex=655d0b40&is=654a9640&hm=520e2a8078bdc4eccdb085a5ac0feb87970b6a690ee3763dbde66f6bc2889c93&"
         alt="image 1"
         className="object-cover "
         style={ImgStyle} 
