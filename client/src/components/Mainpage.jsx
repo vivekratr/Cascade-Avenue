@@ -68,7 +68,7 @@ export default function Mainpage() {
     <div>
     <div
       className="relative  lg:h-full
-    lg:bg-large-image xl:bg-extra-large-image bg-center object-cover max-w-full min-h-[200vh]  md:min-h-[500px] lg:min-h-[600px]"
+    lg:bg-large-image xl:bg-extra-large-image bg-center object-cover max-w-full md:min-h-[200vh] min-h-[200vh]   lg:min-h-[600px]"
       style={backgroundStyles}
     >
       <Header />
@@ -140,7 +140,7 @@ export default function Mainpage() {
           </div>
         </div>
         {/*left side corousel */}
-        <div className=" h-[78%] w-[90%]  flex mx-auto my-auto mb-8 lg:mb:0 lg:mx-0 lg:my-0  lg:h-[36rem] lg:w-[56.731242rem]">
+        <div className=" h-[78%] w-[90%]   flex mx-auto my-auto mb-8 lg:mb:0 lg:mx-0 lg:my-0  lg:h-[36rem] md:lg-[50%] lg:w-[50.731242rem]">
           {/* <Corousell >
         {slides.map((slide) => (
             <img
@@ -174,7 +174,7 @@ export default function Mainpage() {
         <div className="flex flex-wrap lg:gap-10 mt-3 h-[550px] lg:h-auto">
           <img className=" h-[25rem] w-[17rem] lg:w-[29rem] rounded-[2rem]  " src="https://cdn.discordapp.com/attachments/1096324843877703713/1170748291554746519/cascade_pic1.jpg?ex=655a2b50&is=6547b650&hm=5b37b6bc6af8adf9d43f8f46144529fc27a1cd2c53bce4322357a0afe8f36e9b&" alt="" />
           <p className="my-2 h-fit lg:max-w-[500px]">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ad minima, temporibus reiciendis ut mollitia quidem molestiae inventore. Aliquid deleniti nesciunt vero! Deserunt eius accusamus ex libero quas debitis dignissimos!
+          Lorem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam dolorem, unde asperiores itaque quae pariatur perspiciatis libero! Harum, non cumque. Voluptatum autem maxime nostrum porro expedita dolore suscipit cupiditate officiis? ipsum dolor sit amet consectetur adipisicing elit. Laborum ad minima, temporibus reiciendis ut mollitia quidem molestiae inventore. Aliquid deleniti nesciunt vero! Deserunt eius accusamus ex libero quas debitis dignissimos!
           </p>
         </div>
 
