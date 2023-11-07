@@ -1,6 +1,7 @@
 import { Carousel } from "@material-tailwind/react";
 
 export default function CarouselCustomNavigation() {
+  const ImgStyle = { objectFit: "cover",maxWidth:`100%`,height:`auto`};
   return (
     <Carousel
       className="rounded-3xl aspect-video overflow-hidden  h-[100%] w-[100%]  lg:w-[86%] relative z-20"
@@ -22,21 +23,25 @@ export default function CarouselCustomNavigation() {
         src="https://cdn.discordapp.com/attachments/1096324843877703713/1170447206298435695/image.png?ex=655912e7&is=65469de7&hm=ee5587fc85aa92f10da1c39b6b8851635ce4f2e1b605eff6730d03ba4b05a528&"
         alt="image 1"
         className="object-cover  "
-        style={{ objectFit: "cover" }} // Add this line
+        style={ImgStyle} 
+    
       />
        <img
-        src="https://cdn.discordapp.com/attachments/1096324843877703713/1170703634296754248/diwali_cascade_Custom_1.png?ex=655a01b9&is=65478cb9&hm=dda3fd6d8b6c4a541ce2d827ebdf9ff02d80e59d6a0a4ff0ec97c9449404964a&"
+        src="https://media.discordapp.net/attachments/1096324843877703713/1170620628412403772/image.png?ex=6559b46a&is=65473f6a&hm=c260b6f0c4a6f0bb15e99afa9920d232a8403bf9f17536d1d78174ef6bdfcdf6&=&width=971&height=662"
         alt="image 1"
         className="object-cover "
-        style={{ objectFit: "cover" }} // Add this line
+        style={ImgStyle} 
+        height={`563px`}
+        width={`825px`}
       />
        <img
         src="https://cdn.discordapp.com/attachments/1096324843877703713/1170701960425525308/image.png?ex=655a0029&is=65478b29&hm=b3c7fb53217f543b083107f65310e9f2fa6908a04d6423e887e279c4a5cb7eb3&"
         alt="image 1"
         className="object-cover "
-        style={{ objectFit: "cover" }} // Add this line
+        style={ImgStyle} 
+
       />
-      {/* Add similar style for other images if necessary */}
+      
     </Carousel>
   );
 }
