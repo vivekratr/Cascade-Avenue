@@ -20,10 +20,12 @@ export default function CarouselCustomNavigation() {
       )}
     >
       <img
-        src="https://cdn.discordapp.com/attachments/1096324843877703713/1170447206298435695/image.png?ex=655912e7&is=65469de7&hm=ee5587fc85aa92f10da1c39b6b8851635ce4f2e1b605eff6730d03ba4b05a528&"
+        src="https://cdn.discordapp.com/attachments/1096324843877703713/1171499178099224727/WhatsApp_Image_2023-11-03_at_22.39.58_dd28d378.jpg?ex=655ce6a1&is=654a71a1&hm=232dd53a349c84487a44d25ac21fa0630c749a9d7c2ac53c24c1f12b8d043bc8&"
         alt="image 1"
         className="object-cover  "
         style={ImgStyle} 
+        height={`1580px`}
+        width={`1600px`}
     
       />
        <img
@@ -35,10 +37,12 @@ export default function CarouselCustomNavigation() {
         width={`825px`}
       />
        <img
-        src="https://cdn.discordapp.com/attachments/1096324843877703713/1170701960425525308/image.png?ex=655a0029&is=65478b29&hm=b3c7fb53217f543b083107f65310e9f2fa6908a04d6423e887e279c4a5cb7eb3&"
+        src="https://cdn.discordapp.com/attachments/1096324843877703713/1170748291554746519/cascade_pic1.jpg?ex=655a2b50&is=6547b650&hm=5b37b6bc6af8adf9d43f8f46144529fc27a1cd2c53bce4322357a0afe8f36e9b&"
         alt="image 1"
         className="object-cover "
         style={ImgStyle} 
+        height={`537px`}
+        width={`715px`}
 
       />
       
