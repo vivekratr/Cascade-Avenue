@@ -133,7 +133,7 @@ export default function Mainpage() {
               )}
             </div>
             <div className="relative xs:left-[9%] left-[30%] top-[5rem] rounded-[46px] bg-yellow-600 xs:min-w-[80%]  min-w-[39%] max-w-[35%] h-[3.25rem] overflow-hidden text-justify text-[0.9rem] text-white font-dm-serif-display">
-              <div className="relative top-[0.8rem] lg:left-[10rem] left-[4.8rem]">
+              <div className="relative top-[0.8rem] lg:left-[7rem] left-[4.8rem]">
                 Enquire Now
               </div>
             </div>
