@@ -172,7 +172,7 @@ export default function Mainpage() {
         <div className="relative h-12 lg:h-max text-[1.2rem] top-7 lg:text-[3rem] font-dm-serif-display text-teal-600 text-left">Happiness Is Beautiful</div>
         <div className="relative h-12 lg:mt-3 lg:mb-11 lg:h-max text-[1.2rem] top-0 lg:text-[3rem] font-dm-serif-display text-darkkhaki text-left">Moment spent with your loved ones</div>
         <div className="flex flex-wrap lg:gap-10 mt-3 h-[550px] lg:h-auto">
-          <img className=" h-[25rem] w-[17rem] rounded-[2rem]  " src="https://cdn.discordapp.com/attachments/1096324843877703713/1170748291554746519/cascade_pic1.jpg?ex=655a2b50&is=6547b650&hm=5b37b6bc6af8adf9d43f8f46144529fc27a1cd2c53bce4322357a0afe8f36e9b&" alt="" />
+          <img className=" h-[25rem] w-[17rem] lg:w-[29rem] rounded-[2rem]  " src="https://cdn.discordapp.com/attachments/1096324843877703713/1170748291554746519/cascade_pic1.jpg?ex=655a2b50&is=6547b650&hm=5b37b6bc6af8adf9d43f8f46144529fc27a1cd2c53bce4322357a0afe8f36e9b&" alt="" />
           <p className="my-2 h-fit lg:max-w-[500px]">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ad minima, temporibus reiciendis ut mollitia quidem molestiae inventore. Aliquid deleniti nesciunt vero! Deserunt eius accusamus ex libero quas debitis dignissimos!
           </p>
