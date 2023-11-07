@@ -68,7 +68,7 @@ export default function Mainpage() {
     <div>
     <div
       className="relative  lg:h-full
-      bg-center object-cover max-w-full md:min-h-[200vh] min-h-[180vh]   lg:min-h-[120vh]"
+      bg-center object-cover max-w-full md:min-h-[200vh] min-h-[140vh]   lg:min-h-[120vh]"
       style={backgroundStyles}
     >
       <Header />
@@ -158,10 +158,10 @@ export default function Mainpage() {
     </div>
 
       {/* 2nd page */}
-      <div className="flex  w-full ">
+      <div className="flex  w-full h-[130vh] ">
         <div className="relative w-[20%] bg-white ">
         <div className="absolute top-[30rem] lg:top-[49rem] h-full   font-dm-serif-display text-darkkhaki text-left [transform:_rotate(-90deg)] [transform-origin:0_0] opacity-[0.32]">
-          <p className="w-[29rem] lg:w-[48rem] lg:text-[6rem] h-fit text-[2rem]">
+          <p className="w-[29rem]  lg:w-[48rem] lg:text-[6rem] h-fit text-[2rem] ">
 
           CASCADE AVENUE
           </p>
