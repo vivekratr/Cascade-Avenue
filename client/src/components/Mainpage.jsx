@@ -140,7 +140,7 @@ export default function Mainpage() {
           </div>
         </div>
         {/*left side corousel */}
-        <div className=" h-[78%] w-[90%] flex mx-auto my-auto mb-8 lg:mb:0 lg:mx-0 lg:my-0  lg:h-[36rem] lg:w-[56.731242rem]">
+        <div className=" h-[78%] w-[90%]  flex mx-auto my-auto mb-8 lg:mb:0 lg:mx-0 lg:my-0  lg:h-[36rem] lg:w-[56.731242rem]">
           {/* <Corousell >
         {slides.map((slide) => (
             <img
@@ -156,7 +156,7 @@ export default function Mainpage() {
 
 
     </div>
-    
+
       {/* 2nd page */}
       <div className="flex  w-full ">
         <div className="relative w-[20%] bg-white ">
@@ -171,11 +171,20 @@ export default function Mainpage() {
         <div className="w-[80%] h-full bg-white">
         <div className="relative h-12 text-[1.2rem] top-7 lg:text-[3rem] font-dm-serif-display text-teal-600 text-left">Happiness Is Beautiful</div>
         <div className="relative h-12 text-[1.2rem] top-0 lg:text-[3rem] font-dm-serif-display text-darkkhaki text-left">Moment spent with your loved ones</div>
-        <div className="flex flex-wrap">
+        <div className="flex flex-wrap mt-3 h-[550px]">
           <img className=" h-[25rem] w-[17rem] rounded-[2rem]  " src="https://cdn.discordapp.com/attachments/1096324843877703713/1170748291554746519/cascade_pic1.jpg?ex=655a2b50&is=6547b650&hm=5b37b6bc6af8adf9d43f8f46144529fc27a1cd2c53bce4322357a0afe8f36e9b&" alt="" />
-          <p>
-
+          <p className="my-2 h-fit">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ad minima, temporibus reiciendis ut mollitia quidem molestiae inventore. Aliquid deleniti nesciunt vero! Deserunt eius accusamus ex libero quas debitis dignissimos!
           </p>
+        </div>
+
+        <div className="flex flex-wrap h-[10rem] ">
+        <div className="relative w-[19rem] h-fit text-[1.3rem] font-dm-serif-display text-darkkhaki text-left">CELEBRATE A COMPLETE LIFE</div>
+
+        <div className="relative rounded-[46px] mx-auto right-3  bg-yellow-600 w-[12rem] h-[4rem] overflow-hidden text-justify text-[1rem] text-white font-dm-serif-display">
+<div className="absolute top-[1.19rem] left-[1.25rem]">Download Brochure</div>
+<img className="absolute top-[0.77rem] left-[17.46rem] w-[3.15rem] h-[3.15rem] overflow-hidden" alt="" src="arrow-up-right.svg" />
+</div>
         </div>
         </div>
       </div>
