@@ -75,7 +75,7 @@ export default function Mainpage() {
       {/* <Button>Button</Button>; */}
       {/* <h1 className="color-white">Mainpage</h1> */}
       <div className="  w-full flex  flex-wrap  justify-between">
-        <div className=" ml-0  w-[100%] lg:w-[40%] flex justify-around ">
+        <div className=" ml-0  w-[100%] lg:max-w-[40%] flex justify-around ">
           {/* right side content */}
           <div
             style={{ borderRadius: "32px" }}
@@ -140,7 +140,7 @@ export default function Mainpage() {
           </div>
         </div>
         {/*left side corousel */}
-        <div className=" h-[78%] w-[90%]   flex mx-auto my-auto mb-8 lg:mb:0 lg:mx-0 lg:my-0  lg:h-[36rem] md:lg-[50%] lg:w-[50.731242rem]">
+        <div className=" h-[78%] w-[90%]   flex mx-auto my-auto mb-8 lg:mb:0 lg:mx-0 lg:my-0  lg:h-[36rem] md:lg-[50%] lg:max-w-[60%]">
           {/* <Corousell >
         {slides.map((slide) => (
             <img
@@ -181,9 +181,9 @@ export default function Mainpage() {
         <div className="flex flex-wrap h-[10rem] lg:mt-6 items-center">
         <div className="relative w-[19rem] lg:text-[3rem] lg:w-[45rem] h-fit text-[1.3rem] font-dm-serif-display text-darkkhaki text-left">CELEBRATE A COMPLETE LIFE</div>
 
-        <div className="relative rounded-[46px] mx-auto right-3  bg-yellow-600 w-[14rem] h-[4rem] overflow-hidden text-justify text-[1rem] text-white font-dm-serif-display">
+        <div className="relative rounded-[46px] mx-auto right-3  bg-yellow-600 w-[14rem] h-[4rem] overflow-hidden text-justify text-[1rem] text-white font-dm-serif-display lg:text-[1.1rem]">
 <div className="absolute w-fit top-[1.19rem] left-[1.25rem]">Download Brochure</div>
-<img className="absolute top-[0.5rem] left-[10.46rem] w-[3.15rem] h-[3.15rem] my-auto " style={{maxWidth:`100%`,height:`auto`}} height={`49px`} width={`49px`} alt="" src="https://cdn.discordapp.com/attachments/1096324843877703713/1171505265909170306/arrow-up-right.png?ex=655cec4c&is=654a774c&hm=bda8e08005c943b38ff915dd7bedad9a632d181216c14751e59208538cacbc15&" />
+<img className="absolute top-[1rem] left-[11.46rem] w-[2.15rem] h-[2.15rem] my-auto " style={{maxWidth:`100%`,height:`auto`}} height={`49px`} width={`49px`} alt="" src="https://cdn.discordapp.com/attachments/1096324843877703713/1171505265909170306/arrow-up-right.png?ex=655cec4c&is=654a774c&hm=bda8e08005c943b38ff915dd7bedad9a632d181216c14751e59208538cacbc15&" />
 </div>
         </div>
         </div>
