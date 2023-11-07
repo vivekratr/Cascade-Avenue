@@ -181,9 +181,9 @@ export default function Mainpage() {
         <div className="flex flex-wrap h-[10rem] lg:mt-6 items-center">
         <div className="relative w-[19rem] lg:text-[3rem] lg:w-[45rem] h-fit text-[1.3rem] font-dm-serif-display text-darkkhaki text-left">CELEBRATE A COMPLETE LIFE</div>
 
-        <div className="relative rounded-[46px] mx-auto right-3  bg-yellow-600 w-[19rem] h-[4rem] overflow-hidden text-justify text-[1rem] text-white font-dm-serif-display">
+        <div className="relative rounded-[46px] mx-auto right-3  bg-yellow-600 w-[14rem] h-[4rem] overflow-hidden text-justify text-[1rem] text-white font-dm-serif-display">
 <div className="absolute w-fit top-[1.19rem] left-[1.25rem]">Download Brochure</div>
-<img className="absolute top-[0.77rem] left-[10.46rem] w-[3.15rem] h-[3.15rem] my-auto " style={{maxWidth:`100%`,height:`auto`}} height={`49px`} width={`49px`} alt="" src="https://cdn.discordapp.com/attachments/1096324843877703713/1171505265909170306/arrow-up-right.png?ex=655cec4c&is=654a774c&hm=bda8e08005c943b38ff915dd7bedad9a632d181216c14751e59208538cacbc15&" />
+<img className="absolute top-[0.5rem] left-[10.46rem] w-[3.15rem] h-[3.15rem] my-auto " style={{maxWidth:`100%`,height:`auto`}} height={`49px`} width={`49px`} alt="" src="https://cdn.discordapp.com/attachments/1096324843877703713/1171505265909170306/arrow-up-right.png?ex=655cec4c&is=654a774c&hm=bda8e08005c943b38ff915dd7bedad9a632d181216c14751e59208538cacbc15&" />
 </div>
         </div>
         </div>
