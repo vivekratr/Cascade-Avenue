@@ -68,7 +68,7 @@ export default function Mainpage() {
     <div>
     <div
       className="relative  lg:h-full
-    lg:bg-large-image xl:bg-extra-large-image bg-center object-cover max-w-full md:min-h-[200vh] min-h-[200vh]   lg:min-h-[600px]"
+      bg-center object-cover max-w-full md:min-h-[200vh] min-h-[200vh]   lg:min-h-[120vh]"
       style={backgroundStyles}
     >
       <Header />
