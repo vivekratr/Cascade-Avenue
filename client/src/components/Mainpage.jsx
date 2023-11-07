@@ -140,7 +140,7 @@ export default function Mainpage() {
           </div>
         </div>
         {/*left side corousel */}
-        <div className=" h-[78%] w-[90%]   flex mx-auto my-auto mb-8 lg:mb:0 lg:mx-0 lg:my-0  lg:h-[36rem] md:lg-[50%] lg:max-w-[60%]">
+        <div className=" h-[78%] w-[90%]   flex mx-auto my-auto mb-8 lg:mb:0 lg:mx-0 lg:my-0  lg:h-[36rem] md:lg-w-[50%] lg:max-w-[60%]">
           {/* <Corousell >
         {slides.map((slide) => (
             <img
