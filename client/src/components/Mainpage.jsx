@@ -158,7 +158,7 @@ export default function Mainpage() {
       {/* 2nd page */}
       <div className="flex  w-full h-[130vh] lg:h-[115vh] ">
         <div className="relative w-[20%] bg-white ">
-          <div className="absolute top-[30rem] lg:top-[49rem] h-full   font-dm-serif-display text-darkkhaki text-left [transform:_rotate(-90deg)] [transform-origin:0_0] opacity-[0.32]">
+          <div className="absolute top-[30rem] lg:top-[49rem] w-[2rem] h-full   font-dm-serif-display text-darkkhaki text-left [transform:_rotate(-90deg)] [transform-origin:0_0] opacity-[0.32]">
             <p className="w-[29rem]  lg:w-[48rem] lg:text-[6rem] h-fit text-[2rem] ">
               CASCADE AVENUE
             </p>
@@ -219,11 +219,43 @@ export default function Mainpage() {
       <div className=" mt-[2rem] bg-lightgray">
         <div className="flex">
           <div className="w-[80%]">
-            <div className="class="grid grid-cols-3 gap-4>
+            <div className="grid p-6 grid-cols-2 gap-1">
               {/* image 1 */}
-              <div class="relative w-32 h-32 transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[-0.6rem] hover:shadow-lg">
+              <div className="bg-tan w-[8rem] h-[8rem]">
+                <div className="  absolute top-0 left-0 w-full h-full bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
+              <div class="relative w-[8rem] h-[8rem]  transition-transform duration-[600ms] transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
   <img src="https://cdn.discordapp.com/attachments/1096324843877703713/1171732951025860628/image.png?ex=655dc059&is=654b4b59&hm=cb754f3eed7092c313e90217eb496c8b6c5395cbfe2c663ea0612a6d3555ce0d&
-  " alt="Your Image" class="w-full h-full object-cover rounded-md" />
+  " alt="Your Image" class="w-full h-full object-cover " />
+</div>
+</div>
+
+
+
+{/* image 2 */}
+<div className="bg-tan w-[8rem] h-[8rem]">
+                <div className="  absolute top-0 left-0 w-full h-full bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
+              <div class="relative w-[8rem] h-[8rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
+  <img src="https://cdn.discordapp.com/attachments/1096324843877703713/1171732951025860628/image.png?ex=655dc059&is=654b4b59&hm=cb754f3eed7092c313e90217eb496c8b6c5395cbfe2c663ea0612a6d3555ce0d&
+  " alt="Your Image" class="w-full h-full object-cover " />
+</div>
+</div>
+
+{/* image 2 */}
+<div className="bg-tan w-[8rem] h-[8rem]">
+                <div className="  absolute top-0 left-0 w-full h-full bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
+              <div class="relative w-[8rem] h-[8rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
+  <img src="https://cdn.discordapp.com/attachments/1096324843877703713/1171732951025860628/image.png?ex=655dc059&is=654b4b59&hm=cb754f3eed7092c313e90217eb496c8b6c5395cbfe2c663ea0612a6d3555ce0d&
+  " alt="Your Image" class="w-full h-full object-cover " />
+</div>
+</div>
+
+{/* image 2 */}
+<div className="bg-tan w-[8rem] h-[8rem]">
+                <div className="  absolute top-0 left-0 w-full h-full bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
+              <div class="relative w-[8rem] h-[8rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
+  <img src="https://cdn.discordapp.com/attachments/1096324843877703713/1171732951025860628/image.png?ex=655dc059&is=654b4b59&hm=cb754f3eed7092c313e90217eb496c8b6c5395cbfe2c663ea0612a6d3555ce0d&
+  " alt="Your Image" class="w-full h-full object-cover " />
+</div>
 </div>
 
             </div>
