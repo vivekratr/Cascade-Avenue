@@ -240,8 +240,8 @@ export default function Mainpage() {
 
       <div className=" mt-[2rem] bg-lightgray h-auto">
         <div className="flex h-auto">
-          <div className="w-[80%] h-auto">
-            <div className="grid p-6 xs:p-1  h-auto  auto-rows-max grid-cols-1 lg:grid-cols-3  gap-5">
+          <div className="w-[80%]   h-auto">
+            <div className="grid p-6 h-auto  auto-rows-max grid-cols-1 lg:grid-cols-3  gap-5">
               {/* image 1 */}
               <div className="bg-tan w-[23rem] h-[23rem]">
                 <div className="  absolute top-0 left-0 w-full h-full bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
@@ -341,7 +341,7 @@ export default function Mainpage() {
               {images.slice(0, visibleImages).map((image, index) => (
                 <div key={index} className="bg-tan xs:w-[10rem] w-[23rem] h-[23rem]">
                   <div className="  absolute top-0 left-0 w-full h-full bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
-                  <div class="relative w-[23rem] h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
+                  <div class="relative  w-[23rem] h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
                     <img
                       src={image}
                       alt="Your Image"
