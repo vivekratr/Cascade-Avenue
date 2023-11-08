@@ -21,24 +21,25 @@ export default function Mainpage() {
   };
 
   const [images, setImages] = useState([
-    "https://cdn.discordapp.com/attachments/1096324843877703713/1171733074195795998/image.png?ex=655dc076&is=654b4b76&hm=6309b2cea31146bada03f48494c5a5612ea94612d47d494114dd3e75fdb77edc&",
+    "https://cdn.discordapp.com/attachments/1096324843877703713/1171733523263131678/image.png?ex=655dc0e1&is=654b4be1&hm=be1350cdf701589eaa7a0b7575597a4a47469f5eb7ab84f2e43a383417beeca1&",
     "https://cdn.discordapp.com/attachments/1096324843877703713/1171733129459924992/image.png?ex=655dc083&is=654b4b83&hm=04f08b0d09b3a77b590ddf0fe85ce08230da9fbbd68ad15b4ac45a8a475d25f8&",
-    "https://cdn.discordapp.com/attachments/1096324843877703713/1171733609011499080/image.png?ex=655dc0f6&is=654b4bf6&hm=ecbdb35513df518708190814a7d606aacebd50c4a8f6d09a165fd31ce81c4fd5&",
-    "https://cdn.discordapp.com/attachments/1096324843877703713/1171789020204892261/WhatsApp_Image_2023-11-08_at_18.00.39_aedb38be.jpg?ex=655df491&is=654b7f91&hm=0e4a8a2945678c5712012edb1bc5bfee566ad6132780e915dfd054434f9dc344&",
-    "https://cdn.discordapp.com/attachments/1096324843877703713/1171789020204892261/WhatsApp_Image_2023-11-08_at_18.00.39_aedb38be.jpg?ex=655df491&is=654b7f91&hm=0e4a8a2945678c5712012edb1bc5bfee566ad6132780e915dfd054434f9dc344&",
-    "",
+    "https://cdn.discordapp.com/attachments/1096324843877703713/1171733523946815488/image.png?ex=655dc0e1&is=654b4be1&hm=e9f3dd804054d34dc814b4b45e580a6fa49c839640d795698d5bc0b20d8432b7&",
+    "https://cdn.discordapp.com/attachments/1096324843877703713/1171733523636428800/image.png?ex=655dc0e1&is=654b4be1&hm=27ea3b023858cf17d001a3a7884d8d8d1d57427e7deb4fb0d19b341b57b6529e&",
+    "https://cdn.discordapp.com/attachments/1096324843877703713/1171733384817549343/image.png?ex=655dc0c0&is=654b4bc0&hm=14d04e5124e4000bec69dc4880acf49decc4d84ec3c7d4cbdfa528f41f32ef49&",
+    "https://cdn.discordapp.com/attachments/1096324843877703713/1171733384368762890/image.png?ex=655dc0c0&is=654b4bc0&hm=0444844903e52246f2f793c48676c2b82a0b88df71ebcd131ff3faa5b7225389&",
   ]);
   const imageTitle = [
+    "Gazebo",
     "Landscape",
-    "Deck Lounge",
-    "BBQ Area",
-    "Jogging Track",
-    "",
+    "Office Space",
+    "Senior Citizens Area",
+    "Yoga Area",
+    "Turf Area",
   ];
 
-  const [visibleImages, setVisibleImages] = useState(0); 
+  const [visibleImages, setVisibleImages] = useState(0);
   const loadMoreImages = () => {
-    setVisibleImages((prevVisibleImages) => prevVisibleImages + 5);
+    setVisibleImages((prevVisibleImages) => prevVisibleImages + 6);
   };
 
   function getScreenSize() {
@@ -240,7 +241,7 @@ export default function Mainpage() {
       <div className=" mt-[2rem] bg-lightgray h-auto">
         <div className="flex h-auto">
           <div className="w-[80%] h-auto">
-            <div className="grid p-6 h-auto  auto-rows-max grid-cols-1 lg:grid-cols-3  gap-5">
+            <div className="grid p-6 xs:p-1  h-auto  auto-rows-max grid-cols-1 lg:grid-cols-3  gap-5">
               {/* image 1 */}
               <div className="bg-tan w-[23rem] h-[23rem]">
                 <div className="  absolute top-0 left-0 w-full h-full bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
@@ -338,7 +339,7 @@ export default function Mainpage() {
 
               {/* load more image*/}
               {images.slice(0, visibleImages).map((image, index) => (
-                <div key={index} className="bg-tan w-[23rem] h-[23rem]">
+                <div key={index} className="bg-tan xs:w-[10rem] w-[23rem] h-[23rem]">
                   <div className="  absolute top-0 left-0 w-full h-full bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
                   <div class="relative w-[23rem] h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
                     <img
@@ -346,7 +347,13 @@ export default function Mainpage() {
                       alt="Your Image"
                       class="w-full h-full object-cover "
                     />
-                    <p className="relative h-fit w-max bottom-[23rem] left-[13rem] text-[1.5rem] z-10 font-dm-serif-display text-white text-left  opacity-[0.9]">
+                    <p
+                      className={`relative  w-[20rem] h-fit  bottom-[23rem]  text-[1.5rem] z-10 font-dm-serif-display  text-left  opacity-[0.9] ${
+                        imageTitle[index] === "Landscape"
+                          ? "text-black"
+                          : "text-white"
+                      } ${imageTitle[index]==="Senior Citizens Area"? "left-[8rem]" : "left-[13rem]" }`}
+                    >
                       {imageTitle[index]}
                     </p>
                   </div>
@@ -355,15 +362,15 @@ export default function Mainpage() {
               {visibleImages < images.length && (
                 <div
                   onClick={loadMoreImages}
-                  className="relative rounded-[176px] w-full h-[4.69rem] overflow-hidden text-justify text-[1.75rem] text-yellow-700 font-dm-serif-display"
+                  className="relative rounded-[176px] w-full h-[4.69rem]  bg-white overflow-hidden text-justify text-[1.75rem] text-yellow-700 font-dm-serif-display"
                 >
-                  <div className="absolute top-[1.19rem] left-[4rem]">
+                  <div className="absolute h-fit w-fit top-[1.19rem] left-[4rem]">
                     Load More
                   </div>
                   <img
-                    className="absolute top-[1rem]  left-[13rem] w-[2.81rem] h-[2.81rem] overflow-hidden"
+                    className="absolute top-[1rem]  left-[13rem]  w-[2.81rem] h-[2.81rem] overflow-hidden"
                     alt=""
-                    src="https://cdn.discordapp.com/attachments/1096324843877703713/1171505265909170306/arrow-up-right.png?ex=655cec4c&is=654a774c&hm=bda8e08005c943b38ff915dd7bedad9a632d181216c14751e59208538cacbc15&"
+                    src="https://cdn.discordapp.com/attachments/1096324843877703713/1171809513389707344/image.png?ex=655e07a7&is=654b92a7&hm=f4963477d1be9275ed98848c87e5c151e1485efb7715a155047418f10256b11b&"
                   />
                 </div>
               )}

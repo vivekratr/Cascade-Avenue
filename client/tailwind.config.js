@@ -12,7 +12,7 @@ module.exports = withMT({
   theme: {
     extend: {
       screens: {
-        xs: "375px", // Custom screen size for smaller than 'sm'
+        xs: "379px", // Custom screen size for smaller than 'sm'
       },
       colors: {
         tan: "#bcad93",
