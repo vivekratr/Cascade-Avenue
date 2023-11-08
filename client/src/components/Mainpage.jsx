@@ -339,8 +339,8 @@ export default function Mainpage() {
 
               {/* load more image*/}
               {images.slice(0, visibleImages).map((image, index) => (
-                <div key={index} className="bg-tan xs:w-[10rem] w-[23rem] h-[23rem]">
-                  <div className="  absolute top-0 left-0 w-full h-full bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
+                <div key={index} className="bg-tan  w-[23rem] h-[23rem]">
+                  <div className="  absolute top-0 left-0 w-[23rem] h-[23rem] bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
                   <div class="relative  w-[23rem] h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
                     <img
                       src={image}
@@ -387,6 +387,19 @@ export default function Mainpage() {
         </div>
 
         {/* load more */}
+      </div>
+
+      {/* 4th page */}
+
+      {/* 5th page */}
+      <div className="flex mt-9 bg-lightgray">
+
+        <div className="w-[80%] "></div>
+        <div className="w-[20%] bg-black ">
+        <div className="relative left-[3rem] text-[1.13rem] font-dm-serif-display text-white text-right [transform:_rotate(90deg)] h-fit [transform-origin:0_0] opacity-[0.35]">Unit Plans</div>
+
+
+        </div>
       </div>
     </div>
   );
