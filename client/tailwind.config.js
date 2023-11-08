@@ -17,6 +17,7 @@ module.exports = withMT({
             'xs': '375px',  // Custom screen size for smaller than 'sm'
           },
           "colors": {
+            "lightgray": "#d4c9b6",
               "yellow-600": "#9f580a",
               "yellow-400": "#e3a008",
               "yellow-700": "#8e4b10",
