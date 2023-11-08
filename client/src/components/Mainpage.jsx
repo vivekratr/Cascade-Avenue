@@ -20,6 +20,19 @@ export default function Mainpage() {
     height: "100vh",
   };
 
+  
+    const [images, setImages] = useState([
+      'https://cdn.discordapp.com/attachments/1096324843877703713/1171732951025860628/image.png?ex=655dc059&is=654b4b59&hm=cb754f3eed7092c313e90217eb496c8b6c5395cbfe2c663ea0612a6d3555ce0d&',
+
+    ]);
+    const imageTitle =['Children Area']
+  
+    const [visibleImages, setVisibleImages] = useState(4); // Number of images initially visible
+    const loadMoreImages = () => {
+      // Increase the number of visible images when the "Load More" button is clicked
+      setVisibleImages(prevVisibleImages => prevVisibleImages + 4);
+    };
+
   function getScreenSize() {
     const innerWidth = window.innerWidth;
     console.log("innerWidth", innerWidth);
@@ -156,9 +169,9 @@ export default function Mainpage() {
       </div>
 
       {/* 2nd page */}
-      <div className="flex  w-full h-[130vh] lg:h-[115vh] ">
+      <div className="flex  w-full h-[130vh] lg:h-[122vh] ">
         <div className="relative w-[20%] bg-white ">
-          <div className="absolute top-[30rem] lg:top-[49rem] w-[2rem] h-full   font-dm-serif-display text-darkkhaki text-left [transform:_rotate(-90deg)] [transform-origin:0_0] opacity-[0.32]">
+          <div className="absolute top-[30rem] lg:top-[49rem] w-[2rem] h-[12rem]   font-dm-serif-display text-darkkhaki text-left [transform:_rotate(-90deg)] [transform-origin:0_0] opacity-[0.32]">
             <p className="w-[29rem]  lg:w-[48rem] lg:text-[6rem] h-fit text-[2rem] ">
               CASCADE AVENUE
             </p>
@@ -216,57 +229,114 @@ export default function Mainpage() {
 
       {/* 3rd page */}
 
-      <div className=" mt-[2rem] bg-lightgray">
+      <div className=" mt-[2rem] bg-lightgray h-auto">
         <div className="flex">
           <div className="w-[80%]">
-            <div className="grid p-6 grid-cols-2 gap-1">
+            <div className="grid p-6  auto-rows-max grid-cols-1 lg:grid-cols-3  gap-5">
               {/* image 1 */}
-              <div className="bg-tan w-[8rem] h-[8rem]">
+              <div className="bg-tan w-[23rem] h-[23rem]">
                 <div className="  absolute top-0 left-0 w-full h-full bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
-              <div class="relative w-[8rem] h-[8rem]  transition-transform duration-[600ms] transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
-  <img src="https://cdn.discordapp.com/attachments/1096324843877703713/1171732951025860628/image.png?ex=655dc059&is=654b4b59&hm=cb754f3eed7092c313e90217eb496c8b6c5395cbfe2c663ea0612a6d3555ce0d&
-  " alt="Your Image" class="w-full h-full object-cover " />
-</div>
-</div>
+                <div class="relative w-[23rem] h-[23rem]  transition-transform duration-[600ms] transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
+                  <img
+                    src="https://cdn.discordapp.com/attachments/1096324843877703713/1171732951025860628/image.png?ex=655dc059&is=654b4b59&hm=cb754f3eed7092c313e90217eb496c8b6c5395cbfe2c663ea0612a6d3555ce0d&
+  "
+                    alt="Your Image"
+                    class="w-full h-full object-cover "
+                  />
+                  <p className="relative h-fit w-max bottom-[23rem] left-[13rem] text-[1.5rem] z-10 font-dm-serif-display text-yellow-900 text-left  opacity-[0.7]">
+                    Children Area
+                  </p>
+                </div>
+              </div>
 
-
-
-{/* image 2 */}
-<div className="bg-tan w-[8rem] h-[8rem]">
+              {/* image 2 */}
+              <div className="bg-tan w-[23rem] h-[23rem]">
                 <div className="  absolute top-0 left-0 w-full h-full bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
-              <div class="relative w-[8rem] h-[8rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
-  <img src="https://cdn.discordapp.com/attachments/1096324843877703713/1171732951025860628/image.png?ex=655dc059&is=654b4b59&hm=cb754f3eed7092c313e90217eb496c8b6c5395cbfe2c663ea0612a6d3555ce0d&
-  " alt="Your Image" class="w-full h-full object-cover " />
-</div>
-</div>
+                <div class="relative w-[23rem] h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
+                  <img
+                    src="https://cdn.discordapp.com/attachments/1096324843877703713/1171733074195795998/image.png?ex=655dc076&is=654b4b76&hm=6309b2cea31146bada03f48494c5a5612ea94612d47d494114dd3e75fdb77edc&
+  "
+                    alt="Your Image"
+                    class="w-full h-full object-cover "
+                  />
 
-{/* image 2 */}
-<div className="bg-tan w-[8rem] h-[8rem]">
+                  <p className="relative h-fit w-max bottom-[23rem] left-[13rem] text-[1.5rem] z-10 font-dm-serif-display text-white text-left  opacity-[0.9]">
+                    Gym Area
+                  </p>
+                </div>
+              </div>
+
+              {/* image 3 */}
+              <div className="bg-tan w-[23rem] h-[23rem]">
                 <div className="  absolute top-0 left-0 w-full h-full bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
-              <div class="relative w-[8rem] h-[8rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
-  <img src="https://cdn.discordapp.com/attachments/1096324843877703713/1171732951025860628/image.png?ex=655dc059&is=654b4b59&hm=cb754f3eed7092c313e90217eb496c8b6c5395cbfe2c663ea0612a6d3555ce0d&
-  " alt="Your Image" class="w-full h-full object-cover " />
-</div>
-</div>
+                <div class="relative w-[23rem] h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
+                  <img
+                    src="https://cdn.discordapp.com/attachments/1096324843877703713/1171733129459924992/image.png?ex=655dc083&is=654b4b83&hm=04f08b0d09b3a77b590ddf0fe85ce08230da9fbbd68ad15b4ac45a8a475d25f8&"
+                    alt="Your Image"
+                    class="w-full h-full object-cover "
+                  />
+                  <p className="relative h-fit w-max bottom-[23rem] left-[13rem] text-[1.5rem] z-10 font-dm-serif-display text-yellow-900 text-left  opacity-[0.7]">
+                    Landscape
+                  </p>
+                </div>
+              </div>
 
-{/* image 2 */}
-<div className="bg-tan w-[8rem] h-[8rem]">
+              {/* image 4 */}
+              <div className="bg-tan w-[23rem] h-[23rem]">
                 <div className="  absolute top-0 left-0 w-full h-full bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
-              <div class="relative w-[8rem] h-[8rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
-  <img src="https://cdn.discordapp.com/attachments/1096324843877703713/1171732951025860628/image.png?ex=655dc059&is=654b4b59&hm=cb754f3eed7092c313e90217eb496c8b6c5395cbfe2c663ea0612a6d3555ce0d&
-  " alt="Your Image" class="w-full h-full object-cover " />
-</div>
-</div>
+                <div class="relative w-[23rem] h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
+                  <img
+                    src="https://cdn.discordapp.com/attachments/1096324843877703713/1171733609011499080/image.png?ex=655dc0f6&is=654b4bf6&hm=ecbdb35513df518708190814a7d606aacebd50c4a8f6d09a165fd31ce81c4fd5&
+  "
+                    alt="Your Image"
+                    class="w-full h-full object-cover "
+                  />
+                  <p className="relative h-fit w-max bottom-[23rem] left-[13rem] text-[1.5rem] z-10 font-dm-serif-display text-yellow-900 text-left  opacity-[0.9]">
+                    Deck Lounge
+                  </p>
+                </div>
+              </div>
 
+              {/* image 5 */}
+              <div className="bg-tan w-[23rem] h-[23rem]">
+                <div className="  absolute top-0 left-0 w-full h-full bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
+                <div class="relative w-[23rem] h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
+                  <img
+                    src="https://cdn.discordapp.com/attachments/1096324843877703713/1171733609409953812/image.png?ex=655dc0f6&is=654b4bf6&hm=0e610eaa3d71f467dc5416946ebe834fa46ab20384bde12adca92aad985bacf4&"
+                    alt="Your Image"
+                    class="w-full h-full object-cover "
+                  />
+                  <p className="relative h-fit w-max bottom-[23rem] left-[13rem] text-[1.5rem] z-10 font-dm-serif-display text-yellow-900 text-left  opacity-[0.9]">
+                    BBQ Area
+                  </p>
+                </div>
+              </div>
+
+              {/* image 6 */}
+              <div className="bg-tan w-[23rem] h-[23rem]">
+                <div className="  absolute top-0 left-0 w-full h-full bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
+                <div class="relative w-[23rem] h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
+                  <img
+                    src="https://cdn.discordapp.com/attachments/1096324843877703713/1171786378556755968/image.png?ex=655df21b&is=654b7d1b&hm=4fdcbbc60c82954a17bcc7e1736499c26ad377f3de74259d7974fe09760e34f6&
+  "
+                    alt="Your Image"
+                    class="w-full h-full object-cover "
+                  />
+                  <p className="relative h-fit w-max bottom-[23rem] left-[13rem] text-[1.5rem] z-10 font-dm-serif-display text-white text-left  opacity-[0.9]">
+                    Jogging Track
+                  </p>
+                </div>
+              </div>
             </div>
-            
           </div>
 
           <div className=" relative w-[20%] ">
-            <div className="absolute top-[10rem] left-[4.5rem] lg:top-[49rem] h-full   font-dm-serif-display text-white text-right [transform:_rotate(90deg)] [transform-origin:0_0] opacity-[0.35]">
-              <p className="  lg:w-[48rem] lg:text-[6rem] h-fit text-[2rem]">
-                Amenities
-              </p>
+            <div className="sticky left-0 w-7">
+              <div className="relative top-[10rem]  left-[6rem] lg:top-[49rem] h-full   font-dm-serif-display text-white text-right [transform:_rotate(90deg)] [transform-origin:0_0] opacity-[0.35]">
+                <p className="  lg:w-[48rem]    lg:text-[6rem] h-fit text-[5rem]">
+                  Amenities
+                </p>
+              </div>
             </div>
           </div>
         </div>
