@@ -36,9 +36,8 @@ export default function Mainpage() {
     "",
   ];
 
-  const [visibleImages, setVisibleImages] = useState(0); // Number of images initially visible
+  const [visibleImages, setVisibleImages] = useState(0); 
   const loadMoreImages = () => {
-    // Increase the number of visible images when the "Load More" button is clicked
     setVisibleImages((prevVisibleImages) => prevVisibleImages + 5);
   };
 
