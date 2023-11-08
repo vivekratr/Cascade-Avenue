@@ -22,7 +22,7 @@ export default function CarouselCustomNavigation() {
       <img
         src="https://cdn.discordapp.com/attachments/1096324843877703713/1171499178099224727/WhatsApp_Image_2023-11-03_at_22.39.58_dd28d378.jpg?ex=655ce6a1&is=654a71a1&hm=232dd53a349c84487a44d25ac21fa0630c749a9d7c2ac53c24c1f12b8d043bc8&"
         alt="image 1"
-        className="object-cover  "
+        className="object-cover md:w-full md:h-full lg:w-[50rem] "
         style={ImgStyle} 
         height={`1580px`}
         width={`1600px`}
@@ -46,12 +46,12 @@ export default function CarouselCustomNavigation() {
 
       />
        <img
-        src="https://cdn.discordapp.com/attachments/1096324843877703713/1171538501376954469/image_Custom.png?ex=655d0b40&is=654a9640&hm=520e2a8078bdc4eccdb085a5ac0feb87970b6a690ee3763dbde66f6bc2889c93&"
+        src="https://cdn.discordapp.com/attachments/1096324843877703713/1171546484831948820/image_Custom.png?ex=655d12b0&is=654a9db0&hm=9b6c424394dfd4609f7037b611620427c4234a920df456ca719493d84f2992a2&"
         alt="image 1"
         className="object-cover "
         style={ImgStyle} 
-        height={`537px`}
-        width={`715px`}
+        height={`1580px`}
+        width={`1600px`}
 
       />
       

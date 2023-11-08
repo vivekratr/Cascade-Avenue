@@ -68,7 +68,7 @@ export default function Mainpage() {
     <div>
     <div
       className="relative  lg:h-full
-      bg-center object-cover max-w-full md:min-h-[200vh] min-h-[140vh]   lg:min-h-[120vh]"
+      bg-center object-cover max-w-full  md:min-h-[220vh] min-h-[200vh]   lg:min-h-[120vh]"
       style={backgroundStyles}
     >
       <Header />
@@ -140,7 +140,7 @@ export default function Mainpage() {
           </div>
         </div>
         {/*left side corousel */}
-        <div className=" h-[78%] w-[90%] lg:min-h[36rem] my-[5rem]  flex mx-auto  mb-8 lg:mb:0 lg:mx-0 lg:my-0  lg:h-[36rem] md:lg-w-[50%] lg:max-w-[60%]">
+        <div className=" h-[60%] w-[90%]  md:h-[100%] lg:min-h[36rem] my-[5rem]  flex mx-auto  mb-8 lg:mb:0 lg:mx-0 lg:my-0  lg:h-[36rem]  lg:max-w-[60%]">
           {/* <Corousell >
         {slides.map((slide) => (
             <img
@@ -158,7 +158,7 @@ export default function Mainpage() {
     </div>
 
       {/* 2nd page */}
-      <div className="flex  w-full h-[130vh] ">
+      <div className="flex  w-full h-[130vh] lg:h-[115vh] ">
         <div className="relative w-[20%] bg-white ">
         <div className="absolute top-[30rem] lg:top-[49rem] h-full   font-dm-serif-display text-darkkhaki text-left [transform:_rotate(-90deg)] [transform-origin:0_0] opacity-[0.32]">
           <p className="w-[29rem]  lg:w-[48rem] lg:text-[6rem] h-fit text-[2rem] ">
@@ -178,7 +178,7 @@ export default function Mainpage() {
           </p>
         </div>
 
-        <div className="flex flex-wrap h-[10rem] mt-16 lg:mt-6 items-center">
+        <div className="flex flex-wrap h-[10rem] mt-16 lg:mt-6 items-center justify-center">
         <div className="relative w-[19rem] lg:text-[3rem] lg:w-[45rem] h-fit text-[1.3rem] font-dm-serif-display text-darkkhaki text-left">CELEBRATE A COMPLETE LIFE</div>
 
         <div className="relative rounded-[46px] mx-auto right-3  bg-yellow-600 w-[14rem] h-[4rem] overflow-hidden text-justify text-[1rem] text-white font-dm-serif-display lg:text-[1.1rem]">
