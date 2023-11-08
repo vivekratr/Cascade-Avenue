@@ -20,18 +20,27 @@ export default function Mainpage() {
     height: "100vh",
   };
 
-  
-    const [images, setImages] = useState([
-      'https://cdn.discordapp.com/attachments/1096324843877703713/1171732951025860628/image.png?ex=655dc059&is=654b4b59&hm=cb754f3eed7092c313e90217eb496c8b6c5395cbfe2c663ea0612a6d3555ce0d&',
+  const [images, setImages] = useState([
+    "https://cdn.discordapp.com/attachments/1096324843877703713/1171733074195795998/image.png?ex=655dc076&is=654b4b76&hm=6309b2cea31146bada03f48494c5a5612ea94612d47d494114dd3e75fdb77edc&",
+    "https://cdn.discordapp.com/attachments/1096324843877703713/1171733129459924992/image.png?ex=655dc083&is=654b4b83&hm=04f08b0d09b3a77b590ddf0fe85ce08230da9fbbd68ad15b4ac45a8a475d25f8&",
+    "https://cdn.discordapp.com/attachments/1096324843877703713/1171733609011499080/image.png?ex=655dc0f6&is=654b4bf6&hm=ecbdb35513df518708190814a7d606aacebd50c4a8f6d09a165fd31ce81c4fd5&",
+    "https://cdn.discordapp.com/attachments/1096324843877703713/1171789020204892261/WhatsApp_Image_2023-11-08_at_18.00.39_aedb38be.jpg?ex=655df491&is=654b7f91&hm=0e4a8a2945678c5712012edb1bc5bfee566ad6132780e915dfd054434f9dc344&",
+    "https://cdn.discordapp.com/attachments/1096324843877703713/1171789020204892261/WhatsApp_Image_2023-11-08_at_18.00.39_aedb38be.jpg?ex=655df491&is=654b7f91&hm=0e4a8a2945678c5712012edb1bc5bfee566ad6132780e915dfd054434f9dc344&",
+    "",
+  ]);
+  const imageTitle = [
+    "Landscape",
+    "Deck Lounge",
+    "BBQ Area",
+    "Jogging Track",
+    "",
+  ];
 
-    ]);
-    const imageTitle =['Children Area']
-  
-    const [visibleImages, setVisibleImages] = useState(4); // Number of images initially visible
-    const loadMoreImages = () => {
-      // Increase the number of visible images when the "Load More" button is clicked
-      setVisibleImages(prevVisibleImages => prevVisibleImages + 4);
-    };
+  const [visibleImages, setVisibleImages] = useState(0); // Number of images initially visible
+  const loadMoreImages = () => {
+    // Increase the number of visible images when the "Load More" button is clicked
+    setVisibleImages((prevVisibleImages) => prevVisibleImages + 5);
+  };
 
   function getScreenSize() {
     const innerWidth = window.innerWidth;
@@ -230,9 +239,9 @@ export default function Mainpage() {
       {/* 3rd page */}
 
       <div className=" mt-[2rem] bg-lightgray h-auto">
-        <div className="flex">
-          <div className="w-[80%]">
-            <div className="grid p-6  auto-rows-max grid-cols-1 lg:grid-cols-3  gap-5">
+        <div className="flex h-auto">
+          <div className="w-[80%] h-auto">
+            <div className="grid p-6 h-auto  auto-rows-max grid-cols-1 lg:grid-cols-3  gap-5">
               {/* image 1 */}
               <div className="bg-tan w-[23rem] h-[23rem]">
                 <div className="  absolute top-0 left-0 w-full h-full bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
@@ -271,12 +280,12 @@ export default function Mainpage() {
                 <div className="  absolute top-0 left-0 w-full h-full bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
                 <div class="relative w-[23rem] h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
                   <img
-                    src="https://cdn.discordapp.com/attachments/1096324843877703713/1171733129459924992/image.png?ex=655dc083&is=654b4b83&hm=04f08b0d09b3a77b590ddf0fe85ce08230da9fbbd68ad15b4ac45a8a475d25f8&"
+                    src="https://cdn.discordapp.com/attachments/1096324843877703713/1171805065376436284/image.png?ex=655e0382&is=654b8e82&hm=f06eea204b556f1cba540f152c30f1a32124c0c90a1326514c60eacd7b6173ab&"
                     alt="Your Image"
                     class="w-full h-full object-cover "
                   />
-                  <p className="relative h-fit w-max bottom-[23rem] left-[13rem] text-[1.5rem] z-10 font-dm-serif-display text-yellow-900 text-left  opacity-[0.7]">
-                    Landscape
+                  <p className="relative h-fit w-max bottom-[23rem] left-[12rem] text-[1.5rem] z-10 font-dm-serif-display text-white text-left  opacity-[0.9]">
+                    Ganesh Temple
                   </p>
                 </div>
               </div>
@@ -291,7 +300,7 @@ export default function Mainpage() {
                     alt="Your Image"
                     class="w-full h-full object-cover "
                   />
-                  <p className="relative h-fit w-max bottom-[23rem] left-[13rem] text-[1.5rem] z-10 font-dm-serif-display text-yellow-900 text-left  opacity-[0.9]">
+                  <p className="relative h-fit w-max bottom-[23rem] left-[13rem] text-[1.5rem] z-10 font-dm-serif-display text-white text-left  opacity-[0.9]">
                     Deck Lounge
                   </p>
                 </div>
@@ -302,11 +311,11 @@ export default function Mainpage() {
                 <div className="  absolute top-0 left-0 w-full h-full bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
                 <div class="relative w-[23rem] h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
                   <img
-                    src="https://cdn.discordapp.com/attachments/1096324843877703713/1171733609409953812/image.png?ex=655dc0f6&is=654b4bf6&hm=0e610eaa3d71f467dc5416946ebe834fa46ab20384bde12adca92aad985bacf4&"
+                    src="https://cdn.discordapp.com/attachments/1096324843877703713/1171792821137707129/image.png?ex=655df81b&is=654b831b&hm=2ee0032eaf47e12868fc781318527578e2f891d37473f9b1fa08a1e4b08a2730&"
                     alt="Your Image"
                     class="w-full h-full object-cover "
                   />
-                  <p className="relative h-fit w-max bottom-[23rem] left-[13rem] text-[1.5rem] z-10 font-dm-serif-display text-yellow-900 text-left  opacity-[0.9]">
+                  <p className="relative h-fit w-max bottom-[23rem] left-[13rem] text-[1.5rem] z-10 font-dm-serif-display text-white text-left  opacity-[0.9]">
                     BBQ Area
                   </p>
                 </div>
@@ -327,22 +336,51 @@ export default function Mainpage() {
                   </p>
                 </div>
               </div>
+
+              {/* load more image*/}
+              {images.slice(0, visibleImages).map((image, index) => (
+                <div key={index} className="bg-tan w-[23rem] h-[23rem]">
+                  <div className="  absolute top-0 left-0 w-full h-full bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
+                  <div class="relative w-[23rem] h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
+                    <img
+                      src={image}
+                      alt="Your Image"
+                      class="w-full h-full object-cover "
+                    />
+                    <p className="relative h-fit w-max bottom-[23rem] left-[13rem] text-[1.5rem] z-10 font-dm-serif-display text-white text-left  opacity-[0.9]">
+                      {imageTitle[index]}
+                    </p>
+                  </div>
+                </div>
+              ))}
+              {visibleImages < images.length && (
+                <div
+                  onClick={loadMoreImages}
+                  className="relative rounded-[176px] w-full h-[4.69rem] overflow-hidden text-justify text-[1.75rem] text-yellow-700 font-dm-serif-display"
+                >
+                  <div className="absolute top-[1.19rem] left-[4rem]">
+                    Load More
+                  </div>
+                  <img
+                    className="absolute top-[1rem]  left-[13rem] w-[2.81rem] h-[2.81rem] overflow-hidden"
+                    alt=""
+                    src="https://cdn.discordapp.com/attachments/1096324843877703713/1171505265909170306/arrow-up-right.png?ex=655cec4c&is=654a774c&hm=bda8e08005c943b38ff915dd7bedad9a632d181216c14751e59208538cacbc15&"
+                  />
+                </div>
+              )}
             </div>
           </div>
 
-          <div className=" relative w-[20%] ">
-            <div className="sticky left-0 w-7">
-              <div className="relative top-[10rem]  left-[6rem] lg:top-[49rem] h-full   font-dm-serif-display text-white text-right [transform:_rotate(90deg)] [transform-origin:0_0] opacity-[0.35]">
-                <p className="  lg:w-[48rem]    lg:text-[6rem] h-fit text-[5rem]">
-                  Amenities
-                </p>
-              </div>
+          <div className=" sticky top-0 w-[20%] h-full ">
+            <div className="relative top-[10rem]  left-[6rem] lg:top-[49rem] h-full   font-dm-serif-display text-white text-right [transform:_rotate(90deg)] [transform-origin:0_0] opacity-[0.35]">
+              <p className="  lg:w-[48rem]    lg:text-[6rem] h-fit text-[5rem]">
+                Amenities
+              </p>
             </div>
           </div>
         </div>
 
         {/* load more */}
-        <div></div>
       </div>
     </div>
   );
