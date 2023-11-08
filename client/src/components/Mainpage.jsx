@@ -109,14 +109,14 @@ export default function Mainpage() {
                 </div>
               </div>
               <div
-                className={`absolute top-[0rem] h-fit xs:left-[50%] w-[50%]  left-[8.5rem] rounded-[32px]  h-[2.69rem] overflow-hidden cursor-pointer ${
+                className={`absolute top-[0rem]  xs:left-[50%] w-[50%]  left-[8.5rem] rounded-[32px]  h-[2.69rem] overflow-hidden cursor-pointer ${
                   is1BHKSelected
                     ? "bg-gray-200 text-black"
                     : "bg-yellow-600 text-white"
                 }`}
                 onClick={handleToggle}
               >
-                <div className=" xs:text-[0.9rem] h-fit  sm:text-[0.9rem] xs:pt-2 xs:pl-5 xs:text-left text-center pt-1">
+                <div className=" xs:text-[0.9rem] h-fit  sm:text-[0.9rem] xs:pt-2 xs:pl-5 xs:text-left  text-center pt-1">
                   1+1 Jodi
                 </div>
               </div>
