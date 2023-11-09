@@ -238,28 +238,28 @@ export default function Mainpage() {
 
       <div className=" mt-[2rem] bg-lightgray h-fit">
         <div className="flex h-auto">
-          <div className="w-[80%]   h-auto">
-            <div className="grid p-6 h-auto  auto-rows-max grid-cols-1 lg:grid-cols-3  gap-5">
+          <div className="w-[80%] lg:w-[80%]   h-auto">
+            <div className="grid p-6 h-auto   auto-rows-max grid-cols-[16rem] lg:grid-cols-3  gap-5">
               {/* image 1 */}
-              <div className="bg-tan w-[23rem] h-[23rem]">
-                <div className="  absolute top-0 left-0 w-full h-full bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
-                <div class="relative w-[23rem] h-[23rem]  transition-transform duration-[600ms] transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
+              <div className="bg-tan w-[19rem] h-[19rem] lg:w-[23rem] lg:h-[23rem]">
+                <div className="  absolute top-0 left-0 w-full h-full  bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
+                <div class="relative w-[19rem] h-[19rem] lg:w-[23rem] lg:h-[23rem]  transition-transform duration-[600ms] transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
                   <img
                     src="https://cdn.discordapp.com/attachments/1096324843877703713/1171732951025860628/image.png?ex=655dc059&is=654b4b59&hm=cb754f3eed7092c313e90217eb496c8b6c5395cbfe2c663ea0612a6d3555ce0d&
   "
                     alt="Your Image"
-                    class="w-full h-full object-cover "
+                    class="w-full h-full object-fill lg:w-full lg:h-full lg:object-cover "
                   />
-                  <p className="relative h-fit w-max bottom-[23rem] left-[13rem] text-[1.5rem] z-10 font-dm-serif-display text-yellow-900 text-left  opacity-[0.7]">
+                  <p className="relative h-fit w-max bottom-[18rem] left-[8rem] lg:bottom-[23rem] lg:left-[13rem] text-[1.5rem] z-10 font-dm-serif-display text-yellow-900 text-left  opacity-[0.7]">
                     Children Area
                   </p>
                 </div>
               </div>
 
               {/* image 2 */}
-              <div className="relative bg-tan w-[23rem] h-[23rem]">
+              <div className="relative bg-tan w-[19rem] h-[19rem] lg:w-[23rem] lg:h-[23rem]">
                 <div className="  absolute top-0 left-0 w-full h-full bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
-                <div class="relative w-[23rem] h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
+                <div class="relative w-[19rem] h-[19rem] lg:w-[23rem] lg:h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
                   <img
                     src="https://cdn.discordapp.com/attachments/1096324843877703713/1171733074195795998/image.png?ex=655dc076&is=654b4b76&hm=6309b2cea31146bada03f48494c5a5612ea94612d47d494114dd3e75fdb77edc&
   "
@@ -267,69 +267,69 @@ export default function Mainpage() {
                     class="w-full h-full object-cover "
                   />
 
-                  <p className="relative h-fit w-max bottom-[23rem] left-[13rem] text-[1.5rem] z-10 font-dm-serif-display text-white text-left  opacity-[0.9]">
+                  <p className="relative h-fit w-max bottom-[18rem] left-[8rem] lg:bottom-[23rem] lg:left-[13rem] text-[1.5rem] z-10 font-dm-serif-display text-white text-left  opacity-[0.9]">
                     Gym Area
                   </p>
                 </div>
               </div>
 
               {/* image 3 */}
-              <div className="bg-tan w-[23rem] h-[23rem]">
+              <div className="bg-tan w-[19rem] h-[19rem] lg:w-[23rem] lg:h-[23rem]">
                 <div className="  absolute top-0 left-0 w-full h-full bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
-                <div class="relative w-[23rem] h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
+                <div class="relative w-[19rem] h-[19rem] lg:w-[23rem] lg:h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
                   <img
                     src="https://cdn.discordapp.com/attachments/1096324843877703713/1171805065376436284/image.png?ex=655e0382&is=654b8e82&hm=f06eea204b556f1cba540f152c30f1a32124c0c90a1326514c60eacd7b6173ab&"
                     alt="Your Image"
                     class="w-full h-full object-cover "
                   />
-                  <p className="relative h-fit w-max bottom-[23rem] left-[12rem] text-[1.5rem] z-10 font-dm-serif-display text-white text-left  opacity-[0.9]">
+                  <p className="relative h-fit w-max bottom-[18rem] left-[8rem] lg:bottom-[23rem] lg:left-[12rem] text-[1.5rem] z-10 font-dm-serif-display text-white text-left  opacity-[0.9]">
                     Ganesh Temple
                   </p>
                 </div>
               </div>
 
               {/* image 4 */}
-              <div className="bg-tan w-[23rem] h-[23rem]">
+              <div className="bg-tan w-[19rem] h-[19rem] lg:w-[23rem] lg:h-[23rem]">
                 <div className="  absolute top-0 left-0 w-full h-full bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
-                <div class="relative w-[23rem] h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
+                <div class="relative w-[19rem] h-[19rem] lg:w-[23rem] lg:h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
                   <img
                     src="https://cdn.discordapp.com/attachments/1096324843877703713/1171733609011499080/image.png?ex=655dc0f6&is=654b4bf6&hm=ecbdb35513df518708190814a7d606aacebd50c4a8f6d09a165fd31ce81c4fd5&
   "
                     alt="Your Image"
                     class="w-full h-full object-cover "
                   />
-                  <p className="relative h-fit w-max bottom-[23rem] left-[13rem] text-[1.5rem] z-10 font-dm-serif-display text-white text-left  opacity-[0.9]">
+                  <p className="relative h-fit w-max bottom-[18rem] left-[8rem] lg:bottom-[23rem] lg:left-[13rem] text-[1.5rem] z-10 font-dm-serif-display text-white text-left  opacity-[0.9]">
                     Deck Lounge
                   </p>
                 </div>
               </div>
 
               {/* image 5 */}
-              <div className="bg-tan w-[23rem] h-[23rem]">
+              <div className="bg-tan w-[19rem] h-[19rem] lg:w-[23rem] lg:h-[23rem]">
                 <div className="  absolute top-0 left-0 w-full h-full bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
-                <div class="relative w-[23rem] h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
+                <div class="relative w-[19rem] h-[19rem] lg:w-[23rem] lg:h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
                   <img
                     src="https://cdn.discordapp.com/attachments/1096324843877703713/1171792821137707129/image.png?ex=655df81b&is=654b831b&hm=2ee0032eaf47e12868fc781318527578e2f891d37473f9b1fa08a1e4b08a2730&"
                     alt="Your Image"
                     class="w-full h-full object-cover "
                   />
-                  <p className="relative h-fit w-max bottom-[23rem] left-[13rem] text-[1.5rem] z-10 font-dm-serif-display text-white text-left  opacity-[0.9]">
+                  <p className="relative h-fit w-max bottom-[18rem] left-[8rem] lg:bottom-[23rem] lg:left-[13rem] text-[1.5rem] z-10 font-dm-serif-display text-white text-left  opacity-[0.9]">
                     BBQ Area
                   </p>
                 </div>
               </div>
 
               {/* image 6 */}
-              <div className="bg-tan w-[23rem] h-[23rem]">
+              <div className="bg-tan w-[19rem] h-[19rem] lg:w-[23rem] lg:h-[23rem]">
                 <div className="  absolute top-0 left-0 w-full h-full bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
-                <div class="relative w-[23rem] h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
+                <div class="relative w-[19rem] h-[19rem] lg:w-[23rem] lg:h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
                   <img
                     src="https://cdn.discordapp.com/attachments/1096324843877703713/1171786378556755968/image.png?ex=655df21b&is=654b7d1b&hm=4fdcbbc60c82954a17bcc7e1736499c26ad377f3de74259d7974fe09760e34f6&
   "
                     alt="Your Image"
                     class="w-full h-full object-cover "
                   />
-                  <p className="relative h-fit w-max bottom-[23rem] left-[13rem] text-[1.5rem] z-10 font-dm-serif-display text-white text-left  opacity-[0.9]">
+                  <p className="relative h-fit w-max bottom-[18rem] left-[8rem] lg:bottom-[23rem] lg:left-[13rem] text-[1.5rem] z-10 font-dm-serif-display text-white text-left  opacity-[0.9]">
                     Jogging Track
                   </p>
                 </div>
@@ -337,20 +337,20 @@ export default function Mainpage() {
 
               {/* load more image*/}
               {images.slice(0, visibleImages).map((image, index) => (
-                <div key={index} className="bg-tan  w-[23rem] h-[23rem]">
-                  <div className="  absolute top-0 left-0 w-[23rem] h-[23rem] bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
-                  <div class="relative  w-[23rem] h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
+                <div key={index} className="bg-tan  w-[19rem] h-[19rem] lg:w-[23rem] lg:h-[23rem]">
+                  <div className="  absolute top-0 left-0 w-[19rem] h-[19rem] lg:w-[23rem] lg:h-[23rem] bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
+                  <div class="relative  w-[19rem] h-[19rem] lg:w-[23rem] lg:h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
                     <img
                       src={image}
                       alt="Your Image"
                       class="w-full h-full object-cover "
                     />
                     <p
-                      className={`relative  w-[20rem] h-fit  bottom-[23rem]  text-[1.5rem] z-10 font-dm-serif-display  text-left  opacity-[0.9] ${
+                      className={`relative  w-[20rem] h-fit bottom-[18rem]  lg:bottom-[23rem] text-[1.5rem] z-10 font-dm-serif-display  text-left  opacity-[0.9] ${
                         imageTitle[index] === "Landscape"
                           ? "text-black"
                           : "text-white"
-                      } ${imageTitle[index]==="Senior Citizens Area"? "left-[8rem]" : "left-[13rem]" }`}
+                      } ${imageTitle[index]==="Senior Citizens Area"? "left-[5rem] lg:left-[8rem]" : "left-[10rem] lg:left-[13rem]" }`}
                     >
                       {imageTitle[index]}
                     </p>
@@ -375,7 +375,7 @@ export default function Mainpage() {
             </div>
           </div>
 
-          <div className=" sticky top-0 w-[20%] h-full ">
+          <div className=" sticky top-0  w-[20%] h-[50vh]  lg:h-full ">
             <div className="relative top-[10rem]  left-[6rem] lg:top-[49rem] h-full   font-dm-serif-display text-white text-right [transform:_rotate(90deg)] [transform-origin:0_0] opacity-[0.35]">
               <p className="  lg:w-[48rem]    lg:text-[6rem] h-fit text-[5rem]">
                 Amenities
