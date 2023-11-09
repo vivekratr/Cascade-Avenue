@@ -1,5 +1,5 @@
 import Header from "./Header";
-import { Button } from "@material-tailwind/react";
+
 import React, { useState, useEffect } from "react";
 import Corousel from "./Corousel";
 
@@ -95,11 +95,11 @@ export default function Mainpage() {
         {/* <Button>Button</Button>; */}
         {/* <h1 className="color-white">Mainpage</h1> */}
         <div className="  w-full h-auto flex  flex-wrap  justify-between">
-          <div className=" ml-0  w-[100%] h-max lg:max-w-[40%] flex justify-around ">
+          <div className=" ml-0  w-[100%]  h-max lg:max-w-[40%] flex justify-around ">
             {/* right side content */}
             <div
               style={{ borderRadius: "32px" }}
-              className="  relative  p-7 bg-white w-[60%] lg:w-[65%] lg:ml-14 h-[31.19rem]  text-left text-[1.75rem] text-yellow-700 font-dm-serif-displays"
+              className="  relative  p-7 bg-white w-[70%] lg:w-[65%] lg:ml-14 h-[31.19rem]  text-left text-[1.75rem] text-yellow-700 font-dm-serif-displays"
             >
               <div className="h-fit text-[1.7rem] font-dm-serif-display text-yellow-400 text-left">
                 CASCADE AVENUE
@@ -160,7 +160,7 @@ export default function Mainpage() {
             </div>
           </div>
           {/*left side corousel */}
-          <div className=" h-[60%] w-[90%]  md:h-[100%] lg:min-h[36rem] my-[5rem]  flex mx-auto  mb-8 lg:mb:0 lg:mx-0 lg:my-0  lg:h-[36rem]  lg:max-w-[60%]">
+          <div className=" h-[60%] w-[90%]  md:h-[100%] lg:min-h[36rem] mx-auto  flex my-[24rem]  mb-8 lg:mb:0 lg:mx-0 lg:my-0  lg:h-[36rem]  lg:max-w-[60%]">
             {/* <Corousell >
         {slides.map((slide) => (
             <img
@@ -176,7 +176,7 @@ export default function Mainpage() {
       </div>
 
       {/* 2nd page */}
-      <div className="flex  w-full h-[130vh] lg:h-[122vh] ">
+      <div className="flex  w-full h-fit lg:h-[122vh] ">
         <div className="relative w-[20%] bg-white ">
           <div className="absolute top-[30rem] lg:top-[49rem] w-[2rem] h-[12rem]   font-dm-serif-display text-darkkhaki text-left [transform:_rotate(-90deg)] [transform-origin:0_0] opacity-[0.32]">
             <p className="w-[29rem]  lg:w-[48rem] lg:text-[6rem] h-fit text-[2rem] ">
@@ -236,7 +236,7 @@ export default function Mainpage() {
 
       {/* 3rd page */}
 
-      <div className=" mt-[2rem] bg-lightgray h-auto">
+      <div className=" mt-[2rem] bg-lightgray h-fit">
         <div className="flex h-auto">
           <div className="w-[80%]   h-auto">
             <div className="grid p-6 h-auto  auto-rows-max grid-cols-1 lg:grid-cols-3  gap-5">
@@ -257,7 +257,7 @@ export default function Mainpage() {
               </div>
 
               {/* image 2 */}
-              <div className="bg-tan w-[23rem] h-[23rem]">
+              <div className="relative bg-tan w-[23rem] h-[23rem]">
                 <div className="  absolute top-0 left-0 w-full h-full bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
                 <div class="relative w-[23rem] h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
                   <img
