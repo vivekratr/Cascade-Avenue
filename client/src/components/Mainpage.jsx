@@ -3,7 +3,6 @@ import { Button } from "@material-tailwind/react";
 import React, { useState, useEffect } from "react";
 import Corousel from "./Corousel";
 
-import Corousell from "./Corousell";
 
 export default function Mainpage() {
   const backgroundImageUrl =
@@ -17,7 +16,6 @@ export default function Mainpage() {
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
 
-    height: "100vh",
   };
 
   const [images, setImages] = useState([
@@ -90,13 +88,13 @@ export default function Mainpage() {
     <div>
       <div
         className="relative  lg:h-full
-      bg-center object-cover max-w-full  md:min-h-[220vh] min-h-[170vh]   lg:min-h-[120vh]"
+      bg-center object-cover max-w-full  h-auto  md:min-h-[220vh] min-h-[170vh]  lg:min-h-[120vh]"
         style={backgroundStyles}
       >
         <Header />
         {/* <Button>Button</Button>; */}
         {/* <h1 className="color-white">Mainpage</h1> */}
-        <div className="  w-full flex  flex-wrap  justify-between">
+        <div className="  w-full h-auto flex  flex-wrap  justify-between">
           <div className=" ml-0  w-[100%] h-max lg:max-w-[40%] flex justify-around ">
             {/* right side content */}
             <div

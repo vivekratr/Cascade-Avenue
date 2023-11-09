@@ -1,64 +1,38 @@
-import { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight } from "react-feather";
-
-export default function Carousell({
-  children: slides,
-  autoSlide = true,
-  autoSlideInterval = 3000,
-}) {
-  const [curr, setCurr] = useState(0);
-
-  const prev = () =>
-    setCurr((curr) => (curr === 0 ? slides.length - 1 : curr - 1));
-  const next = () =>
-    setCurr((curr) => (curr === slides.length - 1 ? 0 : curr + 1));
-
-  useEffect(() => {
-    if (!autoSlide) return;
-    const slideInterval = setInterval(next, autoSlideInterval);
-    return () => clearInterval(slideInterval);
-  }, []);
+import { Carousel } from "@material-tailwind/react";
+ 
+export default function Corousell() {
   return (
-    <div className="overflow-hidden relative ">
-      <div
-        className="flex transition-transform ease-out duration-500"
-        style={{ transform: `translateX(-${curr * 100}%)` }}
-      >
-        {slides}
-      </div>
-      <div className="absolute  inset-0 flex items-center justify-between p-4">
-        <button
-        type="button"
-          onClick={prev}
-          className="p-1 h-12 w-12 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
-        >
-            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 8 14">
-    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 1 1.3 6.326a.91.91 0 0 0 0 1.348L7 13"/>
-</svg>
-        </button>
-        <button
-          type="button"
-          onClick={next}
-          className="p-1 h-12 w-12 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
-        >
-          <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 8 14">
-    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 13 5.7-5.326a.909.909 0 0 0 0-1.348L1 1"/>
-</svg>
-        </button>
-      </div>
-
-      <div className="absolute bottom-4 h-4 right-0 left-0">
-        <div className="flex items-center justify-center gap-2 ">
-          {slides.map((_, i) => (
-            <div
-              className={`
-              transition-all w-3 h-3 bg-white rounded-full
-              ${curr === i ? "p-2" : "bg-opacity-50"}
-            `}
+    <Carousel
+      className="rounded-xl w-[50rem] h-[50rem] overflow-hidden "
+      navigation={({ setActiveIndex, activeIndex, length }) => (
+        <div className=" bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
+          {new Array(length).fill("").map((_, i) => (
+            <span
+              key={i}
+              className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
+                activeIndex === i ? "w-8 bg-white" : "w-4 bg-white/50"
+              }`}
+              onClick={() => setActiveIndex(i)}
             />
           ))}
         </div>
-      </div>
-    </div>
+      )}
+    >
+      <img
+        src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80"
+        alt="image 1"
+        className="h-full w-full object-cover"
+      />
+      <img
+        src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
+        alt="image 2"
+        className="h-full w-full object-cover"
+      />
+      <img
+        src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
+        alt="image 3"
+        className="h-full w-full object-cover"
+      />
+    </Carousel>
   );
 }
