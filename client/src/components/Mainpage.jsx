@@ -3,19 +3,18 @@ import Header from "./Header";
 import React, { useState, useEffect } from "react";
 import Corousel from "./Corousel";
 
-
 export default function Mainpage() {
   const backgroundImageUrl =
     "https://cdn.discordapp.com/attachments/1096324843877703713/1169889030075326545/image_12.png?ex=65570b10&is=65449610&hm=15386f2762e0011dbe26eae3f532949505320da5aab46cec39e877b613a1acd4&";
 
   const [backgroundImage, setBackgroundImage] = useState(backgroundImageUrl);
   const [screenSize, setScreenSize] = useState("");
+const [page3Selector,setPage3Selector] =useState(0)
 
   const backgroundStyles = {
     backgroundImage: `url(${backgroundImage})`,
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
-
   };
 
   const [images, setImages] = useState([
@@ -66,11 +65,53 @@ export default function Mainpage() {
     "https://i.ibb.co/yg7BSdM/4.png",
   ];
 
+  const [is1BHKSelecteds, setIs1BHKSelecteds] = useState(false);
+  const [isJodiSelected, setIsJodiSelected] = useState(false);
+  const [is2BHKSelected, setIs2BHKSelected] = useState(false);
+
+  const handle1BHKToggle = () => {
+    setPage3Selector(0);
+    if (is1BHKSelecteds===false) {
+      
+      setIs1BHKSelecteds(!is1BHKSelecteds);
+    }
+    setIsJodiSelected(false);
+    setIs2BHKSelected(false);
+  };
+
+  const handleJodiToggle = () => {
+    setPage3Selector(1);
+    if (isJodiSelected===false) {
+      
+      setIsJodiSelected(!isJodiSelected);
+    }
+    
+    setIs1BHKSelecteds(false);
+    setIs2BHKSelected(false);
+  };
+
+  const handle2BHKToggle = () => {
+    setPage3Selector(2);
+    if (is2BHKSelected===false) {
+      
+      setIs2BHKSelected(!is2BHKSelected);
+    }
+    setIs2BHKSelected(!is2BHKSelected);
+    setIs1BHKSelecteds(false);
+    setIsJodiSelected(false);
+  };
+
   const [is1BHKSelected, setIs1BHKSelected] = useState(true);
 
   const handleToggle = () => {
     setIs1BHKSelected(!is1BHKSelected);
   };
+
+  const page3ImgObj = {
+    0:['https://cdn.discordapp.com/attachments/1096324843877703713/1172197945911816314/image.png?ex=655f7168&is=654cfc68&hm=ca67d870b1a351f48e0e486706e726ccb9b77fa8b4028bfa3690636b5dd316de&','https://cdn.discordapp.com/attachments/1096324843877703713/1172197945911816314/image.png?ex=655f7168&is=654cfc68&hm=ca67d870b1a351f48e0e486706e726ccb9b77fa8b4028bfa3690636b5dd316de&'],
+    1:['https://cdn.discordapp.com/attachments/1096324843877703713/1172222632796631070/image.png?ex=655f8866&is=654d1366&hm=94ebae234c1e57f30691e92f98bff3f034aafe3c428e0e20697558a4c773ff8b&','https://cdn.discordapp.com/attachments/1096324843877703713/1172222633404805120/image.png?ex=655f8866&is=654d1366&hm=61a93a70c93ce29d8b804dc3b6429e52e0fa7c05f1692a7b834036372c7dc6f9&'],
+    2:['https://cdn.discordapp.com/attachments/1096324843877703713/1172222269922222111/image.png?ex=655f880f&is=654d130f&hm=fc8a3cef92226f735c75c3d5cdb419690443785143af4cdf6e4e7d2bfdf6a4fd&','']
+  }
 
   useEffect(() => {
     const screenSize = getScreenSize();
@@ -239,11 +280,11 @@ export default function Mainpage() {
       <div className=" mt-[2rem] bg-lightgray h-fit">
         <div className="flex h-auto">
           <div className="w-[80%] lg:w-[80%]   h-auto">
-            <div className="grid p-6 h-auto   auto-rows-max grid-cols-[16rem] lg:grid-cols-3  gap-5">
+            <div className="grid p-6 h-auto   auto-rows-max grid-cols-[23rem] lg:grid-cols-3  gap-5 lg:gap-y-[2rem] lg:gap-x-[8rem]">
               {/* image 1 */}
-              <div className="bg-tan w-[19rem] h-[19rem] lg:w-[23rem] lg:h-[23rem]">
+              <div className="bg-tan w-[19rem] h-[19rem] lg:w-[26rem] lg:h-[23rem]">
                 <div className="  absolute top-0 left-0 w-full h-full  bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
-                <div class="relative w-[19rem] h-[19rem] lg:w-[23rem] lg:h-[23rem]  transition-transform duration-[600ms] transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
+                <div class="relative w-[19rem] h-[19rem] lg:w-[26rem] lg:h-[23rem]  transition-transform duration-[600ms] transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
                   <img
                     src="https://cdn.discordapp.com/attachments/1096324843877703713/1171732951025860628/image.png?ex=655dc059&is=654b4b59&hm=cb754f3eed7092c313e90217eb496c8b6c5395cbfe2c663ea0612a6d3555ce0d&
   "
@@ -257,9 +298,9 @@ export default function Mainpage() {
               </div>
 
               {/* image 2 */}
-              <div className="relative bg-tan w-[19rem] h-[19rem] lg:w-[23rem] lg:h-[23rem]">
+              <div className="relative bg-tan w-[19rem] h-[19rem] lg:w-[26rem] lg:h-[23rem]">
                 <div className="  absolute top-0 left-0 w-full h-full bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
-                <div class="relative w-[19rem] h-[19rem] lg:w-[23rem] lg:h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
+                <div class="relative w-[19rem] h-[19rem] lg:w-[26rem] lg:h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
                   <img
                     src="https://cdn.discordapp.com/attachments/1096324843877703713/1171733074195795998/image.png?ex=655dc076&is=654b4b76&hm=6309b2cea31146bada03f48494c5a5612ea94612d47d494114dd3e75fdb77edc&
   "
@@ -274,9 +315,9 @@ export default function Mainpage() {
               </div>
 
               {/* image 3 */}
-              <div className="bg-tan w-[19rem] h-[19rem] lg:w-[23rem] lg:h-[23rem]">
+              <div className="bg-tan w-[19rem] h-[19rem] lg:w-[26rem] lg:h-[23rem]">
                 <div className="  absolute top-0 left-0 w-full h-full bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
-                <div class="relative w-[19rem] h-[19rem] lg:w-[23rem] lg:h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
+                <div class="relative w-[19rem] h-[19rem] lg:w-[26rem] lg:h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
                   <img
                     src="https://cdn.discordapp.com/attachments/1096324843877703713/1171805065376436284/image.png?ex=655e0382&is=654b8e82&hm=f06eea204b556f1cba540f152c30f1a32124c0c90a1326514c60eacd7b6173ab&"
                     alt="Your Image"
@@ -289,9 +330,9 @@ export default function Mainpage() {
               </div>
 
               {/* image 4 */}
-              <div className="bg-tan w-[19rem] h-[19rem] lg:w-[23rem] lg:h-[23rem]">
+              <div className="bg-tan w-[19rem] h-[19rem] lg:w-[26rem] lg:h-[23rem]">
                 <div className="  absolute top-0 left-0 w-full h-full bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
-                <div class="relative w-[19rem] h-[19rem] lg:w-[23rem] lg:h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
+                <div class="relative w-[19rem] h-[19rem] lg:w-[26rem] lg:h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
                   <img
                     src="https://cdn.discordapp.com/attachments/1096324843877703713/1171733609011499080/image.png?ex=655dc0f6&is=654b4bf6&hm=ecbdb35513df518708190814a7d606aacebd50c4a8f6d09a165fd31ce81c4fd5&
   "
@@ -305,9 +346,9 @@ export default function Mainpage() {
               </div>
 
               {/* image 5 */}
-              <div className="bg-tan w-[19rem] h-[19rem] lg:w-[23rem] lg:h-[23rem]">
+              <div className="bg-tan w-[19rem] h-[19rem] lg:w-[26rem] lg:h-[23rem]">
                 <div className="  absolute top-0 left-0 w-full h-full bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
-                <div class="relative w-[19rem] h-[19rem] lg:w-[23rem] lg:h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
+                <div class="relative w-[19rem] h-[19rem] lg:w-[26rem] lg:h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
                   <img
                     src="https://cdn.discordapp.com/attachments/1096324843877703713/1171792821137707129/image.png?ex=655df81b&is=654b831b&hm=2ee0032eaf47e12868fc781318527578e2f891d37473f9b1fa08a1e4b08a2730&"
                     alt="Your Image"
@@ -320,9 +361,9 @@ export default function Mainpage() {
               </div>
 
               {/* image 6 */}
-              <div className="bg-tan w-[19rem] h-[19rem] lg:w-[23rem] lg:h-[23rem]">
+              <div className="bg-tan w-[19rem] h-[19rem] lg:w-[26rem] lg:h-[23rem]">
                 <div className="  absolute top-0 left-0 w-full h-full bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
-                <div class="relative w-[19rem] h-[19rem] lg:w-[23rem] lg:h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
+                <div class="relative w-[19rem] h-[19rem] lg:w-[26rem] lg:h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
                   <img
                     src="https://cdn.discordapp.com/attachments/1096324843877703713/1171786378556755968/image.png?ex=655df21b&is=654b7d1b&hm=4fdcbbc60c82954a17bcc7e1736499c26ad377f3de74259d7974fe09760e34f6&
   "
@@ -337,9 +378,12 @@ export default function Mainpage() {
 
               {/* load more image*/}
               {images.slice(0, visibleImages).map((image, index) => (
-                <div key={index} className="bg-tan  w-[19rem] h-[19rem] lg:w-[23rem] lg:h-[23rem]">
-                  <div className="  absolute top-0 left-0 w-[19rem] h-[19rem] lg:w-[23rem] lg:h-[23rem] bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
-                  <div class="relative  w-[19rem] h-[19rem] lg:w-[23rem] lg:h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
+                <div
+                  key={index}
+                  className="bg-tan  w-[19rem] h-[19rem] lg:w-[26rem] lg:h-[23rem]"
+                >
+                  <div className="  absolute top-0 left-0 w-[19rem] h-[19rem] lg:w-[26rem] lg:h-[23rem] bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
+                  <div class="relative  w-[19rem] h-[19rem] lg:w-[26rem]  lg:h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
                     <img
                       src={image}
                       alt="Your Image"
@@ -350,7 +394,11 @@ export default function Mainpage() {
                         imageTitle[index] === "Landscape"
                           ? "text-black"
                           : "text-white"
-                      } ${imageTitle[index]==="Senior Citizens Area"? "left-[5rem] lg:left-[8rem]" : "left-[10rem] lg:left-[13rem]" }`}
+                      } ${
+                        imageTitle[index] === "Senior Citizens Area"
+                          ? "left-[5rem] lg:left-[8rem]"
+                          : "left-[10rem] lg:left-[13rem]"
+                      }`}
                     >
                       {imageTitle[index]}
                     </p>
@@ -375,9 +423,9 @@ export default function Mainpage() {
             </div>
           </div>
 
-          <div className=" sticky top-0  w-[20%] h-[50vh]  lg:h-full ">
-            <div className="relative top-[10rem]  left-[6rem] lg:top-[49rem] h-full   font-dm-serif-display text-white text-right [transform:_rotate(90deg)] [transform-origin:0_0] opacity-[0.35]">
-              <p className="  lg:w-[48rem]    lg:text-[6rem] h-fit text-[5rem]">
+          <div className=" sticky top-0  w-[20%] h-[50vh]  lg:h-[77vh] ">
+            <div className="relative lg:left-[17rem] top-[1rem]  left-[6rem] lg:top-[3rem] h-full   font-dm-serif-display text-white text-right [transform:_rotate(90deg)] [transform-origin:0_0] opacity-[0.35]">
+              <p className="  lg:w-[27rem]  lg:bg-none  lg:text-[6rem] h-fit text-[5rem]">
                 Amenities
               </p>
             </div>
@@ -390,14 +438,78 @@ export default function Mainpage() {
       {/* 4th page */}
 
       {/* 5th page */}
-      <div className="flex mt-9 bg-lightgray">
+      <div className="flex mt-9 bg-lightgray h-auto">
+        <div className="w-[80%] h-auto ">
+          <div className="relative mx-auto rounded-[23px] mt-8 bg-gray-200 md:w-[80%] w-[80%] lg:w-[70%] h-[2.69rem] overflow-hidden text-left text-[1.25rem] text-darkolivegreen font-dm-serif-display">
+            <div
+              className={`relative top-[0rem]  left-[0rem] rounded-[32px] w-1/3 h-[2.69rem] overflow-hidden cursor-pointer ${
+                is1BHKSelecteds
+                  ? "bg-yellow-600 text-white"
+                  : "bg-gray-200 text-black"
+              }`}
+              onClick={handle1BHKToggle}
+            >
+              <div className="xs:text-[0.9rem] mx-auto w-fit h-fit xs:pt-2 xs:pl-5 xs:text-left text-center pt-1">
+                Unit Plan
+              </div>
 
-        <div className="w-[80%] "></div>
-        <div className="w-[20%] bg-black ">
-        <div className="relative left-[3rem] text-[1.13rem] font-dm-serif-display text-white text-right [transform:_rotate(90deg)] h-fit [transform-origin:0_0] opacity-[0.35]">Unit Plans</div>
+            </div>
+            <div
+              className={` absolute top-[0rem]  xs:left-1/3 w-1/3  left-[8.5rem] rounded-[32px]  h-[2.69rem] overflow-hidden cursor-pointer ${
+                isJodiSelected
+                  ? " bg-yellow-600 text-white"
+                  : "bg-gray-200 text-black"
+              }`}
+              onClick={handleJodiToggle}
+            >
+              <div className="xs:text-[0.9rem] h-fit mx-auto w-fit sm:text-[0.9rem] xs:pt-2 xs:pl-5 xs:text-left  text-center pt-1">
+                Master Plan
+              </div>
+            </div>
+            <div
+              className={`absolute top-[0rem]  xs:left-2/3 w-1/3  left-[16rem] rounded-[32px]  h-[2.69rem] overflow-hidden cursor-pointer ${
+                !is2BHKSelected
+                  ? "bg-gray-200 text-black"
+                  : "bg-yellow-600 text-white"
+              }`}
+              onClick={handle2BHKToggle}
+            >
+              <div className="xs:text-[0.9rem] h-fit mx-auto w-fit sm:text-[0.9rem] xs:pt-2 xs:pl-5 xs:text-left  text-center pt-1">
+                Floor Plan
+              </div>
+            </div>
+          </div>
 
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-[1rem] mt-40 ml-5">
+            <div className="w-[20rem] h-[20rem] lg:w-[33rem] lg:h-[24rem]">
+              <img page3ImgObj
+              onClick={()=>{
+                console.log(page3ImgObj[page3Selector])
+              }}
+                src={page3ImgObj[page3Selector][0]}
+                alt="Your Image"
+                class="w-[100%] h-full object-fill "
+              />
+            </div>
 
+            <div className=" w-[20rem] h-[20rem] lg:w-[33rem] lg:h-[24rem]">
+              <img
+                src={page3ImgObj[page3Selector][0]}
+                alt="Your Image"
+                class="w-[100%] h-full object-fill "
+              />
+            </div>
+          </div>
         </div>
+
+        <div className=" sticky top-0  w-[20%] h-[50vh]  lg:h-[77vh] ">
+            <div className="relative lg:left-[17rem] top-[1rem]  left-[6rem] lg:top-[3rem] h-full   font-dm-serif-display text-white text-right [transform:_rotate(90deg)] [transform-origin:0_0] opacity-[0.35]">
+              <p className="  lg:w-[27rem]  lg:bg-none  lg:text-[6rem] h-fit text-[5rem]">
+                Amenities
+              </p>
+            </div>
+          </div>
+
       </div>
     </div>
   );
