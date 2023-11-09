@@ -110,7 +110,7 @@ const [page3Selector,setPage3Selector] =useState(0)
   const page3ImgObj = {
     0:['https://cdn.discordapp.com/attachments/1096324843877703713/1172197945911816314/image.png?ex=655f7168&is=654cfc68&hm=ca67d870b1a351f48e0e486706e726ccb9b77fa8b4028bfa3690636b5dd316de&','https://cdn.discordapp.com/attachments/1096324843877703713/1172197945911816314/image.png?ex=655f7168&is=654cfc68&hm=ca67d870b1a351f48e0e486706e726ccb9b77fa8b4028bfa3690636b5dd316de&'],
     1:['https://cdn.discordapp.com/attachments/1096324843877703713/1172222632796631070/image.png?ex=655f8866&is=654d1366&hm=94ebae234c1e57f30691e92f98bff3f034aafe3c428e0e20697558a4c773ff8b&','https://cdn.discordapp.com/attachments/1096324843877703713/1172222633404805120/image.png?ex=655f8866&is=654d1366&hm=61a93a70c93ce29d8b804dc3b6429e52e0fa7c05f1692a7b834036372c7dc6f9&'],
-    2:['https://cdn.discordapp.com/attachments/1096324843877703713/1172222269922222111/image.png?ex=655f880f&is=654d130f&hm=fc8a3cef92226f735c75c3d5cdb419690443785143af4cdf6e4e7d2bfdf6a4fd&','']
+    2:['https://cdn.discordapp.com/attachments/1096324843877703713/1172222269922222111/image.png?ex=655f880f&is=654d130f&hm=fc8a3cef92226f735c75c3d5cdb419690443785143af4cdf6e4e7d2bfdf6a4fd&']
   }
 
   useEffect(() => {
@@ -503,9 +503,9 @@ const [page3Selector,setPage3Selector] =useState(0)
         </div>
 
         <div className=" sticky top-0  w-[20%] h-[50vh]  lg:h-[77vh] ">
-            <div className="relative lg:left-[17rem] top-[1rem]  left-[6rem] lg:top-[3rem] h-full   font-dm-serif-display text-white text-right [transform:_rotate(90deg)] [transform-origin:0_0] opacity-[0.35]">
+            <div className="relative  lg:left-[17rem] top-[1rem]  left-[6rem] lg:top-[3rem] h-fit   font-dm-serif-display text-white  [transform:_rotate(90deg)] [transform-origin:0_0] opacity-[0.35]">
               <p className="  lg:w-[27rem]  lg:bg-none  lg:text-[6rem] h-fit text-[5rem]">
-                Amenities
+                Floor Plan
               </p>
             </div>
           </div>
