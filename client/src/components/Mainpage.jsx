@@ -668,6 +668,21 @@ export default function Mainpage() {
 
       </div>
 
+          {/* Tour Page */}
+      <div className="flex mt-9 bg-white h-auto md:h-auto lg:h-[90vh]">
+        <div className="sticky top-0 w-[20%] bg-white h-[30vh] lg:h-[60vh]  ">
+          <div className="absolute top-[15rem] lg:top-[24rem] w-[2rem] h-[12rem]   font-dm-serif-display text-darkkhaki text-left [transform:_rotate(-90deg)] [transform-origin:0_0] opacity-[0.32]">
+            <p className="w-[20rem]  lg:w-[48rem] lg:text-[6rem] h-fit text-[4rem] ">
+              Gallery
+            </p>
+          </div>
+        </div>
+
+        <div className=" flex justify-center w-[80%] h-fit mb-9  lg:w-[80%]">
+
+          </div>
+          </div>
+
       {/* scroll animation */}
       <div className="flex flex-col h-[23vh] lg:h-[50vh]">
         <div className=" overflow-hidden">
