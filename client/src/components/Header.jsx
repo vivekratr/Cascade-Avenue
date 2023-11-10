@@ -3,7 +3,7 @@ import Logo2 from "../assets/logo2.svg";
 import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
-export default function Header() {
+export default function Header(props) {
   const [isNavOpen, setNavOpen] = useState(false);
 
   return (

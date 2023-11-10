@@ -242,7 +242,7 @@ export default function Mainpage() {
       bg-center object-cover max-w-full  h-auto  md:min-h-[220vh] min-h-[170vh]  lg:min-h-[120vh]"
         style={backgroundStyles}
       >
-        <Header />
+        <Header a={setShowModal}/>
         {/* <Button>Button</Button>; */}
         {/* <h1 className="color-white">Mainpage</h1> */}
         <div className="  w-full h-auto flex  flex-wrap  justify-between">
