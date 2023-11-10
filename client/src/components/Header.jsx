@@ -103,28 +103,7 @@ export default function Header() {
 
 
 
-// //   return (
-// //     <div className="flex flex-col lg:flex-row lg:items-center justify-between lg:mb-8 max-w-full max-h-24">
-// //       <div className="my-5 mx-6 bg-none relative w-full lg:w-[16rem] h-24 flex flex-row items-center justify-start gap-2">
-// //         <img
-// //           src={Logo}
-// //           alt="Logo"
-// //           className="w-16 h-16 object-cover"
-// //         />
-// //         <img
-// //           src={Logo2}
-// //           alt="Logo2"
-// //           className="w-32 h-10 object-cover"
-// //         />
-// //       </div>
-
-// //       {/* Responsive Nav Toggle Button */}
-// //       <div className="lg:hidden ml-4">
-// //         <button
-// //           className="w-10 h-10 flex items-center justify-center cursor-pointer"
-// //           onClick={() => setNavOpen(!isNavOpen)}
-// //         >
-// //           {isNavOpen ? (
+       
 // //             <AiOutlineClose size={24} />
 // //           ) : (
 // //             <AiOutlineMenu size={24} />
