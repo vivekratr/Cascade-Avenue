@@ -21,7 +21,6 @@ export default function Header() {
         />
       </div>
 
-      {/* Responsive Nav Toggle Button */}
       <div className="lg:hidden w-full mx-9 my-[1rem] max-w-full flex  max-h-24  items-center justify-end   ">
         {isNavOpen ? (
           <AiOutlineClose
@@ -38,7 +37,6 @@ export default function Header() {
         )}
       </div>
 
-      {/* Responsive Navigation Menu */}
       {isNavOpen && (
         <div className="lg:hidden my-0  max-w-[60%] flex flex-col items-start absolute left-0 top-0 bg-white z-10">
           <div className="my-5 mx-6 mr-13 bg-none relative max-w-[16rem]  max-h-24 px-3  flex flex-row items-center justify-start gap-[0.5rem]">
@@ -67,7 +65,6 @@ export default function Header() {
         </div>
       )}
 
-      {/* Original Navigation for Desktop */}
       <div className="hidden lg:flex lg:flex-row my-5 ml-4 gap-12 max-w-full lg:max-h-24 lg:items-center font-dm-serif-display">
         <p className="h-auto w-fit cursor-pointer">About</p>
         <p className="h-auto w-fit cursor-pointer">Gallery</p>
@@ -82,7 +79,6 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Responsive Navigation Menu for small screens */}
       <div className="hidden lg:hidden my-5 ml-4 max-w-full  flex-col items-end relative left-0 top-0">
         <p className="h-auto w-fit cursor-pointer my-1">About</p>
         <p className="h-auto w-fit cursor-pointer my-1">Gallery</p>
