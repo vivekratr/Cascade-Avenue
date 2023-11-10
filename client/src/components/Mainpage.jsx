@@ -576,6 +576,22 @@ export default function Mainpage() {
         </div>
       </div>
 
+      {/* 6th page */}
+      <div className="flex mt-9 bg-lightgray h-auto">
+      <div className="sticky top-0 w-[20%] bg-white h-[30vh] lg:h-[60vh]  ">
+          <div className="absolute top-[15rem] lg:top-[24rem] w-[2rem] h-[12rem]   font-dm-serif-display text-darkkhaki text-left [transform:_rotate(-90deg)] [transform-origin:0_0] opacity-[0.32]">
+             <img src="https://cdn.discordapp.com/attachments/1096324843877703713/1172572620890325062/image.png?ex=6560ce5a&is=654e595a&hm=c748e1d69a424c9e80ae71997313100b192027eccdb3cff0f02e69ca0168544e&" width={'1rem'} height={'1rem'} className=" object-fill " alt="" /> Location 
+            <p className="w-[20rem]  lg:w-[48rem] lg:text-[6rem] h-fit text-[4rem] ">
+            </p>
+          </div>
+        </div>
+
+        <div className="w-[80%] h-auto ">
+</div>
+
+
+      </div>
+
       {/* scroll animation */}
       <div className="flex flex-col h-[23vh] lg:h-[50vh]">
         <div className=" overflow-hidden">
