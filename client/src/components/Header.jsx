@@ -57,7 +57,9 @@ export default function Header(props) {
           <p className="h-auto w-fit cursor-pointer my-1">Floor Plans</p>
           <p className="h-auto w-fit cursor-pointer my-1">Virtual Tours</p>
           <p className="h-auto w-fit cursor-pointer my-1">Our Partners</p>
-          <div className="cursor-pointer h-16 max-w-[13rem] w-[2.25] my-4 rounded-[46px] bg-yellow-600 overflow-hidden flex flex-row items-center justify-center py-[0.56rem] px-[0.94rem] box-border">
+          <div  onClick={()=>{
+            props.a(true)
+          }} className="cursor-pointer h-16 max-w-[13rem] w-[2.25] my-4 rounded-[46px] bg-yellow-600 overflow-hidden flex flex-row items-center justify-center py-[0.56rem] px-[0.94rem] box-border">
             <p className="w-[7rem] h-[1.16rem] text-center text-white">
               Enquire Now
             </p>
@@ -72,7 +74,9 @@ export default function Header(props) {
         <p className="h-auto w-fit cursor-pointer">Floor Plans</p>
         <p className="h-auto w-fit cursor-pointer">Virtual Tours</p>
         <p className="h-auto w-fit cursor-pointer">Our Partners</p>
-        <div className="cursor-pointer h-16 max-w-[13rem] mx-4 w-[2.25] my-4 rounded-[46px] bg-yellow-600 overflow-hidden flex flex-row items-center justify-center py-[0.56rem] px-[0.94rem] box-border">
+        <div onClick={()=>{
+          props.a(true)
+        }} className="cursor-pointer h-16 max-w-[13rem] mx-4 w-[2.25] my-4 rounded-[46px] bg-yellow-600 overflow-hidden flex flex-row items-center justify-center py-[0.56rem] px-[0.94rem] box-border">
           <p className="w-[7rem] h-[1.16rem] text-center text-white">
             Enquire Now
           </p>
@@ -86,7 +90,9 @@ export default function Header(props) {
         <p className="h-auto w-fit cursor-pointer my-1">Floor Plans</p>
         <p className="h-auto w-fit cursor-pointer my-1">Virtual Tours</p>
         <p className="h-auto w-fit cursor-pointer my-1">Our Partners</p>
-        <div className="cursor-pointer h-16 max-w-[13rem] w-[2.25] my-4 rounded-[46px] bg-yellow-600 overflow-hidden flex flex-row items-center justify-center py-[0.56rem] px-[0.94rem] box-border">
+        <div onClick={()=>{
+          props.a(true)
+        }} className="cursor-pointer h-16 max-w-[13rem] w-[2.25] my-4 rounded-[46px] bg-yellow-600 overflow-hidden flex flex-row items-center justify-center py-[0.56rem] px-[0.94rem] box-border">
           <p className="w-[7rem] h-[1.16rem] text-center text-white">
             Enquire Now
           </p>
