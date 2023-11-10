@@ -102,13 +102,6 @@ export default function Header() {
 
 
 
-// // import Logo from "../assets/logo.png";
-// // import Logo2 from "../assets/logo2.png";
-// // import React, { useState } from "react";
-// // import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
-
-// // export default function Header() {
-// //   const [isNavOpen, setNavOpen] = useState(false);
 
 // //   return (
 // //     <div className="flex flex-col lg:flex-row lg:items-center justify-between lg:mb-8 max-w-full max-h-24">
