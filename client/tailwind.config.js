@@ -57,6 +57,8 @@ module.exports = withMT({
         "yellow-700": "#8e4b10",
         "yellow-900": "#633112",
         "peachpuff": "#e4c9b5",
+        "gray-300": "#d1d5db",
+        "saddlebrown": "#8e4b10",
         darkkhaki: "#ab995a",
       },
       fontFamily: {
