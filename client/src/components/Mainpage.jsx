@@ -1,13 +1,18 @@
 import Header from "./Header";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,Fragment } from "react";
 import Corousel from "./Corousel";
 import ScrollCarousel from "./ScrollCorousel";
 import ScrollReverse from "./ScrollReverse";
 import HoverImage from "./HoverImg";
-import TransitionExample from './Dialog'
+// import { Modal } from "flowbite";
+import Modal from "./Modal"
+// import TransitionExample from './Dialog'
 
 export default function Mainpage() {
+// modal
+ const [showModal,setShowModal] = useState(false);
+
   const [selectedImage, setSelectedImage] = useState(
     "https://flowbite.s3.amazonaws.com/docs/gallery/featured/image.jpg"
   );
@@ -235,13 +240,14 @@ export default function Mainpage() {
   }, [getScreenSize, window.innerWidth, screenSize]);
 
   return (
+    <Fragment>
     <div>
-      <div className="fixed h-1/5 w-1/5 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+      {/* <div className="fixed h-1/5 w-1/5 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
      <TransitionExample
      isOpen={isOpen}
      isCentered
      onClose={handleClose}
-     /></div>
+     /></div> */}
       <div
         className="relative  lg:h-full
       bg-center object-cover max-w-full  h-auto  md:min-h-[220vh] min-h-[170vh]  lg:min-h-[120vh]"
@@ -308,7 +314,9 @@ export default function Mainpage() {
                   </div>
                 )}
               </div>
-              <div onClick={handleOpen} className="relative xs:left-[9%] left-[30%] top-[5rem] rounded-[46px] bg-yellow-600 xs:min-w-[80%]  min-w-[39%] max-w-[35%] h-[3.25rem] overflow-hidden text-justify text-[0.9rem] text-white font-dm-serif-display">
+              <div onClick={()=>{
+                setShowModal(true)
+              }} className="relative xs:left-[9%] left-[30%] top-[5rem] rounded-[46px] bg-yellow-600 xs:min-w-[80%]  min-w-[39%] max-w-[35%] h-[3.25rem] overflow-hidden text-justify text-[0.9rem] text-white font-dm-serif-display">
                 <div className="relative top-[0.8rem] h-fit lg:left-[7rem] left-[4.8rem]">
                   Enquire Now
                 </div>
@@ -744,7 +752,7 @@ export default function Mainpage() {
           </div>
         </div>
 
-        <div className="relative lg:left-[17rem] top-[6rem]  left-[6rem] lg:top-[0rem]   w-[20%] h-[50vh]  lg:w-[20%]  lg:h-[100vh] ">
+        <div className="relative lg:left-[17rem] top-[6rem]  left-[6rem] lg:top-[0rem]   w-[20%] h-[50vh]  lg:w-[0%]  lg:h-[100vh] ">
           <div className="sticky top-0 w-[20%] h-[50vh]  lg:w-[20%]  lg:h-[77vh]   font-dm-serif-display text-white text-right [transform:_rotate(90deg)] [transform-origin:0_0] opacity-[0.35]">
             <p className="  lg:w-[34rem]  lg:bg-none  lg:text-[6rem] h-fit text-[5rem]">
               {isVirualTourSelected ? " Virtual Tour" : "360 view"}
@@ -768,5 +776,7 @@ export default function Mainpage() {
         </div>
       </div>
     </div>
+    <Modal/>
+    </Fragment>
   );
 }
