@@ -67,7 +67,7 @@ const [page3Selector,setPage3Selector] =useState(0)
     "https://i.ibb.co/yg7BSdM/4.png",
   ];
 
-  const [is1BHKSelecteds, setIs1BHKSelecteds] = useState(false);
+  const [is1BHKSelecteds, setIs1BHKSelecteds] = useState(true);
   const [isJodiSelected, setIsJodiSelected] = useState(false);
   const [is2BHKSelected, setIs2BHKSelected] = useState(false);
 
@@ -437,6 +437,8 @@ const [page3Selector,setPage3Selector] =useState(0)
         {/* load more */}
       </div>
 
+      {/* 4th page */}
+
 
       {/* 5th page */}
       <div className="flex mt-9 bg-lightgray h-auto">
@@ -505,7 +507,7 @@ const [page3Selector,setPage3Selector] =useState(0)
 
         <div className=" sticky top-0  w-[20%] h-[50vh]  lg:h-[77vh] ">
             <div className="relative  lg:left-[17rem] top-[1rem]  left-[6rem] lg:top-[3rem] h-fit   font-dm-serif-display text-white  [transform:_rotate(90deg)] [transform-origin:0_0] opacity-[0.35]">
-              <p className="  lg:w-[27rem]  lg:bg-none  lg:text-[6rem] h-fit text-[5rem]">
+              <p className="  lg:w-[27rem] w-max  lg:bg-none  lg:text-[6rem] h-fit text-[5rem]">
                 Unit Plans
               </p>
             </div>
