@@ -2,8 +2,14 @@ import React from "react";
 
 const Modal = ({ isVisible, onClose }) => {
   if (!isVisible) return null;
+
+  const handleClose =(e)=>{
+    if (e.target.id === 'wrapper') {
+        onClose();
+    }
+  }
   return (
-    <div className="fixed z-[999] inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex justify-center items-center">
+    <div onClick={handleClose} id="wrapper" className="fixed z-[999] inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex justify-center items-center">
       <div className="max-w-[60%] h-[60%] bg-white flex flex-col">
         <div className="bg-white  shadow-lg p-0">
         <div className="relative  bg-peachpuff my-auto w-full max-w-[632px] h-fit overflow-hidden text-justify text-[1.75rem] text-yellow-700 font-dm-serif-display">
