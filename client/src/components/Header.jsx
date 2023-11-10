@@ -99,44 +99,7 @@ export default function Header() {
   );
 }
 
-// import Logo from "../assets/logo.svg";
-// import Logo2 from "../assets/logo2.svg";
-// import React, { useState } from "react";
-// import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
-
-// export default function Header() {
-//   const [isNavOpen, setNavOpen] = useState(false);
-
-//   return (
-//     <div className="flex  mb-8  flex-row max-h-24 max-w-full ">
-//       <div className="my-5 mx-6 bg-none relative max-w-[16rem]  max-h-24 px-3  flex flex-row items-center justify-start gap-[0.5rem]">
-//         <img
-//           src={Logo}
-//           alt="Logo"
-//           className="relative w-[4.38rem] h-[4.63rem] object-cover"
-//         />
-//         <img
-//           src={Logo2}
-//           alt="Logo2"
-//           className="relative w-[8.38rem] h-[2.81rem] object-cover"
-//         />
-//       </div>
-
-//       {/* Responsive Nav Toggle Button */}
-//       <div className="lg:hidden w-full mx-9 my-[1rem] max-w-full flex items-center justify-end">
-//         {isNavOpen ? (
-//           <AiOutlineClose
-//             className="w-10 cursor-pointer"
-//             size={39}
-//             onClick={() => setNavOpen(false)}
-//           />
-//         ) : (
-//           <AiOutlineMenu
-//             className="w-10 cursor-pointer"
-//             size={39}
-//             onClick={() => setNavOpen(true)}
-//           />)
-//         }
+/
 //       </div>
 
 //       {/* Responsive Navigation Menu */}
