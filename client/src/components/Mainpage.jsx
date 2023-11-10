@@ -12,6 +12,8 @@ import Modal from "./Modal"
 export default function Mainpage() {
 // modal
  const [showModal,setShowModal] = useState(false);
+ const [showAlert, setShowAlert] = useState(false);
+
 
   const [selectedImage, setSelectedImage] = useState(
     "https://flowbite.s3.amazonaws.com/docs/gallery/featured/image.jpg"
@@ -776,7 +778,15 @@ export default function Mainpage() {
         </div>
       </div>
     </div>
-    <Modal isVisible={showModal} onClose={()=>{
+    {showAlert && (
+  <div className="fixed top-5 left-5 transition-all ease-in-out duration-500">
+    <div className="bg-green-500 h-5 w-fit mx-auto text-white px-4 py-2 rounded">
+      Thank you for submitting the form!
+    </div>
+  </div>
+)}
+
+    <Modal isVisible={showModal} setShowAlert={setShowAlert} onClose={()=>{
       setShowModal(false)
     }}/>
     </Fragment>

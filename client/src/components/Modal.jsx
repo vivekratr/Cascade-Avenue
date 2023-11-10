@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Modal = ({ isVisible, onClose }) => {
+const Modal = ({ isVisible, onClose,setShowAlert }) => {
   if (!isVisible) return null;
 
   const handleClose = (e) => {
@@ -14,10 +14,18 @@ const Modal = ({ isVisible, onClose }) => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [emailAddress, setEmailAddress] = useState("");
 
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
     // TODO: Submit the form data here
+
+    // Show the alert for 4 seconds
+    setShowAlert(true);
+    setTimeout(() => {
+      setShowAlert(false);
+    }, 4000);
+    onClose();
   };
 
   return (
@@ -88,13 +96,17 @@ const Modal = ({ isVisible, onClose }) => {
             </div>
             
            
-            <div className="relative bg-white box-border w-full h-[3.69rem] overflow-hidden text-justify text-[1.75rem] text-saddlebrown font-dm-serif-display border-[1px] border-solid border-yellow-900">
-<div className="mx-auto w-fit h-fit my-auto">Submit</div>
+            <div onClick={(e)=>{
+                handleSubmit(e);
+            }} className="relative cursor-pointer bg-white box-border w-full h-[3.69rem] overflow-hidden text-justify text-[1.75rem] text-saddlebrown font-dm-serif-display border-[1px] border-solid border-yellow-900 hover:bg-gray-200">
+  <div className="mx-auto  w-fit h-fit py-2">Submit</div>
 </div>
+
           </form>
           </div>
         </div>
       </div>
+     
     </div>
   );
 };
