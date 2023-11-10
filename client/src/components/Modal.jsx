@@ -4,49 +4,19 @@ const Modal = ({ isVisible, onClose }) => {
   if (!isVisible) return null;
   return (
     <div className="fixed z-[999] inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex justify-center items-center">
-      <div className="max-w-[600px] h-[400px] bg-white flex flex-col">
-      <div className={`bg-white p-5 rounded-lg ${isOpen ? "block" : "hidden"}`}>
-          <h3 className="text-center font-bold text-xl">{title}</h3>
-          <button
-            type="button"
-            className="absolute top-0 right-0 p-2"
-            onClick={handleClose}
-          >
-            &times;
-          </button>
-          <form onSubmit={handleSubmit}>
-            <input
-              type="text"
-              name="name"
-              placeholder="Name"
-              value={name}
-              onChange={(event) => setName(event.target.value)}
-              className="w-full p-2 border rounded-md"
-            />
-            <input
-              type="tel"
-              name="phoneNumber"
-              placeholder="Phone Number"
-              value={phoneNumber}
-              onChange={(event) => setPhoneNumber(event.target.value)}
-              className="w-full p-2 border rounded-md"
-            />
-            <input
-              type="email"
-              name="emailAddress"
-              placeholder="Email Address"
-              value={emailAddress}
-              onChange={(event) => setEmailAddress(event.target.value)}
-              className="w-full p-2 border rounded-md"
-            />
-            <button
-              type="submit"
-              className="w-full p-2 bg-blue-500 text-white rounded-md"
-            >
-              Submit
-            </button>
-          </form>
-        </div>
+      <div className="max-w-[60%] h-[60%] bg-white flex flex-col">
+        <div className="bg-white  shadow-lg p-0">
+        <div className="relative  bg-peachpuff my-auto w-full max-w-[632px] h-fit overflow-hidden text-justify text-[1.75rem] text-yellow-700 font-dm-serif-display">
+          <div className="mx-auto py-3 text-center w-fit h-fit ">
+            Enquire Here
+          </div>
+          <img
+          onClick={onClose}
+            className="absolute h-[43.94%] cursor-pointer transition-transform hover:translate-y-[-1px] w-[6.24%] my-auto top-[23.53%] right-[2.91%] bottom-[23.53%] left-[91.85%] max-w-full overflow-hidden max-h-full"
+            alt=""
+            src="https://cdn.discordapp.com/attachments/1096324843877703713/1172647855064891412/image.png?ex=6561146b&is=654e9f6b&hm=1c4fe06c279649c348b25e08c06e811c425ebe93388a4ffee09fdfafdc22bacb&"
+          />
+        </div>Modal</div>
       </div>
     </div>
   );
