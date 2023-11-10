@@ -157,7 +157,14 @@ export default function Mainpage() {
 `Eastern Express Highway - 8 km `,
 `Western Express Highway - 8 km  `,
 `Dahisar Check Naka - 14.4 km. `],
-2:[],
+
+2:[`IT & BUSINESS PARKS`,
+`Thane One Corporate IT Park - 8.6 km.`,
+`Lotus IT Park - 13 km.`,
+`Modi Business Park - 2.7 km.`,
+`Ashar IT Park - 12.5 km.`,
+`G. corp Tech Park - 2.7 km.`],
+
 3:[`SCHOOLS & COLLEGES`,
   `Euro School - 3.3 km.`,
   `The Tree House Playgroup & Nursery - 2.4 km.`,
@@ -176,8 +183,17 @@ export default function Mainpage() {
   `Dhanwantari Multispeciality Hospital - 1.58 km.` ,
   `Bethany Hospital - 92 km.`,
   `Metro Hospital - 5.6 km.`],
-5:[],
-6:[]}
+  
+5:[`FOOD AND DINING`,
+  `Wine N Dine - 2.4 km.`,
+  `The Plush - 1.7 km.`,
+  `The Blue Roof Club - 1.1 km.`,
+  `Harish Lunch Home - 2.1 km.`,
+  `Veggies (Veg, Restaurant) - 1.5 km.`,
+  `All major banks are within a 5 km. radius.`,
+  `Metro Station - O.S km.`,
+  `Ferry Station - 0.5 km.`]
+}
 
   useEffect(() => {
     const screenSize = getScreenSize();
@@ -625,22 +641,22 @@ export default function Mainpage() {
 
       {/* 6th page */}
       <div className="flex mt-9 bg-white h-auto">
-      <div className="sticky top-0 w-[10%] bg-white h-[30vh] lg:h-auto  ">
-          <div className="absolute top-[15rem] lg:top-[24rem] w-[2rem] h-[12rem]   font-dm-serif-display text-darkkhaki text-left [transform:_rotate(-90deg)] [transform-origin:0_0] opacity-[0.32]">
+      <div className="sticky top-0 w-[20%] lg:w-[10%] bg-white h-[30vh] lg:h-auto  ">
+          <div className="absolute top-[19rem] lg:top-[24rem] w-[2rem] h-[12rem]   font-dm-serif-display text-darkkhaki text-left [transform:_rotate(-90deg)] [transform-origin:0_0] opacity-[0.32]">
             <p className="w-[18rem]  lg:w-[48rem] lg:text-[6rem] h-fit text-[4rem] ">
               Location
             </p>
             <div className=" relative right-5  bottom-[5rem] [transform:_rotate(-270deg)] [transform-origin:0_0] opacity-[1]  max-h-[5rem] w-[5rem]  ">
           <img
             alt="nature"
-            className="h-auto opacity-[1] max-h-[1vh] lg:max-h-[86%] relative right-4 w-[92%] lg:h-[90%] lg:max-w-[90%] bg-none rounded-lg  object-fill object-center"
+            className="h-[90%]  opacity-[1] max-h-[86%] lg:max-h-[86%] relative lg:right-4 w-[92%] lg:h-[90%] lg:max-w-[90%] bg-none rounded-lg  object-fill object-center"
             src={`https://cdn.discordapp.com/attachments/1096324843877703713/1172578625502064710/image.png?ex=6560d3f1&is=654e5ef1&hm=ad2d2f45c7de1c86af2af9a7aaeacdca32b0beb6f4b8245becde3ab768976b50&`}
           /> </div>
           </div>
         </div>
 
         <div className="w-[80%] h-auto ">
-          <div className="grid grid-cols-3">
+          <div className="grid grid-cols-2 gap-x-4  lg:grid-cols-3 lg:gap-10">
 
           {locationImg.map((img,index)=>{
 
