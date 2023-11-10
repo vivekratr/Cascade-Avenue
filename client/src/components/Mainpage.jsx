@@ -236,12 +236,7 @@ export default function Mainpage() {
   return (
     <Fragment>
     <div>
-      {/* <div className="fixed h-1/5 w-1/5 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
-     <TransitionExample
-     isOpen={isOpen}
-     isCentered
-     onClose={handleClose}
-     /></div> */}
+     
       <div
         className="relative  lg:h-full
       bg-center object-cover max-w-full  h-auto  md:min-h-[220vh] min-h-[170vh]  lg:min-h-[120vh]"
