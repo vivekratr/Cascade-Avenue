@@ -606,7 +606,7 @@ export default function Mainpage() {
               : "lg:grid-cols-2 ml-12 "
           }`}
           >
-            <div className="w-[20rem] h-[20rem] lg:w-[33rem] lg:h-[24rem]">
+            <div className="w-[20rem] h-[20rem] mb-14 lg:w-[33rem] lg:h-[24rem]">
               <img
                 page3ImgObj
                 onClick={() => {
