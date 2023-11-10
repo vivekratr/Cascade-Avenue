@@ -104,21 +104,3 @@ export default function Header() {
 
 
   
-//         </div>)
-//       }
-
-//       {/* Original Navigation for Desktop */}
-//       <div className="hidden lg:flex lg:flex-row my-5 ml-4 gap-12 max-w-full lg:max-h-24 lg:items-center font-dm-serif-display">
-//         <p className="cursor-pointer">About</p>
-//         <p className="cursor-pointer">Gallery</p>
-//         <p className="cursor-pointer">Amenities</p>
-//         <p className="cursor-pointer">Floor Plans</p>
-//         <p className="cursor-pointer">Virtual Tours</p>
-//         <p className="cursor-pointer">Our Partners</p>
-//         <button className="w-32 h-16 mx-4 rounded-full bg-yellow-600 flex items-center justify-center">
-//           <p className="text-white">Enquire Now</p>
-//         </button>
-//       </div>
-//     </div>
-//   );
-// }
