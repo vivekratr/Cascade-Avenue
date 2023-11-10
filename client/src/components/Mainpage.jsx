@@ -288,6 +288,9 @@ export default function Mainpage() {
                   onClick={handleToggle}
                 >
                   <div className=" xs:text-[0.9rem] h-fit  sm:text-[0.9rem] xs:pt-2 xs:pl-5 xs:text-left  text-center pt-1">
+                  <Link to="section2" smooth={true} duration={500}>
+          Scroll to Section 2
+        </Link>
                     1+1 Jodi
                   </div>
                 </div>
