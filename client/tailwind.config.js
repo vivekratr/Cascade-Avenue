@@ -11,6 +11,40 @@ module.exports = withMT({
   ],
   theme: {
     extend: {
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+        marquee2: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(0%)' },
+        },
+        marquees: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(0%)' },
+        },
+        marquees2: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(0%)' },
+        },
+      },
+      animation : {
+        'spin-slow-30': 'spin 30s linear infinite',
+        'spin-slow-25': 'spin 25s linear infinite',
+        'spin-slow-10': 'spin 10s linear infinite',
+        'marquee-infinite' : 'marquee 24s linear infinite',
+        'marquees-infinite' : 'marquees 24s linear infinite',
+      },
+      transitionProperty: {
+        'all-but-transform': 'all except transform',
+      },
+      transitionDuration: {
+        'half-second': '0.5s',
+      },
+      transitionTimingFunction: {
+        'ease-out': 'cubic-bezier(0, 0, 0.2, 1)',
+      },
       screens: {
         xs: "379px", // Custom screen size for smaller than 'sm'
       },

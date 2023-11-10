@@ -2,6 +2,8 @@ import Header from "./Header";
 
 import React, { useState, useEffect } from "react";
 import Corousel from "./Corousel";
+import ScrollCarousel from "./ScrollCorousel";
+import ScrollReverse from "./ScrollReverse"
 
 export default function Mainpage() {
   const backgroundImageUrl =
@@ -277,12 +279,12 @@ const [page3Selector,setPage3Selector] =useState(0)
 
       {/* 3rd page */}
 
-      <div className=" mt-[2rem] bg-lightgray h-fit">
+      <div className=" mt-[2rem] bg-lightgray h-fit ">
         <div className="flex h-auto">
-          <div className="w-[80%] lg:w-[80%]   h-auto">
+          <div className="w-[80%] lg:w-[80%]     h-auto">
             <div className="grid p-6 h-auto   auto-rows-max grid-cols-[23rem] lg:grid-cols-3  gap-5 lg:gap-y-[2rem] lg:gap-x-[8rem]">
               {/* image 1 */}
-              <div className="bg-tan w-[19rem] h-[19rem] lg:w-[26rem] lg:h-[23rem]">
+              <div className="relative bg-tan w-[19rem] h-[19rem] lg:w-[26rem] lg:h-[23rem]">
                 <div className="  absolute top-0 left-0 w-full h-full  bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
                 <div class="relative w-[19rem] h-[19rem] lg:w-[26rem] lg:h-[23rem]  transition-transform duration-[600ms] transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
                   <img
@@ -315,8 +317,8 @@ const [page3Selector,setPage3Selector] =useState(0)
               </div>
 
               {/* image 3 */}
-              <div className="bg-tan w-[19rem] h-[19rem] lg:w-[26rem] lg:h-[23rem]">
-                <div className="  absolute top-0 left-0 w-full h-full bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
+              <div className="relative bg-tan w-[19rem] z-50 h-[19rem] lg:w-[26rem] lg:h-[23rem]">
+                <div className="  absolute top-0 left-0 w-full h-full bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 "></div>
                 <div class="relative w-[19rem] h-[19rem] lg:w-[26rem] lg:h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
                   <img
                     src="https://cdn.discordapp.com/attachments/1096324843877703713/1171805065376436284/image.png?ex=655e0382&is=654b8e82&hm=f06eea204b556f1cba540f152c30f1a32124c0c90a1326514c60eacd7b6173ab&"
@@ -330,7 +332,7 @@ const [page3Selector,setPage3Selector] =useState(0)
               </div>
 
               {/* image 4 */}
-              <div className="bg-tan w-[19rem] h-[19rem] lg:w-[26rem] lg:h-[23rem]">
+              <div className="relative bg-tan w-[19rem] h-[19rem] lg:w-[26rem] lg:h-[23rem]">
                 <div className="  absolute top-0 left-0 w-full h-full bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
                 <div class="relative w-[19rem] h-[19rem] lg:w-[26rem] lg:h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
                   <img
@@ -346,7 +348,7 @@ const [page3Selector,setPage3Selector] =useState(0)
               </div>
 
               {/* image 5 */}
-              <div className="bg-tan w-[19rem] h-[19rem] lg:w-[26rem] lg:h-[23rem]">
+              <div className="relative bg-tan w-[19rem] h-[19rem] lg:w-[26rem] lg:h-[23rem]">
                 <div className="  absolute top-0 left-0 w-full h-full bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
                 <div class="relative w-[19rem] h-[19rem] lg:w-[26rem] lg:h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
                   <img
@@ -361,7 +363,7 @@ const [page3Selector,setPage3Selector] =useState(0)
               </div>
 
               {/* image 6 */}
-              <div className="bg-tan w-[19rem] h-[19rem] lg:w-[26rem] lg:h-[23rem]">
+              <div className=" relative bg-tan w-[19rem] z-50  h-[19rem] lg:w-[26rem] lg:h-[23rem]">
                 <div className="  absolute top-0 left-0 w-full h-full bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
                 <div class="relative w-[19rem] h-[19rem] lg:w-[26rem] lg:h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
                   <img
@@ -380,7 +382,7 @@ const [page3Selector,setPage3Selector] =useState(0)
               {images.slice(0, visibleImages).map((image, index) => (
                 <div
                   key={index}
-                  className="bg-tan  w-[19rem] h-[19rem] lg:w-[26rem] lg:h-[23rem]"
+                  className="relative bg-tan  w-[19rem] h-[19rem] lg:w-[26rem] lg:h-[23rem]"
                 >
                   <div className="  absolute top-0 left-0 w-[19rem] h-[19rem] lg:w-[26rem] lg:h-[23rem] bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
                   <div class="relative  w-[19rem] h-[19rem] lg:w-[26rem]  lg:h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
@@ -423,7 +425,7 @@ const [page3Selector,setPage3Selector] =useState(0)
             </div>
           </div>
 
-          <div className=" sticky top-0  w-[20%] h-[50vh]  lg:h-[77vh] ">
+          <div className=" sticky top-0  w-[20%] h-[50vh]  lg:w-[20%]  lg:h-[77vh] ">
             <div className="relative lg:left-[17rem] top-[1rem]  left-[6rem] lg:top-[3rem] h-full   font-dm-serif-display text-white text-right [transform:_rotate(90deg)] [transform-origin:0_0] opacity-[0.35]">
               <p className="  lg:w-[27rem]  lg:bg-none  lg:text-[6rem] h-fit text-[5rem]">
                 Amenities
@@ -435,7 +437,6 @@ const [page3Selector,setPage3Selector] =useState(0)
         {/* load more */}
       </div>
 
-      {/* 4th page */}
 
       {/* 5th page */}
       <div className="flex mt-9 bg-lightgray h-auto">
@@ -505,12 +506,30 @@ const [page3Selector,setPage3Selector] =useState(0)
         <div className=" sticky top-0  w-[20%] h-[50vh]  lg:h-[77vh] ">
             <div className="relative  lg:left-[17rem] top-[1rem]  left-[6rem] lg:top-[3rem] h-fit   font-dm-serif-display text-white  [transform:_rotate(90deg)] [transform-origin:0_0] opacity-[0.35]">
               <p className="  lg:w-[27rem]  lg:bg-none  lg:text-[6rem] h-fit text-[5rem]">
-                Floor Plan
+                Unit Plans
               </p>
             </div>
           </div>
-
+      
       </div>
+
+{/* scroll animation */}
+<div className="flex flex-col h-[30vh] lg:h-[50vh]">
+      <div className=" overflow-hidden">
+        <div>
+        <ScrollCarousel/>
+        </div>
+        
+      </div>
+      
+      <div className=" overflow-hidden">
+        <div>
+              <ScrollReverse/>
+        </div>
+        </div>
+        
+      
+</div>
     </div>
   );
 }
