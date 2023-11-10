@@ -100,21 +100,7 @@ export default function Header() {
 }
 
 
-//       {/* Original Navigation for Desktop */}
-//       <div className="hidden lg:flex lg:flex-row my-5 ml-4 gap-12 max-w-full lg:max-h-24 lg:items-center font-dm-serif-display">
-//         <p className="h-auto w-fit cursor-pointer">About</p>
-//         <p className="h-auto w-fit cursor-pointer">Gallery</p>
-//         <p className="h-auto w-fit cursor-pointer">Amenities</p>
-//         <p className="h-auto w-fit cursor-pointer">Floor Plans</p>
-//         <p className="h-auto w-fit cursor-pointer">Virtual Tours</p>
-//         <p className="h-auto w-fit cursor-pointer">Our Partners</p>
-//         <div className="cursor-pointer h-16 max-w-[13rem] mx-4 w-[2.25] my-4 rounded-[46px] bg-yellow-600 overflow-hidden flex flex-row items-center justify-center py-[0.56rem] px-[0.94rem] box-border">
-//           <p className="w-[7rem] h-[1.16rem] text-center text-white">Enquire Now</p>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
+
 
 // // import Logo from "../assets/logo.png";
 // // import Logo2 from "../assets/logo2.png";
