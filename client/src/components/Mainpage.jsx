@@ -219,15 +219,7 @@ export default function Mainpage() {
     ],
   };
 
-  const [isOpen, setIsOpen] = useState(false);
-
-  const handleOpen = () => {
-    setIsOpen(true);
-  };
-
-  const handleClose = () => {
-    setIsOpen(false);
-  };
+  
 
   useEffect(() => {
     const screenSize = getScreenSize();
