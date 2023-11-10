@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import Corousel from "./Corousel";
 import ScrollCarousel from "./ScrollCorousel";
 import ScrollReverse from "./ScrollReverse";
-import HoverImage from "./HoverImg"
+import HoverImage from "./HoverImg";
 
 export default function Mainpage() {
   const [selectedImage, setSelectedImage] = useState(
@@ -119,6 +119,12 @@ export default function Mainpage() {
     setIs1BHKSelected(!is1BHKSelected);
   };
 
+  const [isVirualTourSelected, setIsVirualTourSelected] = useState(true);
+
+  const handleToggleVirtualTour = () => {
+    setIsVirualTourSelected(!isVirualTourSelected);
+  };
+
   const page3ImgObj = {
     0: [
       "https://cdn.discordapp.com/attachments/1096324843877703713/1172197945911816314/image.png?ex=655f7168&is=654cfc68&hm=ca67d870b1a351f48e0e486706e726ccb9b77fa8b4028bfa3690636b5dd316de&",
@@ -135,65 +141,75 @@ export default function Mainpage() {
 
   // location page
   const locationImg = [
-  'https://cdn.discordapp.com/attachments/1096324843877703713/1172565383711031306/image.png?ex=6560c79c&is=654e529c&hm=557fc4a675ea66ca88f1b6ea934807da9b76b0c67118ad2ac785c7aa1f9bd951&',
-  'https://cdn.discordapp.com/attachments/1096324843877703713/1172565384398901318/image.png?ex=6560c79c&is=654e529c&hm=47187210302ab9c12741e2dbcfa750a6a8b827a99897b68868c048defff78370&',
-'https://cdn.discordapp.com/attachments/1096324843877703713/1172565385074180116/image.png?ex=6560c79d&is=654e529d&hm=d4605f4faeab1e570687177e187753605b86433121cdbe100d2d9890291bbd3c&',
-'https://cdn.discordapp.com/attachments/1096324843877703713/1172565386793848902/image.png?ex=6560c79d&is=654e529d&hm=733a2ffa0699266a53280c7c448afb8f052c23cb44c1d03ae677bdf68caf256f&',
-'https://cdn.discordapp.com/attachments/1096324843877703713/1172565386395385916/image.png?ex=6560c79d&is=654e529d&hm=cfe138bbb9fa4079f543ae917120910306ca9422681de392c12396c054598954&',
-'https://cdn.discordapp.com/attachments/1096324843877703713/1172565385711718520/image.png?ex=6560c79d&is=654e529d&hm=2e738b8c4d1b454810ae364126e010fc4d8385c3b70d6bff86267dae8f9c651e&' ]
-  const locationText={0:[
-    `Malls & Shopping Centres`,
-    `D-Mart - 2.7 km.`,
-`Hypercity - 2.7 km.`,
-`Viviana Mall - 9.4 km.`,
-`R-Mall - 63 km.`,
-`High Street Mall • 8.8 km.`,
-`Cinemax Wonder Mall - 8.2 km.`,
-`Koruna Mall - 112 km,`
-  
-],
-1:[`Metro Station - 0.5 km `,
-`Thane Station - 14 km  `,
-`Eastern Express Highway - 8 km `,
-`Western Express Highway - 8 km  `,
-`Dahisar Check Naka - 14.4 km. `],
+    "https://cdn.discordapp.com/attachments/1096324843877703713/1172565383711031306/image.png?ex=6560c79c&is=654e529c&hm=557fc4a675ea66ca88f1b6ea934807da9b76b0c67118ad2ac785c7aa1f9bd951&",
+    "https://cdn.discordapp.com/attachments/1096324843877703713/1172565384398901318/image.png?ex=6560c79c&is=654e529c&hm=47187210302ab9c12741e2dbcfa750a6a8b827a99897b68868c048defff78370&",
+    "https://cdn.discordapp.com/attachments/1096324843877703713/1172565385074180116/image.png?ex=6560c79d&is=654e529d&hm=d4605f4faeab1e570687177e187753605b86433121cdbe100d2d9890291bbd3c&",
+    "https://cdn.discordapp.com/attachments/1096324843877703713/1172565386793848902/image.png?ex=6560c79d&is=654e529d&hm=733a2ffa0699266a53280c7c448afb8f052c23cb44c1d03ae677bdf68caf256f&",
+    "https://cdn.discordapp.com/attachments/1096324843877703713/1172565386395385916/image.png?ex=6560c79d&is=654e529d&hm=cfe138bbb9fa4079f543ae917120910306ca9422681de392c12396c054598954&",
+    "https://cdn.discordapp.com/attachments/1096324843877703713/1172565385711718520/image.png?ex=6560c79d&is=654e529d&hm=2e738b8c4d1b454810ae364126e010fc4d8385c3b70d6bff86267dae8f9c651e&",
+  ];
+  const locationText = {
+    0: [
+      `Malls & Shopping Centres`,
+      `D-Mart - 2.7 km.`,
+      `Hypercity - 2.7 km.`,
+      `Viviana Mall - 9.4 km.`,
+      `R-Mall - 63 km.`,
+      `High Street Mall • 8.8 km.`,
+      `Cinemax Wonder Mall - 8.2 km.`,
+      `Koruna Mall - 112 km,`,
+    ],
+    1: [
+      `Metro Station - 0.5 km `,
+      `Thane Station - 14 km  `,
+      `Eastern Express Highway - 8 km `,
+      `Western Express Highway - 8 km  `,
+      `Dahisar Check Naka - 14.4 km. `,
+    ],
 
-2:[`IT & BUSINESS PARKS`,
-`Thane One Corporate IT Park - 8.6 km.`,
-`Lotus IT Park - 13 km.`,
-`Modi Business Park - 2.7 km.`,
-`Ashar IT Park - 12.5 km.`,
-`G. corp Tech Park - 2.7 km.`],
+    2: [
+      `IT & BUSINESS PARKS`,
+      `Thane One Corporate IT Park - 8.6 km.`,
+      `Lotus IT Park - 13 km.`,
+      `Modi Business Park - 2.7 km.`,
+      `Ashar IT Park - 12.5 km.`,
+      `G. corp Tech Park - 2.7 km.`,
+    ],
 
-3:[`SCHOOLS & COLLEGES`,
-  `Euro School - 3.3 km.`,
-  `The Tree House Playgroup & Nursery - 2.4 km.`,
-  `A. P Shah Institute of Technology - 1.9 km.`,
-  `Podar International School = 5.3 km.`,
- ` Dnyan Ganga Education Trust - 2.7 km.`,
-  `Muchhala Polytechnic - 2.4 km.`,
-  `DG International School - 2.7 km.`,
- ` New Horizon Scholars School - 2.9 km.`,
-  ,
-  ],
-4:[`HOSPITALS`,
-  `Vedant Super Speciality Hospital - 1.3 km.`,
-  `Hiranandani Hospital - 5.3 km.`,
-  `Jupiter Hospital - 92 km.`,
-  `Dhanwantari Multispeciality Hospital - 1.58 km.` ,
-  `Bethany Hospital - 92 km.`,
-  `Metro Hospital - 5.6 km.`],
-  
-5:[`FOOD AND DINING`,
-  `Wine N Dine - 2.4 km.`,
-  `The Plush - 1.7 km.`,
-  `The Blue Roof Club - 1.1 km.`,
-  `Harish Lunch Home - 2.1 km.`,
-  `Veggies (Veg, Restaurant) - 1.5 km.`,
-  `All major banks are within a 5 km. radius.`,
-  `Metro Station - O.S km.`,
-  `Ferry Station - 0.5 km.`]
-}
+    3: [
+      `SCHOOLS & COLLEGES`,
+      `Euro School - 3.3 km.`,
+      `The Tree House Playgroup & Nursery - 2.4 km.`,
+      `A. P Shah Institute of Technology - 1.9 km.`,
+      `Podar International School = 5.3 km.`,
+      ` Dnyan Ganga Education Trust - 2.7 km.`,
+      `Muchhala Polytechnic - 2.4 km.`,
+      `DG International School - 2.7 km.`,
+      ` New Horizon Scholars School - 2.9 km.`,
+      ,
+    ],
+    4: [
+      `HOSPITALS`,
+      `Vedant Super Speciality Hospital - 1.3 km.`,
+      `Hiranandani Hospital - 5.3 km.`,
+      `Jupiter Hospital - 92 km.`,
+      `Dhanwantari Multispeciality Hospital - 1.58 km.`,
+      `Bethany Hospital - 92 km.`,
+      `Metro Hospital - 5.6 km.`,
+    ],
+
+    5: [
+      `FOOD AND DINING`,
+      `Wine N Dine - 2.4 km.`,
+      `The Plush - 1.7 km.`,
+      `The Blue Roof Club - 1.1 km.`,
+      `Harish Lunch Home - 2.1 km.`,
+      `Veggies (Veg, Restaurant) - 1.5 km.`,
+      `All major banks are within a 5 km. radius.`,
+      `Metro Station - O.S km.`,
+      `Ferry Station - 0.5 km.`,
+    ],
+  };
 
   useEffect(() => {
     const screenSize = getScreenSize();
@@ -641,38 +657,84 @@ export default function Mainpage() {
 
       {/* 6th page */}
       <div className="flex mt-9 bg-white h-auto">
-      <div className="sticky top-0 w-[20%] lg:w-[10%] bg-white h-[30vh] lg:h-auto  ">
+        <div className="sticky top-0 w-[20%] lg:w-[10%] bg-white h-[30vh] lg:h-auto  ">
           <div className="absolute top-[19rem] lg:top-[24rem] w-[2rem] h-[12rem]   font-dm-serif-display text-darkkhaki text-left [transform:_rotate(-90deg)] [transform-origin:0_0] opacity-[0.32]">
             <p className="w-[18rem]  lg:w-[48rem] lg:text-[6rem] h-fit text-[4rem] ">
               Location
             </p>
             <div className=" relative right-5  bottom-[5rem] [transform:_rotate(-270deg)] [transform-origin:0_0] opacity-[1]  max-h-[5rem] w-[5rem]  ">
-          <img
-            alt="nature"
-            className="h-[90%]  opacity-[1] max-h-[86%] lg:max-h-[86%] relative lg:right-4 w-[92%] lg:h-[90%] lg:max-w-[90%] bg-none rounded-lg  object-fill object-center"
-            src={`https://cdn.discordapp.com/attachments/1096324843877703713/1172578625502064710/image.png?ex=6560d3f1&is=654e5ef1&hm=ad2d2f45c7de1c86af2af9a7aaeacdca32b0beb6f4b8245becde3ab768976b50&`}
-          /> </div>
+              <img
+                alt="nature"
+                className="h-[90%]  opacity-[1] max-h-[86%] lg:max-h-[86%] relative lg:right-4 w-[92%] lg:h-[90%] lg:max-w-[90%] bg-none rounded-lg  object-fill object-center"
+                src={`https://cdn.discordapp.com/attachments/1096324843877703713/1172578625502064710/image.png?ex=6560d3f1&is=654e5ef1&hm=ad2d2f45c7de1c86af2af9a7aaeacdca32b0beb6f4b8245becde3ab768976b50&`}
+              />{" "}
+            </div>
           </div>
         </div>
 
         <div className="w-[80%] h-auto ">
           <div className="grid grid-cols-2 gap-x-4  lg:grid-cols-3 lg:gap-10">
-
-          {locationImg.map((img,index)=>{
-
-        return <HoverImage img={img} text={locationText[index]} />
-          })}
+            {locationImg.map((img, index) => {
+              return <HoverImage img={img} text={locationText[index]} />;
+            })}
           </div>
-</div>
-
-
+        </div>
       </div>
 
-          {/* Tour Page */}
-      <div className="flex mt-9 bg-white h-auto md:h-auto lg:h-[90vh]">
-
-      
+      {/* Tour Page */}
+      <div className="flex mt-9 bg-lightgray h-auto md:h-auto lg:h-auto">
+        <div className="w-[80%] h-auto ">
+          <div className="relative rounded-[23px] mt-8 bg-gray-200 md:w-[100%] w-[100%] lg:mx-auto lg:w-[80%] lg:h-auto  h-[2.69rem] overflow-hidden text-left text-[1.25rem] text-darkolivegreen font-dm-serif-display">
+            <div
+              className={`relative top-[0rem] left-[0rem] rounded-[32px] w-[50%] h-[2.69rem]  overflow-hidden cursor-pointer ${
+                isVirualTourSelected
+                  ? "bg-yellow-600 text-white"
+                  : "bg-gray-200 text-black"
+              }`}
+              onClick={handleToggleVirtualTour}
+            >
+              <div className="xs:text-[0.9rem] mx-auto w-fit h-fit xs:pt-2 xs:pl-5 xs:text-left text-center pt-1">
+                Vitual Tour
+              </div>
+            </div>
+            <div
+              className={`absolute top-[0rem]  xs:left-[50%] w-[50%]  left-[8.5rem] rounded-[32px]  h-[2.69rem] overflow-hidden cursor-pointer ${
+                isVirualTourSelected
+                  ? "bg-gray-200 text-black"
+                  : "bg-yellow-600 text-white"
+              }`}
+              onClick={handleToggleVirtualTour}
+            >
+              <div className=" xs:text-[0.9rem] h-fit mx-auto w-fit  sm:text-[0.9rem] xs:pt-2 xs:pl-5 xs:text-left  text-center pt-1">
+                360 View
+              </div>
+            </div>
           </div>
+          <div className="absolute text-[1.75rem] lg:w-[80%] h-auto font-dm-serif-display text-yellow-700 text-left mt-6">
+            {isVirualTourSelected ? (
+              <div className="relative  w-[80%] mx-auto  text-[0.8em] h-fit font-dm-serif-display text-yellow-700 text-center">
+                <video
+                  className="w-full h-full"
+                  src="https://cdn.discordapp.com/attachments/1096324843877703713/1172621248740724826/WhatsApp_Video_2023-11-02_at_22.18.52_07ded8c6.mp4?ex=6560fba3&is=654e86a3&hm=f16e737b096b653b347a7c8a06cee6224c2024e2a40d37b4b9acdd15f55f6a56&"
+                  controls
+                ></video>
+              </div>
+            ) : (
+              <div className="relative w-[80%] text-[0.8em] h-fit font-dm-serif-display text-yellow-700 text-center">
+                XX* Lakhs Starting Price
+              </div>
+            )}
+          </div>
+        </div>
+
+        <div className="relative lg:left-[17rem] top-[6rem]  left-[6rem] lg:top-[0rem]   w-[20%] h-[50vh]  lg:w-[20%]  lg:h-[100vh] ">
+          <div className="sticky top-0 w-[20%] h-[50vh]  lg:w-[20%]  lg:h-[77vh]   font-dm-serif-display text-white text-right [transform:_rotate(90deg)] [transform-origin:0_0] opacity-[0.35]">
+            <p className="  lg:w-[34rem]  lg:bg-none  lg:text-[6rem] h-fit text-[5rem]">
+              {isVirualTourSelected ? " Virtual Tour" : "360 view"}
+            </p>
+          </div>
+        </div>
+      </div>
 
       {/* scroll animation */}
       <div className="flex flex-col h-[23vh] lg:h-[50vh]">
