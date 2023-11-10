@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Corousel from "./Corousel";
 import ScrollCarousel from "./ScrollCorousel";
 import ScrollReverse from "./ScrollReverse";
+import HoverImage from "./HoverImg"
 
 export default function Mainpage() {
   const [selectedImage, setSelectedImage] = useState(
@@ -131,6 +132,35 @@ export default function Mainpage() {
       "https://cdn.discordapp.com/attachments/1096324843877703713/1172222269922222111/image.png?ex=655f880f&is=654d130f&hm=fc8a3cef92226f735c75c3d5cdb419690443785143af4cdf6e4e7d2bfdf6a4fd&",
     ],
   };
+
+  // location page
+  const locationImg = [
+  'https://cdn.discordapp.com/attachments/1096324843877703713/1172565383711031306/image.png?ex=6560c79c&is=654e529c&hm=557fc4a675ea66ca88f1b6ea934807da9b76b0c67118ad2ac785c7aa1f9bd951&',
+  'https://cdn.discordapp.com/attachments/1096324843877703713/1172565384398901318/image.png?ex=6560c79c&is=654e529c&hm=47187210302ab9c12741e2dbcfa750a6a8b827a99897b68868c048defff78370&',
+'https://cdn.discordapp.com/attachments/1096324843877703713/1172565385074180116/image.png?ex=6560c79d&is=654e529d&hm=d4605f4faeab1e570687177e187753605b86433121cdbe100d2d9890291bbd3c&',
+'https://cdn.discordapp.com/attachments/1096324843877703713/1172565386793848902/image.png?ex=6560c79d&is=654e529d&hm=733a2ffa0699266a53280c7c448afb8f052c23cb44c1d03ae677bdf68caf256f&',
+'https://cdn.discordapp.com/attachments/1096324843877703713/1172565386395385916/image.png?ex=6560c79d&is=654e529d&hm=cfe138bbb9fa4079f543ae917120910306ca9422681de392c12396c054598954&',
+'https://cdn.discordapp.com/attachments/1096324843877703713/1172565385711718520/image.png?ex=6560c79d&is=654e529d&hm=2e738b8c4d1b454810ae364126e010fc4d8385c3b70d6bff86267dae8f9c651e&' ]
+  const locationText={0:[
+    `Metro Station - 0.5 km `,
+    `Thane Station - 14 km  `,
+    `Eastern Express Highway - 8 km `,
+    `Western Express Highway - 8 km  `,
+    `Dahisar Check Naka - 14.4 km. `
+  
+],
+1:[],
+2:[],
+3:[],
+4:[`HOSPITALS`,
+  `Vedant Super Speciality Hospital - 1.3 km.`,
+  `Hiranandani Hospital - 5.3 km.`,
+  `Jupiter Hospital - 92 km.`,
+  `Dhanwantari Multispeciality Hospital - 1.58 km.` ,
+  `Bethany Hospital - 92 km.`,
+  `Metro Hospital - 5.6 km.`],
+5:[],
+6:[]}
 
   useEffect(() => {
     const screenSize = getScreenSize();
@@ -567,7 +597,7 @@ export default function Mainpage() {
           </div>
         </div>
 
-        <div className=" sticky top-0  w-[20%] h-[50vh]  lg:h-[77vh] ">
+        <div className=" sticky top-0  w-[0%] h-[50vh]  lg:h-[77vh] ">
           <div className="relative  lg:left-[17rem] top-[1rem]  left-[6rem] lg:top-[3rem] h-fit   font-dm-serif-display text-white  [transform:_rotate(90deg)] [transform-origin:0_0] opacity-[0.35]">
             <p className="  lg:w-[27rem] w-max  lg:bg-none  lg:text-[6rem] h-fit text-[5rem]">
               Unit Plans
@@ -577,16 +607,29 @@ export default function Mainpage() {
       </div>
 
       {/* 6th page */}
-      <div className="flex mt-9 bg-lightgray h-auto">
-      <div className="sticky top-0 w-[20%] bg-white h-[30vh] lg:h-[60vh]  ">
+      <div className="flex mt-9 bg-white h-auto">
+      <div className="sticky top-0 w-[10%] bg-white h-[30vh] lg:h-auto  ">
           <div className="absolute top-[15rem] lg:top-[24rem] w-[2rem] h-[12rem]   font-dm-serif-display text-darkkhaki text-left [transform:_rotate(-90deg)] [transform-origin:0_0] opacity-[0.32]">
-             <img src="https://cdn.discordapp.com/attachments/1096324843877703713/1172572620890325062/image.png?ex=6560ce5a&is=654e595a&hm=c748e1d69a424c9e80ae71997313100b192027eccdb3cff0f02e69ca0168544e&" width={'1rem'} height={'1rem'} className=" object-fill " alt="" /> Location 
-            <p className="w-[20rem]  lg:w-[48rem] lg:text-[6rem] h-fit text-[4rem] ">
+            <p className="w-[18rem]  lg:w-[48rem] lg:text-[6rem] h-fit text-[4rem] ">
+              Location
             </p>
+            <div className=" relative right-5  bottom-[5rem] [transform:_rotate(-270deg)] [transform-origin:0_0] opacity-[1]  max-h-[5rem] w-[5rem]  ">
+          <img
+            alt="nature"
+            className="h-auto opacity-[1] max-h-[1vh] lg:max-h-[86%] relative right-4 w-[92%] lg:h-[90%] lg:max-w-[90%] bg-none rounded-lg  object-fill object-center"
+            src={`https://cdn.discordapp.com/attachments/1096324843877703713/1172578625502064710/image.png?ex=6560d3f1&is=654e5ef1&hm=ad2d2f45c7de1c86af2af9a7aaeacdca32b0beb6f4b8245becde3ab768976b50&`}
+          /> </div>
           </div>
         </div>
 
         <div className="w-[80%] h-auto ">
+          <div className="grid grid-cols-3">
+
+          {locationImg.map((img,index)=>{
+
+        return <HoverImage img={img} text={locationText[index]} />
+          })}
+          </div>
 </div>
 
 
