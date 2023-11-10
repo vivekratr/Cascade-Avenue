@@ -8,6 +8,7 @@ import HoverImage from "./HoverImg";
 // import { Modal } from "flowbite";
 import Modal from "./Modal"
 // import TransitionExample from './Dialog'
+import { Link } from 'react-scroll';
 
 export default function Mainpage() {
 // modal
@@ -332,7 +333,7 @@ export default function Mainpage() {
       </div>
 
       {/* 2nd page */}
-      <div className="flex  w-full h-auto lg:h-[122vh] ">
+      <div id="section2" className="flex  w-full h-auto lg:h-[122vh] ">
         <div className="relative w-[20%] h-auto bg-white ">
           <div className="absolute top-[30rem] lg:top-[49rem] w-[2rem] h-[12rem]   font-dm-serif-display text-darkkhaki text-left [transform:_rotate(-90deg)] [transform-origin:0_0] opacity-[0.32]">
             <p className="w-[29rem]  lg:w-[48rem] lg:text-[6rem] h-fit text-[2rem] ">
