@@ -236,8 +236,8 @@ export default function Mainpage() {
       </div>
 
       {/* 2nd page */}
-      <div className="flex  w-full h-fit lg:h-[122vh] ">
-        <div className="relative w-[20%] bg-white ">
+      <div className="flex  w-full h-auto lg:h-[122vh] ">
+        <div className="relative w-[20%] h-auto bg-white ">
           <div className="absolute top-[30rem] lg:top-[49rem] w-[2rem] h-[12rem]   font-dm-serif-display text-darkkhaki text-left [transform:_rotate(-90deg)] [transform-origin:0_0] opacity-[0.32]">
             <p className="w-[29rem]  lg:w-[48rem] lg:text-[6rem] h-fit text-[2rem] ">
               CASCADE AVENUE
@@ -247,7 +247,7 @@ export default function Mainpage() {
             </p>
           </div>
         </div>
-        <div className="w-[80%] h-full bg-white">
+        <div className="w-[80%] h-auto bg-white">
           <div className="relative h-12 lg:h-max text-[1.2rem] top-7 lg:text-[3rem] font-dm-serif-display text-teal-600 text-left">
             Happiness Is Beautiful
           </div>
