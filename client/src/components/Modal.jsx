@@ -24,7 +24,7 @@ const Modal = ({ isVisible, onClose,setShowAlert }) => {
     setShowAlert(true);
     setTimeout(() => {
       setShowAlert(false);
-    }, 4000);
+    }, 3000);
     onClose();
   };
 

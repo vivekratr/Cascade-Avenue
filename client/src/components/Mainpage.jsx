@@ -779,12 +779,16 @@ export default function Mainpage() {
       </div>
     </div>
     {showAlert && (
-  <div className="fixed top-5 left-5 transition-all ease-in-out duration-500">
+  <div
+    className="fixed  top-5 left-5 opacity-0 transition-opacity ease-in-out duration-500"
+    style={{ opacity: 1 }}
+  >
     <div className="bg-green-500 h-5 w-fit mx-auto text-white px-4 py-2 rounded">
       Thank you for submitting the form!
     </div>
   </div>
 )}
+
 
     <Modal isVisible={showModal} setShowAlert={setShowAlert} onClose={()=>{
       setShowModal(false)
