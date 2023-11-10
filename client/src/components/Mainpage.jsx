@@ -776,7 +776,9 @@ export default function Mainpage() {
         </div>
       </div>
     </div>
-    <Modal/>
+    <Modal isVisible={showModal} onClose={()=>{
+      setShowModal(false)
+    }}/>
     </Fragment>
   );
 }

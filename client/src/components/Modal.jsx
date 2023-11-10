@@ -1,9 +1,9 @@
 import React from "react";
 
 const Modal = ({isVisible}) => {
-    if (isVisible) return null;
+    if (!isVisible) return null;
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex justify-center items-center">
+    <div className="fixed z-[999] inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex justify-center items-center">
       <div className="w-[600px] h-[400px] bg-white">
         <div className="relative bg-peachpuff w-[630px] h-[4.25rem] overflow-hidden text-justify text-[1.75rem] text-yellow-700 font-dm-serif-display">
           <div className="absolute top-[0.94rem] left-[16.38rem]">
