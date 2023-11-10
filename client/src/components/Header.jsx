@@ -104,25 +104,7 @@ export default function Header() {
 
 
        
-// //             <AiOutlineClose size={24} />
-// //         ) : (
-// //             <AiOutlineMenu size={24} />
-// //           )}
-//         </button>
-//       </div>
-
-//       {/* Responsive Navigation Menu */}
-//       {isNavOpen && (
-//         <div className="lg:hidden ml-4 max-w-full">
-//           <p className="cursor-pointer my-1">About</p>
-//           <p className="cursor-pointer my-1">Gallery</p>
-//           <p className="cursor-pointer my-1">Amenities</p>
-//           <p className="cursor-pointer my-1">Floor Plans</p>
-//           <p className="cursor-pointer my-1">Virtual Tours</p>
-//           <p className="cursor-pointer my-1">Our Partners</p>
-//           <button className="cursor-pointer w-32 h-16 my-4 rounded-full bg-yellow-600 flex items-center justify-center">
-//             <p className="text-white">Enquire Now</p>
-//           </button>
+  </button>
 //         </div>)
 //       }
 
