@@ -99,23 +99,6 @@ export default function Header() {
   );
 }
 
-/
-//       </div>
-
-//       {/* Responsive Navigation Menu */}
-//       {isNavOpen && (
-//         <div className="lg:hidden my-5 ml-4 max-w-full flex flex-col items-start">
-//           <p className="h-auto w-fit cursor-pointer my-1">About</p>
-//           <p className="h-auto w-fit cursor-pointer my-1">Gallery</p>
-//           <p className="h-auto w-fit cursor-pointer my-1">Amenities</p>
-//           <p className="h-auto w-fit cursor-pointer my-1">Floor Plans</p>
-//           <p className="h-auto w-fit cursor-pointer my-1">Virtual Tours</p>
-//           <p className="h-auto w-fit cursor-pointer my-1">Our Partners</p>
-//           <div className="cursor-pointer h-16 max-w-[13rem] w-[2.25] my-4 rounded-[46px] bg-yellow-600 overflow-hidden flex flex-row items-center justify-center py-[0.56rem] px-[0.94rem] box-border">
-//             <p className="w-[7rem] h-[1.16rem] text-center text-white">Enquire Now</p>
-//           </div>
-//         </div>
-//       )}
 
 //       {/* Original Navigation for Desktop */}
 //       <div className="hidden lg:flex lg:flex-row my-5 ml-4 gap-12 max-w-full lg:max-h-24 lg:items-center font-dm-serif-display">
