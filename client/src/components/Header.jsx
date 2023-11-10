@@ -68,7 +68,7 @@ export default function Header(props) {
       )}
 
       <div className="hidden lg:flex lg:flex-row my-5 ml-4 gap-12 max-w-full lg:max-h-24 lg:items-center font-dm-serif-display">
-        <p className="h-auto w-fit cursor-pointer">About</p>
+        <p  className="h-auto w-fit cursor-pointer">About</p>
         <p className="h-auto w-fit cursor-pointer">Gallery</p>
         <p className="h-auto w-fit cursor-pointer">Amenities</p>
         <p className="h-auto w-fit cursor-pointer">Floor Plans</p>

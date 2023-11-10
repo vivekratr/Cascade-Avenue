@@ -370,7 +370,11 @@ export default function Mainpage() {
               CELEBRATE A COMPLETE LIFE
             </div>
 
-            <div className="relative rounded-[46px] mx-auto right-3  bg-yellow-600 w-[14rem] h-[4rem] overflow-hidden text-justify text-[1rem] text-white font-dm-serif-display lg:text-[1.1rem]">
+            <div onClick={ ()=>{
+                setShowModal(true)
+                
+                // download function
+              }} className="relative cursor-pointer rounded-[46px] mx-auto right-3  bg-yellow-600 w-[14rem] h-[4rem] overflow-hidden text-justify text-[1rem] text-white font-dm-serif-display lg:text-[1.1rem]">
               <div className="absolute w-fit top-[1.19rem] left-[1.25rem]">
                 Download Brochure
               </div>

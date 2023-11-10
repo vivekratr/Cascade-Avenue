@@ -56,6 +56,7 @@ const Modal = ({ isVisible, onClose,setShowAlert }) => {
                 src="https://cdn.discordapp.com/attachments/1096324843877703713/1172662933759721503/image.png?ex=65612276&is=654ead76&hm=e09d6b2b1141d3a4049755a9db2214aa4c21dc667b30aa098d470cdfb8eb8b9f&"
               />
             <input
+            required
               type="name"
               name="name"
               placeholder="Name"
@@ -70,7 +71,8 @@ const Modal = ({ isVisible, onClose,setShowAlert }) => {
                 alt=""
                 src="https://cdn.discordapp.com/attachments/1096324843877703713/1172670764462395393/image.png?ex=656129c1&is=654eb4c1&hm=efbedadda52a442ed68b79cbdb3f9676a65523f6dda152a7e78f3e768919ca8a&"
                 />
-            <input
+            <input 
+            required
               type="phone"
               name="phone"
               placeholder="Phone Number"
@@ -86,6 +88,7 @@ const Modal = ({ isVisible, onClose,setShowAlert }) => {
                 alt=""
               />
             <input
+            required
               type="name"
               name="email"
               placeholder="Email Address"
@@ -96,11 +99,9 @@ const Modal = ({ isVisible, onClose,setShowAlert }) => {
             </div>
             
            
-            <div onClick={(e)=>{
-                handleSubmit(e);
-            }} className="relative cursor-pointer bg-white box-border w-full h-[3.69rem] overflow-hidden text-justify text-[1.75rem] text-saddlebrown font-dm-serif-display border-[1px] border-solid border-yellow-900 hover:bg-gray-200">
+            <button type="submit"  className="relative cursor-pointer bg-white box-border w-full h-[3.69rem] overflow-hidden text-justify text-[1.75rem] text-saddlebrown font-dm-serif-display border-[1px] border-solid border-yellow-900 hover:bg-gray-200">
   <div className="mx-auto  w-fit h-fit py-2">Submit</div>
-</div>
+</button>
 
           </form>
           </div>
