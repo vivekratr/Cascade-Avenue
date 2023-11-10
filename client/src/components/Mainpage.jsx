@@ -3,7 +3,7 @@ import Header from "./Header";
 import React, { useState, useEffect } from "react";
 import Corousel from "./Corousel";
 import ScrollCarousel from "./ScrollCorousel";
-import ScrollReverse from "./ScrollReverse"
+import ScrollReverse from "./ScrollReverse";
 
 export default function Mainpage() {
   const backgroundImageUrl =
@@ -11,7 +11,7 @@ export default function Mainpage() {
 
   const [backgroundImage, setBackgroundImage] = useState(backgroundImageUrl);
   const [screenSize, setScreenSize] = useState("");
-const [page3Selector,setPage3Selector] =useState(0)
+  const [page3Selector, setPage3Selector] = useState(0);
 
   const backgroundStyles = {
     backgroundImage: `url(${backgroundImage})`,
@@ -73,8 +73,7 @@ const [page3Selector,setPage3Selector] =useState(0)
 
   const handle1BHKToggle = () => {
     setPage3Selector(0);
-    if (is1BHKSelecteds===false) {
-      
+    if (is1BHKSelecteds === false) {
       setIs1BHKSelecteds(!is1BHKSelecteds);
     }
     setIsJodiSelected(false);
@@ -83,19 +82,17 @@ const [page3Selector,setPage3Selector] =useState(0)
 
   const handleJodiToggle = () => {
     setPage3Selector(1);
-    if (isJodiSelected===false) {
-      
+    if (isJodiSelected === false) {
       setIsJodiSelected(!isJodiSelected);
     }
-    
+
     setIs1BHKSelecteds(false);
     setIs2BHKSelected(false);
   };
 
   const handle2BHKToggle = () => {
     setPage3Selector(2);
-    if (is2BHKSelected===false) {
-      
+    if (is2BHKSelected === false) {
       setIs2BHKSelected(!is2BHKSelected);
     }
     setIs2BHKSelected(!is2BHKSelected);
@@ -110,10 +107,18 @@ const [page3Selector,setPage3Selector] =useState(0)
   };
 
   const page3ImgObj = {
-    0:['https://cdn.discordapp.com/attachments/1096324843877703713/1172197945911816314/image.png?ex=655f7168&is=654cfc68&hm=ca67d870b1a351f48e0e486706e726ccb9b77fa8b4028bfa3690636b5dd316de&','https://cdn.discordapp.com/attachments/1096324843877703713/1172197945911816314/image.png?ex=655f7168&is=654cfc68&hm=ca67d870b1a351f48e0e486706e726ccb9b77fa8b4028bfa3690636b5dd316de&'],
-    1:['https://cdn.discordapp.com/attachments/1096324843877703713/1172222632796631070/image.png?ex=655f8866&is=654d1366&hm=94ebae234c1e57f30691e92f98bff3f034aafe3c428e0e20697558a4c773ff8b&','https://cdn.discordapp.com/attachments/1096324843877703713/1172222633404805120/image.png?ex=655f8866&is=654d1366&hm=61a93a70c93ce29d8b804dc3b6429e52e0fa7c05f1692a7b834036372c7dc6f9&'],
-    2:['https://cdn.discordapp.com/attachments/1096324843877703713/1172222269922222111/image.png?ex=655f880f&is=654d130f&hm=fc8a3cef92226f735c75c3d5cdb419690443785143af4cdf6e4e7d2bfdf6a4fd&']
-  }
+    0: [
+      "https://cdn.discordapp.com/attachments/1096324843877703713/1172197945911816314/image.png?ex=655f7168&is=654cfc68&hm=ca67d870b1a351f48e0e486706e726ccb9b77fa8b4028bfa3690636b5dd316de&",
+      "https://cdn.discordapp.com/attachments/1096324843877703713/1172495614924292158/image.png?ex=656086a2&is=654e11a2&hm=602eb8a8f351758e0710413ac9f4df6207ecb2205fc9f1d5f8b10f733d940c6f&",
+    ],
+    1: [
+      "https://cdn.discordapp.com/attachments/1096324843877703713/1172222632796631070/image.png?ex=655f8866&is=654d1366&hm=94ebae234c1e57f30691e92f98bff3f034aafe3c428e0e20697558a4c773ff8b&",
+      "https://cdn.discordapp.com/attachments/1096324843877703713/1172222633404805120/image.png?ex=655f8866&is=654d1366&hm=61a93a70c93ce29d8b804dc3b6429e52e0fa7c05f1692a7b834036372c7dc6f9&",
+    ],
+    2: [
+      "https://cdn.discordapp.com/attachments/1096324843877703713/1172222269922222111/image.png?ex=655f880f&is=654d130f&hm=fc8a3cef92226f735c75c3d5cdb419690443785143af4cdf6e4e7d2bfdf6a4fd&",
+    ],
+  };
 
   useEffect(() => {
     const screenSize = getScreenSize();
@@ -382,9 +387,9 @@ const [page3Selector,setPage3Selector] =useState(0)
               {images.slice(0, visibleImages).map((image, index) => (
                 <div
                   key={index}
-                  className="relative bg-tan  w-[19rem] h-[19rem] lg:w-[26rem] lg:h-[23rem]"
+                  className="relative bg-tan z-50 w-[19rem] h-[19rem] lg:w-[26rem] lg:h-[23rem]"
                 >
-                  <div className="  absolute top-0 left-0 w-[19rem] h-[19rem] lg:w-[26rem] lg:h-[23rem] bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
+                  <div className="  absolute top-0 left-0  w-[19rem] h-[19rem] lg:w-[26rem] lg:h-[23rem] bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
                   <div class="relative  w-[19rem] h-[19rem] lg:w-[26rem]  lg:h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
                     <img
                       src={image}
@@ -439,7 +444,6 @@ const [page3Selector,setPage3Selector] =useState(0)
 
       {/* 4th page */}
 
-
       {/* 5th page */}
       <div className="flex mt-9 bg-lightgray h-auto">
         <div className="w-[80%] h-auto ">
@@ -455,7 +459,6 @@ const [page3Selector,setPage3Selector] =useState(0)
               <div className="xs:text-[0.9rem] mx-auto w-fit h-fit xs:pt-2 xs:pl-5 xs:text-left text-center pt-1">
                 Unit Plan
               </div>
-
             </div>
             <div
               className={` absolute top-[0rem]  xs:left-1/3 w-1/3  left-[8.5rem] rounded-[32px]  h-[2.69rem] overflow-hidden cursor-pointer ${
@@ -483,55 +486,53 @@ const [page3Selector,setPage3Selector] =useState(0)
             </div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-[1rem] mt-40 ml-5">
+          <div className={`grid grid-cols-1   gap-y-[1rem] mt-40  
+          ${(page3Selector===2)? 'ml-[20rem] lg:grid-cols-1' :'lg:grid-cols-2 ml-12 '}`}>
             <div className="w-[20rem] h-[20rem] lg:w-[33rem] lg:h-[24rem]">
-              <img page3ImgObj
-              onClick={()=>{
-                console.log(page3ImgObj[page3Selector])
-              }}
+              <img
+                page3ImgObj
+                onClick={() => {
+                  console.log(page3ImgObj[page3Selector]);
+                }}
                 src={page3ImgObj[page3Selector][0]}
                 alt="Your Image"
                 class="w-[100%] h-full object-fill "
               />
             </div>
 
-            <div className=" w-[20rem] h-[20rem] lg:w-[33rem] lg:h-[24rem]">
+{page3ImgObj[page3Selector][1] &&            <div className=" w-[20rem]  h-[20rem] lg:w-[33rem] lg:h-[24rem]">
               <img
-                src={page3ImgObj[page3Selector][0]}
+                src={page3ImgObj[page3Selector][1]}
                 alt="Your Image"
                 class="w-[100%] h-full object-fill "
               />
-            </div>
+            </div>}
           </div>
         </div>
 
         <div className=" sticky top-0  w-[20%] h-[50vh]  lg:h-[77vh] ">
-            <div className="relative  lg:left-[17rem] top-[1rem]  left-[6rem] lg:top-[3rem] h-fit   font-dm-serif-display text-white  [transform:_rotate(90deg)] [transform-origin:0_0] opacity-[0.35]">
-              <p className="  lg:w-[27rem] w-max  lg:bg-none  lg:text-[6rem] h-fit text-[5rem]">
-                Unit Plans
-              </p>
-            </div>
+          <div className="relative  lg:left-[17rem] top-[1rem]  left-[6rem] lg:top-[3rem] h-fit   font-dm-serif-display text-white  [transform:_rotate(90deg)] [transform-origin:0_0] opacity-[0.35]">
+            <p className="  lg:w-[27rem] w-max  lg:bg-none  lg:text-[6rem] h-fit text-[5rem]">
+              Unit Plans
+            </p>
           </div>
-      
+        </div>
       </div>
 
-{/* scroll animation */}
-<div className="flex flex-col h-[23vh] lg:h-[50vh]">
-      <div className=" overflow-hidden">
-        <div>
-        <ScrollCarousel/>
+      {/* scroll animation */}
+      <div className="flex flex-col h-[23vh] lg:h-[50vh]">
+        <div className=" overflow-hidden">
+          <div>
+            <ScrollCarousel />
+          </div>
         </div>
-        
+
+        <div className=" overflow-hidden">
+          <div>
+            <ScrollReverse />
+          </div>
+        </div>
       </div>
-      
-      <div className=" overflow-hidden">
-        <div>
-              <ScrollReverse/>
-        </div>
-        </div>
-        
-      
-</div>
     </div>
   );
 }
