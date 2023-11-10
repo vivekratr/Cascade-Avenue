@@ -5,6 +5,7 @@ import Corousel from "./Corousel";
 import ScrollCarousel from "./ScrollCorousel";
 import ScrollReverse from "./ScrollReverse";
 import HoverImage from "./HoverImg";
+import TransitionExample from './Dialog'
 
 export default function Mainpage() {
   const [selectedImage, setSelectedImage] = useState(
@@ -211,6 +212,16 @@ export default function Mainpage() {
     ],
   };
 
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleOpen = () => {
+    setIsOpen(true);
+  };
+
+  const handleClose = () => {
+    setIsOpen(false);
+  };
+
   useEffect(() => {
     const screenSize = getScreenSize();
 
@@ -225,6 +236,12 @@ export default function Mainpage() {
 
   return (
     <div>
+      <div className="fixed h-1/5 w-1/5 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+     <TransitionExample
+     isOpen={isOpen}
+     isCentered
+     onClose={handleClose}
+     /></div>
       <div
         className="relative  lg:h-full
       bg-center object-cover max-w-full  h-auto  md:min-h-[220vh] min-h-[170vh]  lg:min-h-[120vh]"
@@ -291,7 +308,7 @@ export default function Mainpage() {
                   </div>
                 )}
               </div>
-              <div className="relative xs:left-[9%] left-[30%] top-[5rem] rounded-[46px] bg-yellow-600 xs:min-w-[80%]  min-w-[39%] max-w-[35%] h-[3.25rem] overflow-hidden text-justify text-[0.9rem] text-white font-dm-serif-display">
+              <div onClick={handleOpen} className="relative xs:left-[9%] left-[30%] top-[5rem] rounded-[46px] bg-yellow-600 xs:min-w-[80%]  min-w-[39%] max-w-[35%] h-[3.25rem] overflow-hidden text-justify text-[0.9rem] text-white font-dm-serif-display">
                 <div className="relative top-[0.8rem] h-fit lg:left-[7rem] left-[4.8rem]">
                   Enquire Now
                 </div>
