@@ -514,7 +514,7 @@ const [page3Selector,setPage3Selector] =useState(0)
       </div>
 
 {/* scroll animation */}
-<div className="flex flex-col h-[30vh] lg:h-[50vh]">
+<div className="flex flex-col h-[23vh] lg:h-[50vh]">
       <div className=" overflow-hidden">
         <div>
         <ScrollCarousel/>
