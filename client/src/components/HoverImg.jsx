@@ -9,11 +9,11 @@ const HoverImage = (props) => {
         src={props.img}
         alt=""
       />
-      <div className="absolute  lg:max-w-[80%] inset-10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
-        <p className="text-black font-bold">
+      <div className="absolute  lg:max-w-[80%] inset-1 p-5 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+        <p className="text-black max-h-auto font-bold">
         {temp.map((t, i) => {
           if (i < temp.length - 1) {
-            return <span key={i}>{t}<br /><br /></span>;
+            return <span key={i}>{t}<br /></span>;
           } else {
             return <span key={i}>{t}</span>;
           }
