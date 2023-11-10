@@ -6,6 +6,18 @@ import ScrollCarousel from "./ScrollCorousel";
 import ScrollReverse from "./ScrollReverse";
 
 export default function Mainpage() {
+  const [selectedImage, setSelectedImage] = useState(
+    "https://flowbite.s3.amazonaws.com/docs/gallery/featured/image.jpg"
+  );
+
+  const smallImages = [
+    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg",
+    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg",
+    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg",
+    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg",
+    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg",
+  ];
+
   const backgroundImageUrl =
     "https://cdn.discordapp.com/attachments/1096324843877703713/1169889030075326545/image_12.png?ex=65570b10&is=65449610&hm=15386f2762e0011dbe26eae3f532949505320da5aab46cec39e877b613a1acd4&";
 
@@ -287,11 +299,11 @@ export default function Mainpage() {
       <div className=" mt-[2rem] bg-lightgray h-fit ">
         <div className="flex h-auto">
           <div className="w-[80%] lg:w-[80%]     h-auto">
-            <div className="grid p-6 h-auto   auto-rows-max grid-cols-[23rem] lg:grid-cols-3  gap-5 lg:gap-y-[2rem] lg:gap-x-[8rem]">
+            <div className="grid p-6 h-auto mx-7 mt-7 lg:mt-0  auto-rows-max grid-cols-[23rem] lg:grid-cols-3  gap-5 lg:gap-y-[2rem] lg:gap-x-[8rem]">
               {/* image 1 */}
-              <div className="relative bg-tan w-[19rem] h-[19rem] lg:w-[26rem] lg:h-[23rem]">
+              <div className="relative bg-tan w-[21rem] h-[19rem] lg:w-[26rem] lg:h-[23rem]">
                 <div className="  absolute top-0 left-0 w-full h-full  bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
-                <div class="relative w-[19rem] h-[19rem] lg:w-[26rem] lg:h-[23rem]  transition-transform duration-[600ms] transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
+                <div class="relative w-[21rem] h-[19rem] lg:w-[26rem] lg:h-[23rem]  transition-transform duration-[600ms] transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
                   <img
                     src="https://cdn.discordapp.com/attachments/1096324843877703713/1171732951025860628/image.png?ex=655dc059&is=654b4b59&hm=cb754f3eed7092c313e90217eb496c8b6c5395cbfe2c663ea0612a6d3555ce0d&
   "
@@ -305,9 +317,9 @@ export default function Mainpage() {
               </div>
 
               {/* image 2 */}
-              <div className="relative bg-tan w-[19rem] h-[19rem] lg:w-[26rem] lg:h-[23rem]">
+              <div className="relative bg-tan w-[21rem] h-[19rem] lg:w-[26rem] lg:h-[23rem]">
                 <div className="  absolute top-0 left-0 w-full h-full bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
-                <div class="relative w-[19rem] h-[19rem] lg:w-[26rem] lg:h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
+                <div class="relative w-[21rem] h-[19rem] lg:w-[26rem] lg:h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
                   <img
                     src="https://cdn.discordapp.com/attachments/1096324843877703713/1171733074195795998/image.png?ex=655dc076&is=654b4b76&hm=6309b2cea31146bada03f48494c5a5612ea94612d47d494114dd3e75fdb77edc&
   "
@@ -322,9 +334,9 @@ export default function Mainpage() {
               </div>
 
               {/* image 3 */}
-              <div className="relative bg-tan w-[19rem] z-50 h-[19rem] lg:w-[26rem] lg:h-[23rem]">
+              <div className="relative bg-tan w-[21rem] z-50 h-[19rem] lg:w-[26rem] lg:h-[23rem]">
                 <div className="  absolute top-0 left-0 w-full h-full bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 "></div>
-                <div class="relative w-[19rem] h-[19rem] lg:w-[26rem] lg:h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
+                <div class="relative w-[21rem] h-[19rem] lg:w-[26rem] lg:h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
                   <img
                     src="https://cdn.discordapp.com/attachments/1096324843877703713/1171805065376436284/image.png?ex=655e0382&is=654b8e82&hm=f06eea204b556f1cba540f152c30f1a32124c0c90a1326514c60eacd7b6173ab&"
                     alt="Your Image"
@@ -337,9 +349,9 @@ export default function Mainpage() {
               </div>
 
               {/* image 4 */}
-              <div className="relative bg-tan w-[19rem] h-[19rem] lg:w-[26rem] lg:h-[23rem]">
+              <div className="relative bg-tan w-[21rem] h-[19rem] lg:w-[26rem] lg:h-[23rem]">
                 <div className="  absolute top-0 left-0 w-full h-full bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
-                <div class="relative w-[19rem] h-[19rem] lg:w-[26rem] lg:h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
+                <div class="relative w-[21rem] h-[19rem] lg:w-[26rem] lg:h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
                   <img
                     src="https://cdn.discordapp.com/attachments/1096324843877703713/1171733609011499080/image.png?ex=655dc0f6&is=654b4bf6&hm=ecbdb35513df518708190814a7d606aacebd50c4a8f6d09a165fd31ce81c4fd5&
   "
@@ -353,9 +365,9 @@ export default function Mainpage() {
               </div>
 
               {/* image 5 */}
-              <div className="relative bg-tan w-[19rem] h-[19rem] lg:w-[26rem] lg:h-[23rem]">
+              <div className="relative bg-tan w-[21rem] h-[19rem] lg:w-[26rem] lg:h-[23rem]">
                 <div className="  absolute top-0 left-0 w-full h-full bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
-                <div class="relative w-[19rem] h-[19rem] lg:w-[26rem] lg:h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
+                <div class="relative w-[21rem] h-[19rem] lg:w-[26rem] lg:h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
                   <img
                     src="https://cdn.discordapp.com/attachments/1096324843877703713/1171792821137707129/image.png?ex=655df81b&is=654b831b&hm=2ee0032eaf47e12868fc781318527578e2f891d37473f9b1fa08a1e4b08a2730&"
                     alt="Your Image"
@@ -368,9 +380,9 @@ export default function Mainpage() {
               </div>
 
               {/* image 6 */}
-              <div className=" relative bg-tan w-[19rem] z-50  h-[19rem] lg:w-[26rem] lg:h-[23rem]">
+              <div className=" relative bg-tan w-[21rem] z-50  h-[19rem] lg:w-[26rem] lg:h-[23rem]">
                 <div className="  absolute top-0 left-0 w-full h-full bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
-                <div class="relative w-[19rem] h-[19rem] lg:w-[26rem] lg:h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
+                <div class="relative w-[21rem] h-[19rem] lg:w-[26rem] lg:h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
                   <img
                     src="https://cdn.discordapp.com/attachments/1096324843877703713/1171786378556755968/image.png?ex=655df21b&is=654b7d1b&hm=4fdcbbc60c82954a17bcc7e1736499c26ad377f3de74259d7974fe09760e34f6&
   "
@@ -387,10 +399,10 @@ export default function Mainpage() {
               {images.slice(0, visibleImages).map((image, index) => (
                 <div
                   key={index}
-                  className="relative bg-tan z-50 w-[19rem] h-[19rem] lg:w-[26rem] lg:h-[23rem]"
+                  className="relative bg-tan z-50 w-[21rem] h-[19rem] lg:w-[26rem] lg:h-[23rem]"
                 >
                   <div className="  absolute top-0 left-0  w-[19rem] h-[19rem] lg:w-[26rem] lg:h-[23rem] bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 z-[-10]"></div>
-                  <div class="relative  w-[19rem] h-[19rem] lg:w-[26rem]  lg:h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
+                  <div class="relative  w-[21rem] h-[19rem] lg:w-[26rem]  lg:h-[23rem] duration-[600ms]  transition-transform transform hover:translate-y-[-1rem] hover:translate-x-[0.9rem] hover:shadow-lg">
                     <img
                       src={image}
                       alt="Your Image"
@@ -431,7 +443,7 @@ export default function Mainpage() {
           </div>
 
           <div className=" sticky top-0  w-[20%] h-[50vh]  lg:w-[20%]  lg:h-[77vh] ">
-            <div className="relative lg:left-[17rem] top-[1rem]  left-[6rem] lg:top-[3rem] h-full   font-dm-serif-display text-white text-right [transform:_rotate(90deg)] [transform-origin:0_0] opacity-[0.35]">
+            <div className="relative lg:left-[17rem] top-[6rem]  left-[6rem] lg:top-[3rem] h-full   font-dm-serif-display text-white text-right [transform:_rotate(90deg)] [transform-origin:0_0] opacity-[0.35]">
               <p className="  lg:w-[27rem]  lg:bg-none  lg:text-[6rem] h-fit text-[5rem]">
                 Amenities
               </p>
@@ -443,6 +455,43 @@ export default function Mainpage() {
       </div>
 
       {/* 4th page */}
+      <div className="flex mt-9 bg-white h-auto md:h-auto lg:h-[90vh]">
+        <div className="sticky top-0 w-[20%] bg-white h-[30vh] lg:h-[60vh]  ">
+          <div className="absolute top-[15rem] lg:top-[24rem] w-[2rem] h-[12rem]   font-dm-serif-display text-darkkhaki text-left [transform:_rotate(-90deg)] [transform-origin:0_0] opacity-[0.32]">
+            <p className="w-[20rem]  lg:w-[48rem] lg:text-[6rem] h-fit text-[4rem] ">
+              Gallery
+            </p>
+          </div>
+        </div>
+
+        <div className=" flex justify-center w-[80%] h-fit mb-9  lg:w-[80%]">
+          <div className="mx-auto w-fit grid gap-7 grid-cols-1 lg:grid-cols-2 h-auto">
+            <div className="h-max w-[100%] mx-auto">
+              <img
+                className="h-[15rem] max-w-[80%] lg:h-[30rem] lg:max-w-[828px] cover  rounded-lg"
+                src={selectedImage}
+                alt=""
+              />
+            </div>
+
+            <div className="grid grid-rows-1 grid-cols-5 lg:grid-cols-2 gap-1 lg:gap-5 max-w-[80%] lg:max-w-[65%] h-[2rem] lg:h-fit">
+              {smallImages.map((image, index) => (
+                <div
+                  key={index}
+                  className="h-22  lg:h-fit"
+                  onClick={() => setSelectedImage(image)}
+                >
+                  <img
+                    className="h-auto max-w-full rounded-lg cursor-pointer hover:opacity-75 transition duration-300 ease-in-out"
+                    src={image}
+                    alt=""
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* 5th page */}
       <div className="flex mt-9 bg-lightgray h-auto">
@@ -486,8 +535,14 @@ export default function Mainpage() {
             </div>
           </div>
 
-          <div className={`grid grid-cols-1   gap-y-[1rem] mt-40  
-          ${(page3Selector===2)? 'ml-[20rem] lg:grid-cols-1' :'lg:grid-cols-2 ml-12 '}`}>
+          <div
+            className={`grid grid-cols-1   gap-y-[1rem] mt-40  
+          ${
+            page3Selector === 2
+              ? "ml-[20rem] lg:grid-cols-1"
+              : "lg:grid-cols-2 ml-12 "
+          }`}
+          >
             <div className="w-[20rem] h-[20rem] lg:w-[33rem] lg:h-[24rem]">
               <img
                 page3ImgObj
@@ -500,13 +555,15 @@ export default function Mainpage() {
               />
             </div>
 
-{page3ImgObj[page3Selector][1] &&            <div className=" w-[20rem]  h-[20rem] lg:w-[33rem] lg:h-[24rem]">
-              <img
-                src={page3ImgObj[page3Selector][1]}
-                alt="Your Image"
-                class="w-[100%] h-full object-fill "
-              />
-            </div>}
+            {page3ImgObj[page3Selector][1] && (
+              <div className=" w-[20rem]  h-[20rem] lg:w-[33rem] lg:h-[24rem]">
+                <img
+                  src={page3ImgObj[page3Selector][1]}
+                  alt="Your Image"
+                  class="w-[100%] h-full object-fill "
+                />
+              </div>
+            )}
           </div>
         </div>
 
