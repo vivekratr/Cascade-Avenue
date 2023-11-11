@@ -23,20 +23,19 @@ const Modal = ({ isVisible, onClose,setShowAlert }) => {
     event.preventDefault();
   
     try {
-      // Prepare form data
       const formData = new FormData(formRef.current);
+      const currentDate = new Date().toLocaleDateString();
+      formData.append("Date", currentDate);
+      console.log(formData);
   
-      // Send form data using Axios
+      onClose();
+      setShowAlert(true);
       await axios.post('https://script.google.com/macros/s/AKfycbwZJgF5UfEFI6QAOy1kwxITzCzY8JXUdkbqdiDShiFs3EhrWexPKTm9HEFngQNeW_ej/exec', formData);
   
-      // Show the alert for 4 seconds
-      setShowAlert(true);
       setTimeout(() => {
         setShowAlert(false);
       }, 3000);
-      onClose();
     } catch (error) {
-      // Handle the error, you might want to log it or show an error message
       console.error('Error submitting form:', error);
     }
   };
@@ -113,7 +112,7 @@ const Modal = ({ isVisible, onClose,setShowAlert }) => {
             </div>
             
            
-            <button type="submit"  className="relative cursor-pointer bg-white box-border w-full h-[3.69rem] overflow-hidden text-justify text-[1.75rem] text-saddlebrown font-dm-serif-display border-[1px] border-solid border-yellow-900 hover:bg-gray-200">
+            <button onClick={(e)=>{handleSubmit(e)}}  className="relative cursor-pointer bg-white box-border w-full h-[3.69rem] overflow-hidden text-justify text-[1.75rem] text-saddlebrown font-dm-serif-display border-[1px] border-solid border-yellow-900 hover:bg-gray-200">
   <div className="mx-auto  w-fit h-fit py-2">Submit</div>
 </button>
 
