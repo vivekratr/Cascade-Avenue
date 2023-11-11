@@ -290,9 +290,9 @@ export default function Mainpage() {
                 >
                   <div className=" xs:text-[0.9rem] h-fit  sm:text-[0.9rem] xs:pt-2 xs:pl-5 xs:text-left  text-center pt-1">
                   <Link to="section2" smooth={true} duration={500}>
-          Scroll to Section 2
-        </Link>
+         
                     1+1 Jodi
+        </Link>
                   </div>
                 </div>
               </div>
@@ -397,7 +397,7 @@ export default function Mainpage() {
 
       {/* 3rd page */}
 
-      <div className=" mt-[2rem] bg-lightgray h-fit ">
+      <div id="section3" className=" mt-[2rem] bg-lightgray h-fit ">
         <div className="flex h-auto">
           <div className="w-[80%] lg:w-[80%]     h-auto">
             <div className="grid p-6 h-auto mx-7 mt-7 lg:mt-0  auto-rows-max grid-cols-[23rem] lg:grid-cols-3  gap-5 lg:gap-y-[2rem] lg:gap-x-[8rem]">
@@ -556,7 +556,7 @@ export default function Mainpage() {
       </div>
 
       {/* 4th page */}
-      <div className="flex mt-9 bg-white h-auto md:h-auto lg:h-[90vh]">
+      <div id="section4" className="flex mt-9 bg-white h-auto md:h-auto lg:h-[90vh]">
         <div className="sticky top-0 w-[20%] bg-white h-[30vh] lg:h-[60vh]  ">
           <div className="absolute top-[15rem] lg:top-[24rem] w-[2rem] h-[12rem]   font-dm-serif-display text-darkkhaki text-left [transform:_rotate(-90deg)] [transform-origin:0_0] opacity-[0.32]">
             <p className="w-[20rem]  lg:w-[48rem] lg:text-[6rem] h-fit text-[4rem] ">
@@ -595,7 +595,7 @@ export default function Mainpage() {
       </div>
 
       {/* 5th page */}
-      <div className="flex mt-9 bg-lightgray h-auto">
+      <div id="section5" className="flex mt-9 bg-lightgray h-auto">
         <div className="w-[80%] h-auto ">
           <div className="relative mx-auto rounded-[23px] mt-8 bg-gray-200 md:w-[80%] w-[80%] lg:w-[70%] h-[2.69rem] overflow-hidden text-left text-[1.25rem] text-darkolivegreen font-dm-serif-display">
             <div
@@ -678,7 +678,7 @@ export default function Mainpage() {
       </div>
 
       {/* 6th page */}
-      <div className="flex mt-9 bg-white h-auto">
+      <div id="section6" className="flex mt-9 bg-white h-auto">
         <div className="sticky top-0 w-[20%] lg:w-[10%] bg-white h-[30vh] lg:h-auto  ">
           <div className="absolute top-[19rem] lg:top-[24rem] w-[2rem] h-[12rem]   font-dm-serif-display text-darkkhaki text-left [transform:_rotate(-90deg)] [transform-origin:0_0] opacity-[0.32]">
             <p className="w-[18rem]  lg:w-[48rem] lg:text-[6rem] h-fit text-[4rem] ">
@@ -704,7 +704,7 @@ export default function Mainpage() {
       </div>
 
       {/* Tour Page */}
-      <div className="flex mt-9 bg-lightgray h-auto md:h-auto lg:h-auto">
+      <div id="section7" className="flex mt-9 bg-lightgray h-auto md:h-auto lg:h-auto">
         <div className="w-[80%] h-auto ">
           <div className="relative rounded-[23px] mt-8 bg-gray-200 md:w-[100%] w-[100%] lg:mx-auto lg:w-[80%] lg:h-auto  h-[2.69rem] overflow-hidden text-left text-[1.25rem] text-darkolivegreen font-dm-serif-display">
             <div
@@ -759,7 +759,7 @@ export default function Mainpage() {
       </div>
 
       {/* scroll animation */}
-      <div className="flex flex-col h-[23vh] lg:h-[50vh]">
+      <div id="section8" className="flex flex-col h-[23vh] lg:h-[50vh]">
         <div className=" overflow-hidden">
           <div>
             <ScrollCarousel />

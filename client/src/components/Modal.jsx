@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useState,useRef  } from "react";
+import axios from 'axios';
+
 
 const Modal = ({ isVisible, onClose,setShowAlert }) => {
   if (!isVisible) return null;
@@ -9,24 +11,36 @@ const Modal = ({ isVisible, onClose,setShowAlert }) => {
     }
   };
 
+  const formRef = useRef()
+
   const [isOpen, setIsOpen] = useState(false);
   const [name, setName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [emailAddress, setEmailAddress] = useState("");
 
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-
-    // TODO: Submit the form data here
-
-    // Show the alert for 4 seconds
-    setShowAlert(true);
-    setTimeout(() => {
-      setShowAlert(false);
-    }, 3000);
-    onClose();
+  
+    try {
+      // Prepare form data
+      const formData = new FormData(formRef.current);
+  
+      // Send form data using Axios
+      await axios.post('https://script.google.com/macros/s/AKfycbwZJgF5UfEFI6QAOy1kwxITzCzY8JXUdkbqdiDShiFs3EhrWexPKTm9HEFngQNeW_ej/exec', formData);
+  
+      // Show the alert for 4 seconds
+      setShowAlert(true);
+      setTimeout(() => {
+        setShowAlert(false);
+      }, 3000);
+      onClose();
+    } catch (error) {
+      // Handle the error, you might want to log it or show an error message
+      console.error('Error submitting form:', error);
+    }
   };
+  
 
   return (
     <div
@@ -48,7 +62,7 @@ const Modal = ({ isVisible, onClose,setShowAlert }) => {
             />
           </div>
     <div className="w-[60%] pt-14 m-auto">
-          <form onSubmit={handleSubmit}>
+          <form ref={formRef}  >
             <div className="relative mb-4  bg-white box-border w-60% h-[3.69rem] overflow-hidden text-justify text-[1.75rem] text-gray-300 font-dm-serif-display border-[1px] border-solid border-yellow-900">
               <img
                 className="absolute top-[0.69rem] left-[0.56rem] w-[2.63rem] h-[2.63rem] overflow-hidden"
@@ -58,7 +72,7 @@ const Modal = ({ isVisible, onClose,setShowAlert }) => {
             <input
             required
               type="name"
-              name="name"
+              name="Name"
               placeholder="Name"
               value={name}
               onChange={(event) => setName(event.target.value)}
@@ -74,7 +88,7 @@ const Modal = ({ isVisible, onClose,setShowAlert }) => {
             <input 
             required
               type="phone"
-              name="phone"
+              name="Mobile Number"
               placeholder="Phone Number"
               value={phoneNumber}
               onChange={(event) => setPhoneNumber(event.target.value)}
@@ -90,7 +104,7 @@ const Modal = ({ isVisible, onClose,setShowAlert }) => {
             <input
             required
               type="name"
-              name="email"
+              name="Email"
               placeholder="Email Address"
               value={emailAddress}
               onChange={(event) => setEmailAddress(event.target.value)}
