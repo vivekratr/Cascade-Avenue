@@ -1,8 +1,8 @@
 import React, { useState,useRef  } from "react";
 import axios from 'axios';
+import { saveAs } from 'file-saver';
 
-
-const Modal = ({ isVisible, onClose,setShowAlert }) => {
+const Modal = ({ isVisible, onClose,setShowAlert ,isPdf,setPdf}) => {
   if (!isVisible) return null;
 
   const handleClose = (e) => {
@@ -18,6 +18,14 @@ const Modal = ({ isVisible, onClose,setShowAlert }) => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [emailAddress, setEmailAddress] = useState("");
 
+ //  file download
+const handleDownload = () => {
+  const pdfUrl = 'https://cdn.discordapp.com/attachments/1096324843877703713/1172800185957621780/Cascade_Avenue_Brochure.pdf?ex=6561a249&is=654f2d49&hm=bf4a8a331f7b4cfab50a57c8d0967d0a3ff88e2caadf4434e254fdde9f84a867&';
+
+  saveAs(pdfUrl, 'Cascade_Avenue_Brochure.pdf');
+};
+
+  
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -27,7 +35,11 @@ const Modal = ({ isVisible, onClose,setShowAlert }) => {
       const currentDate = new Date().toLocaleDateString();
       formData.append("Date", currentDate);
       console.log(formData);
-  
+      
+      if(isPdf){
+        handleDownload();
+        setPdf(false);
+      }
       onClose();
       setShowAlert(true);
       await axios.post('https://script.google.com/macros/s/AKfycbwZJgF5UfEFI6QAOy1kwxITzCzY8JXUdkbqdiDShiFs3EhrWexPKTm9HEFngQNeW_ej/exec', formData);
