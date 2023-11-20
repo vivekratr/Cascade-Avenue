@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom"; 
 import Mainpage from './components/Mainpage'
 import './App.css'
 import Figma1 from './components/Figma1';
