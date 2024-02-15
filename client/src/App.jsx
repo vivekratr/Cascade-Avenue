@@ -10,7 +10,7 @@ import Modal from './components/Modal';
 function App() {
   const [count, setCount] = useState(0); 
 
-  return (
+  return ( 
     <>
       <BrowserRouter>
       <div className='m-0 p-0'> 
